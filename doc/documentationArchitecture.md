@@ -326,7 +326,7 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 
 
 **Scénario**
-1. Un micro-service appelle notre monitoring afin de connaître la disponibilité d'un autre micro-service
+1. Un micro-service appelle notre Health Monitor afin de connaître la disponibilité d'un autre micro-service
 2. Le coordinateur envoie un ping au micro-service demandé en attendant une réponse 
 3. Le coordinateur renvoi une confirmation indiquant la disponibilité d'un micro-service
 
@@ -338,7 +338,7 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 - Le coordinateur est en attente d'un nouvel appel d'un micro-service
 
 **Cas alternatifs:**
-2a. Le micro-service ne renvoi pas de réponse au monitoring 
+2a. Le micro-service ne renvoi pas de réponse au Health Monitor 
   - 2a1 On répète l'étape 2 six fois de suite
   - 2a2 Le coordinateur renvoie un message d'erreur indiquant que le micro-service est indisponible  
 
@@ -348,7 +348,7 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 #### CU03-D1 [**Disponibilité**](#add-disponibilité) 
 <span style="color:red">N/a</span>
 #### CU03-M1 [**Modifiabilité**](#add-modifiabilité)
-<span style="color:red">Le module du monitoring doit posséder le moins de couplage possible afin d'être utilisé facilement</span>
+<span style="color:red">Le module du Health Monitor doit posséder le moins de couplage possible afin d'être utilisé facilement</span>
 #### CU03-P1 [**Performance**](#add-performance) 
 <span style="color:red">Le module doit pouvoir recevoir une réponse du micro-service en moins de 100ms</span>
 #### CU03-S1 [**Sécurité**](#add-sécurité)
@@ -356,7 +356,7 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 #### CU03-T1 [**Testabilité**](#add-testabilité) 
 <span style="color:red">N/a</span>
 #### CU03-U1 [**Usabilité**](#add-usabilité)
-<span style="color:red">L'on doit pouvoir utiliser le module du monitoring de manière simple en utilisant le moins de paramètres possible</span>
+<span style="color:red">L'on doit pouvoir utiliser le module du Health Monitor de manière simple en utilisant le moins de paramètres possible</span>
 #### CU03-I1 [**Interopérabilité**](#add-interopérabilité)
 <span style="color:red">N/a</span>
 
