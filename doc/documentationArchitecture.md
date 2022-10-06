@@ -25,15 +25,85 @@
   - [OA-2. Validez si le transport par autobus est toujours plus rapide, peu importe l'heure de la journée](#oa-2-validez-si-le-transport-par-autobus-est-toujours-plus-rapide-peu-importe-lheure-de-la-journée)
 - [Cas d'utilisations](#cas-dutilisations)
     - [**CU01** - Veux comparer les temps de trajet.](#cu01---veux-comparer-les-temps-de-trajet)
+        - [CU01-D1 **Disponibilité**](#cu01-d1-disponibilité)
+      - [CU01-M1 **Modifiabilité**](#cu01-m1-modifiabilité)
+      - [CU01-P1 **Performance**](#cu01-p1-performance)
+      - [CU01-S1 **Sécurité**](#cu01-s1-sécurité)
+      - [CU01-T1 **Testabilité**](#cu01-t1-testabilité)
+      - [CU01-U1 **Usabilité**](#cu01-u1-usabilité)
+      - [CU01-I1 **Interopérabilité**](#cu01-i1-interopérabilité)
     - [**CU02** - Veux pouvoir mettre le chaos dans les microservices.](#cu02---veux-pouvoir-mettre-le-chaos-dans-les-microservices)
-    - [**CU03** - <span style="color:red">Vous devez proposer un nouveau cas d'utilisation</span>](#cu03---vous-devez-proposer-un-nouveau-cas-dutilisation)
+      - [CU02-D1 **Disponibilité**](#cu02-d1-disponibilité)
+      - [CU02-M1 **Modifiabilité**](#cu02-m1-modifiabilité)
+      - [CU02-P1 **Performance**](#cu02-p1-performance)
+      - [CU02-S1 **Sécurité**](#cu02-s1-sécurité)
+      - [CU02-T1 **Testabilité**](#cu02-t1-testabilité)
+      - [CU02-U1 **Usabilité**](#cu02-u1-usabilité)
+      - [CU02-I1 **Interopérabilité**](#cu02-i1-interopérabilité)
+    - [**CU03** - <span style="color:red">Veux pouvoir vérifier la disponibilité d'un micro-service</span>](#cu03---veux-pouvoir-vérifier-la-disponibilité-dun-micro-service)
+      - [CU03-D1 **Disponibilité**](#cu03-d1-disponibilité)
+      - [CU03-M1 **Modifiabilité**](#cu03-m1-modifiabilité)
+      - [CU03-P1 **Performance**](#cu03-p1-performance)
+      - [CU03-S1 **Sécurité**](#cu03-s1-sécurité)
+      - [CU03-T1 **Testabilité**](#cu03-t1-testabilité)
+      - [CU03-U1 **Usabilité**](#cu03-u1-usabilité)
+      - [CU03-I1 **Interopérabilité**](#cu03-i1-interopérabilité)
     - [**CU04** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu04---vous-devez-proposer-un-nouveau-cas-dutilisation)
+      - [CU04-D1 **Disponibilité**](#cu04-d1-disponibilité)
+      - [CU04-M1 **Modifiabilité**](#cu04-m1-modifiabilité)
+      - [CU04-P1 **Performance**](#cu04-p1-performance)
+      - [CU04-S1 **Sécurité**](#cu04-s1-sécurité)
+      - [CU04-T1 **Testabilité**](#cu04-t1-testabilité)
+      - [CU04-U1 **Usabilité**](#cu04-u1-usabilité)
+      - [CU04-I1 **Interopérabilité**](#cu04-i1-interopérabilité)
     - [**CU05** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu05---vous-devez-proposer-un-nouveau-cas-dutilisation)
+      - [CU05-D1 **Disponibilité**](#cu05-d1-disponibilité)
+      - [CU05-M1 **Modifiabilité**](#cu05-m1-modifiabilité)
+      - [CU05-P1 **Performance**](#cu05-p1-performance)
+      - [CU05-S1 **Sécurité**](#cu05-s1-sécurité)
+      - [CU05-T1 **Testabilité**](#cu05-t1-testabilité)
+      - [CU05-U1 **Usabilité**](#cu05-u1-usabilité)
+      - [CU05-I1 **Interopérabilité**](#cu05-i1-interopérabilité)
     - [**CU06** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu06---vous-devez-proposer-un-nouveau-cas-dutilisation)
+      - [CU06-D1 **Disponibilité**](#cu06-d1-disponibilité)
+      - [CU06-M1 **Modifiabilité**](#cu06-m1-modifiabilité)
+      - [CU06-P1 **Performance**](#cu06-p1-performance)
+      - [CU06-S1 **Sécurité**](#cu06-s1-sécurité)
+      - [CU06-T1 **Testabilité**](#cu06-t1-testabilité)
+      - [CU06-U1 **Usabilité**](#cu06-u1-usabilité)
+      - [CU06-I1 **Interopérabilité**](#cu06-i1-interopérabilité)
     - [**CU07** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu07---vous-devez-proposer-un-nouveau-cas-dutilisation)
+      - [CU07-D1 **Disponibilité**](#cu07-d1-disponibilité)
+      - [CU07-M1 **Modifiabilité**](#cu07-m1-modifiabilité)
+      - [CU07-P1 **Performance**](#cu07-p1-performance)
+      - [CU07-S1 **Sécurité**](#cu07-s1-sécurité)
+      - [CU07-T1 **Testabilité**](#cu07-t1-testabilité)
+      - [CU07-U1 **Usabilité**](#cu07-u1-usabilité)
+      - [CU07-I1 **Interopérabilité**](#cu07-i1-interopérabilité)
     - [**CU08** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu08---vous-devez-proposer-un-nouveau-cas-dutilisation)
+      - [CU08-D1 **Disponibilité**](#cu08-d1-disponibilité)
+      - [CU08-M1 **Modifiabilité**](#cu08-m1-modifiabilité)
+      - [CU08-P1 **Performance**](#cu08-p1-performance)
+      - [CU08-S1 **Sécurité**](#cu08-s1-sécurité)
+      - [CU08-T1 **Testabilité**](#cu08-t1-testabilité)
+      - [CU08-U1 **Usabilité**](#cu08-u1-usabilité)
+      - [CU08-I1 **Interopérabilité**](#cu08-i1-interopérabilité)
     - [**CU09** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu09---vous-devez-proposer-un-nouveau-cas-dutilisation)
+      - [CU09-D1 **Disponibilité**](#cu09-d1-disponibilité)
+      - [CU09-M1 **Modifiabilité**](#cu09-m1-modifiabilité)
+      - [CU09-P1 **Performance**](#cu09-p1-performance)
+      - [CU09-S1 **Sécurité**](#cu09-s1-sécurité)
+      - [CU09-T1 **Testabilité**](#cu09-t1-testabilité)
+      - [CU09-U1 **Usabilité**](#cu09-u1-usabilité)
+      - [CU09-I1 **Interopérabilité**](#cu09-i1-interopérabilité)
     - [**CU10** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation.</span>](#cu10---vous-devez-proposer-un-nouveau-cas-dutilisation)
+      - [CU10-D1 **Disponibilité**](#cu10-d1-disponibilité)
+      - [CU10-M1 **Modifiabilité**](#cu10-m1-modifiabilité)
+      - [CU10-P1 **Performance**](#cu10-p1-performance)
+      - [CU10-S1 **Sécurité**](#cu10-s1-sécurité)
+      - [CU10-T1 **Testabilité**](#cu10-t1-testabilité)
+      - [CU10-U1 **Usabilité**](#cu10-u1-usabilité)
+      - [CU10-I1 **Interopérabilité**](#cu10-i1-interopérabilité)
 - [Vue architecturale de contexte](#vue-architecturale-de-contexte)
   - [Présentation primaire](#présentation-primaire)
   - [Catalogue d'éléments](#catalogue-déléments)
@@ -240,38 +310,55 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 
 - <span style="color:red">Quel sont vos remarques/commentaires par rapport à ce scénario</span>
 
-### **CU03** - <span style="color:red">Vous devez proposer un nouveau cas d'utilisation</span>
+### **CU03** - <span style="color:red">Veux pouvoir vérifier la disponibilité d'un micro-service</span>
 
 **Acteurs externe:** 
-
+- Chargé de laboratoire: Veut pouvoir faire la correction de chaque cas d'utilisation.
+- Un micro-service externe au notre 
+  
 **Précondition:** 
+- Le micro-service du coordinateur est opérationnel
 
 **Évènement déclencheur:** 
+- La documentation pour cet attribut est terminé et l'équipe demande au chargé de laboratoire de corriger celle-ci. 
+- L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci
+- L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
+
 
 **Scénario**
+1. Un micro-service appelle notre coordinateur afin de connaître la disponibilité d'un autre micro-service
+2. Le coordinateur envoie un ping au micro-service demandé en attendant une réponse 
+3. Le coordinateur renvoi une confirmation indiquant la disponibilité d'un micro-service
+
 
 **Évènement résultant:**
+- Le coordinateur renvoie la disponibilité du micro-service demandé
 
 **Postcondition:** 
+- Le coordinateur est en attente d'un nouvel appel d'un micro-service
 
 **Cas alternatifs:**
+2a. Le micro-service ne renvoi pas de réponse au coordinateur 
+  - 2a1 On répète l'étape 2 six fois de suite
+  - 2a2 Le coordinateur renvoie un message d'erreur indiquant que le micro-service est indisponible  
+
 
 **Attributs de qualité**
 
 #### CU03-D1 [**Disponibilité**](#add-disponibilité) 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 #### CU03-M1 [**Modifiabilité**](#add-modifiabilité)
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">Le module du coordinateur doit posséder le moins de couplage possible afin d'être utilisé facilement</span>
 #### CU03-P1 [**Performance**](#add-performance) 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">Le module doit pouvoir recevoir une réponse du micro-service en moins de 100ms</span>
 #### CU03-S1 [**Sécurité**](#add-sécurité)
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 #### CU03-T1 [**Testabilité**](#add-testabilité) 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 #### CU03-U1 [**Usabilité**](#add-usabilité)
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">L'on doit pouvoir utiliser le module du coordinateur de manière simple en utilisant le moins de paramètres possible</span>
 #### CU03-I1 [**Interopérabilité**](#add-interopérabilité)
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
