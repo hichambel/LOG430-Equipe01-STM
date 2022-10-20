@@ -1,0 +1,36 @@
+
+    <h1 class="div-title">Gestionnaire de santé des services web</h1>
+    <!--<h2>{{ this.titleService.getTitle() }}</h2> -->
+    <button class="btn-recuperation" mat-raised-button color="primary" (click)="recupererServicesWeb()">
+        <mat-icon>cloud_download</mat-icon>
+        <span>Récupération des services web</span>
+    </button>
+    <mat-divider></mat-divider>
+    <div class="grid">
+        <div fxLayout="row wrap" fxLayoutGap="16px grid">
+            <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let serviceWeb of listeServiceWeb">
+
+                <app-sante-service-web-item [serviceWeb]="serviceWeb"></app-sante-service-web-item>
+                <!-- <mat-card class="mat-elevation-z4 service-web-card" [ngStyle]="serviceWeb.code?.startsWith('2') ? {'background-color':'#99ff99'} : {'background-color': '#ff6666'}">
+                    <div *ngIf="enChargement">
+                        <mat-spinner></mat-spinner>
+                    
+                        <mat-card-title>{{serviceWeb.nom}}</mat-card-title>
+                        <mat-card-subtitle>Code : {{ serviceWeb.code }}</mat-card-subtitle>
+                        <mat-card-content>
+                            <p>{{ serviceWeb.description }}</p>
+                        </mat-card-content>
+                        <mat-divider inset></mat-divider>
+                        <mat-card-actions>
+                            <button mat-raised-button color="basic" (click)="recupererStatutServiceWeb(serviceWeb.id)">
+                                <mat-icon>refresh</mat-icon>
+                                <span>Faire appel</span>
+                            </button>
+                        </mat-card-actions>
+                    </div>
+                </mat-card> -->
+            </div>
+        </div>
+    </div>
+    
+    
