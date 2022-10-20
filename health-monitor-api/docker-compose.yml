@@ -21,6 +21,3 @@ services:
 
 volumes:
   Health-Monitor-Api_Volume:
-
-networks:
-    nesjs-network:
