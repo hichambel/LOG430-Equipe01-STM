@@ -8,4 +8,6 @@ RUN npm install
 
 COPY . .
 
+USER admin
+
 CMD ["node", "dist/main"]

@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
     dev:
-        container_name: Health-Monitor-API_Container
+        container_name: health-monitor-api
         image: health-monitor-api_image:1.0.0
         build:
             context: .
