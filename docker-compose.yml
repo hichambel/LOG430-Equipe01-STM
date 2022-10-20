@@ -15,7 +15,7 @@ services:
         networks:
             - nesjs-network
         volumes:
-            - .:/usr/src/app
+            - Health-Monitor-Api_Volume:/usr/src/app
             - /usr/app/node_modules
         restart: unless-stopped
 
