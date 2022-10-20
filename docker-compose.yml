@@ -21,6 +21,7 @@ services:
 
 volumes:
   Health-Monitor-Api_Volume:
+    external: true
 
 networks:
     nesjs-network:
