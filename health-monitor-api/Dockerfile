@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . .
 
-USER admin
+RUN mkdir -p data
 
 CMD ["node", "dist/main"]
