@@ -701,11 +701,11 @@ tactiques et identifier clairement la raison de votre choix.
 
 ## ADD-[Disponibilité](#rdaq-disponibilité)
 
-|Identifiant| Description                                                                                                       |
-  |-------------------------------------------------------------------------------------------------------------------|------------|
-|[CU01-D1](#cu01-d1-disponibilité)|                                                                                                                   |
-|[CU02-D1](#cu02-d1-disponibilité)|                                                                                                                   |
-|[CU03-D1](#cu03-d1-disponibilité) | Le micro-service Health Monitor est responsable de détecter la disponibilité <br/> des autres entités du système. | 
+|Identifiant| Description                                                                                                                                                                                                                                                                                        |
+  |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+|[CU01-D1](#cu01-d1-disponibilité)|                                                                                                                                                                                                                                                                                                    |
+|[CU02-D1](#cu02-d1-disponibilité)|                                                                                                                                                                                                                                                                                                    |
+|[CU03-D1](#cu03-d1-disponibilité) | Le micro-service Health Monitor est responsable de détecter la disponibilité <br/> des autres entités du système. (Je me rend compte que ce que j'ai mis ici sera<br/>seulement applicable à l'autre micro-service que nous implémenterons, le monitoring<br/>ne peut pas se surveiller lui-même.) | 
 |[CU04-D1](#cu04-d1-disponibilité) |
 |[CU05-D1](#cu05-d1-disponibilité) |
 |[CU06-D1](#cu06-d1-disponibilité) |
@@ -801,7 +801,7 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
-<br/>Split module parce que c'est la seule.
+<br/>Split module parce que c'est la seule...
 
 ### ADD-[Augmenter la cohésion](#rdtq-augmenter-la-cohésion)
 
@@ -813,7 +813,7 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
-<br/>Increase semantic coherence parce que c'est la seule.
+<br/>Increase semantic coherence parce que c'est la seule...
 
 ### ADD-[Réduire le couplage](#rdtq-réduire-le-couplage)
 
@@ -829,17 +829,21 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Nous avons choisi la tactique de l'intermédiaire. Notre service de monitoring connaîtrera les informations
+<br/>des micro-services à surveiller seulement par l'intermédiaire du service de Discovery.
 
 ### ADD-[Defer binding](#rdtq-defer-binding)
 
 <div class="concept modifiabilite">
 
-| Concept de design      | Pour | Contre| Valeur | Cout|
-|------------------------|------|-------|--------|-----|
-| <li>Defer binding</li> |avantages| désavantages|M|M|
+| Concept de design          | Pour                                                                                                                                                                   |  Contre                                                                    | Valeur | Cout|
+|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|--------|-----|
+| <li>Publish-subscribe</li> | Permet d'avoir l'information relié à un <br/>évènement sans connaître la source <br/>du dit évènements. Réduit le couplage <br/>et permet une meilleure extensibilité. | La file de messages peut être encombré<br/> et causer des ralentissements. |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Nous utiliserons la patron architecturale Publish-subscribe pour aller chercher les informations
+<br/>des nouveaux micro-services qui s'enregistrent auprès du service de Discovery.
 
 ## ADD-[Performance](#rdaq-performance)
 
@@ -954,27 +958,32 @@ ADD-Gérer les ressources
 
 <div class="concept testabilite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design                           | Pour                                                                                                                                                                                                                        |  Contre                                                                                                   | Valeur | Cout|
+|---------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|--------|-----|
+| <li>Interfaces spécialisées</li>            | Permet de tester les méthodes d'un objet pour s'assurer<br/>qu'elles font ce qui est désiré. Facile à ajouter ou enlever.                                                                                                   | Plus de code à écrire et ne teste pas les <br/>inputs de l'environnement d'éxécution.                     |M|M|
+| <li>Record/Playback</li>                    | Permet de recréer facilement l'environnement <br/>qui a créé un erreur critique en enregistrant<br/>le input et le réutiliser au besoin.                                                                                    | Difficile à implémenter.                                                                                  |M|M|
+| <li>Localize State Storage</li>             | Permet de recréer facilement l'environnement <br/>qui a créé un erreur critique en sauvegardant<br/> l'état du système.                                                                                                     | Difficile à implémenter.                                                                                  |M|M|
+| <li>Abstraction des sources de données</li> | Permet de tester facilement le système en changeant<br/>l'origine des données.                                                                                                                                              | On doit rendre facile le changement<br/>de la source des données et <br/>avoir une autre base de données. |M|M|
+| <li>Bac à sable</li>                        | Permet de faire des tests sans se soucier des <br/>conséquences sur le système. Isole une autre instance <br/>du service et permet l'expérimentation du système <br/>tout en pouvant revenir à l'état d'origine facilement. | Deux instances alors plus de ressources.                                                                  |M|M|
+| <li>Executable assertions</li>              | Test les valeurs des input et output au fur et <br/>à mesure de l'éxécution du code.<br/>Rend facile tracer l'évolution de l'état du système.                                                                               | Peut être fastidieux si le système est complexe<br/>et possède beaucoup de lignes de codes.               |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>À décider en groupe...
 
 ### ADD-[Limiter la complexité](#rdtq-limiter-la-complexité)
 
 <div class="concept testabilite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design                              | Pour                                                                              |  Contre                                                                                                                                        | Valeur | Cout|
+|------------------------------------------------|-----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|--------|-----|
+| <li>Limiter la complexité de la structure</li> | En réduisant la complexité du système, celui-ci<br/> devient plus facilement testable. | Si on limite la complexité, on limite <br/>d'autres aspects importants de la conception<br/>logiciel comme l'extensibilité et l'encapsulation. |M|M|
+| <li>Limiter le non-déterminisme</li>           | avantages                                                                         | désavantages                                                                                                                                   |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Nous avons choisi de limiter la complexité de la structure. Étant un service assez simple, le fait de limiter
+<br/>la complexité pour mieux tester ne nous pénalisera pas au niveau de la conception logiciel.
 
 ## ADD-[Usabilité](#rdaq-usabilité)
 
