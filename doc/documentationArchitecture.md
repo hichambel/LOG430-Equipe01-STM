@@ -795,37 +795,37 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept modifiabilite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design     | Pour                                                                                                   |  Contre                         | Valeur | Cout|
+|-----------------------|--------------------------------------------------------------------------------------------------------|---------------------------------|--------|-----|
+| <li>Split module</li> | Séparer le code en modules <br/>permet une meilleure flexibilité <br/>lors d'ajout de fonctionnalités. | Développement un peu plus long. |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Split module parce que c'est la seule.
 
 ### ADD-[Augmenter la cohésion](#rdtq-augmenter-la-cohésion)
 
 <div class="concept modifiabilite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design                    | Pour                                                                                                         |  Contre                     | Valeur | Cout|
+|--------------------------------------|--------------------------------------------------------------------------------------------------------------|-----------------------------|--------|-----|
+| <li>Increase semantic coherence</li> | Permet une meilleure séparation<br/> des responsabilités, rend le code<br/>plus facile à lire et comprendre. | Peut augmenter le couplage. |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Increase semantic coherence parce que c'est la seule.
 
 ### ADD-[Réduire le couplage](#rdtq-réduire-le-couplage)
 
 <div class="concept modifiabilite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design                         | Pour                                                                                               |  Contre                                                                                  | Valeur | Cout|
+|-------------------------------------------|----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|--------|-----|
+| <li>Encapsulation</li>                    | Permet la modification de modules<br/>sans propager les changements dans <br/>d'autres modules.    | Limite la flexibilités des interactions<br/>venant de l'extérieur du module.             |M|M|
+| <li>Intermédiaire</li>                    | Brise une mauvaise dépendance <br/>entre deux modules.                                             | Implémentation de plus pour faire la médiation.                                          |M|M|
+| <li>Restriction des dépendances</li>      | Empêche l'utilisation de modules hors<br/>de la portée du module concerné.                         | Nécessite une bonne structure des modules<br/>pour ne pas empêcher une bonne dépendance. |M|M|
+| <li>Refactorisation</li>                  | Réduit la répétition de code.                                                                      | Peut rendre le code difficile à lire.                                                    |M|M|
+| <li>Abstraction des services communs</li> | Réduit la répétition de code. Nécessite la <br/>modification à un endroit à la place de plusieurs. | Peut rendre le code difficile à lire.                                                                               |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
@@ -834,11 +834,9 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept modifiabilite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design      | Pour | Contre| Valeur | Cout|
+|------------------------|------|-------|--------|-----|
+| <li>Defer binding</li> |avantages| désavantages|M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
