@@ -701,11 +701,11 @@ tactiques et identifier clairement la raison de votre choix.
 
 ## ADD-[Disponibilité](#rdaq-disponibilité)
 
-|Identifiant| Description                                                                                                                                                                                                                                                                                        |
-  |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
-|[CU01-D1](#cu01-d1-disponibilité)|                                                                                                                                                                                                                                                                                                    |
-|[CU02-D1](#cu02-d1-disponibilité)|                                                                                                                                                                                                                                                                                                    |
-|[CU03-D1](#cu03-d1-disponibilité) | Le micro-service Health Monitor est responsable de détecter la disponibilité <br/> des autres entités du système. (Je me rend compte que ce que j'ai mis ici sera<br/>seulement applicable à l'autre micro-service que nous implémenterons, le monitoring<br/>ne peut pas se surveiller lui-même.) | 
+|Identifiant| Description                                                                              |
+  |------------------------------------------------------------------------------------------|------------|
+|[CU01-D1](#cu01-d1-disponibilité)|                                                                                          |
+|[CU02-D1](#cu02-d1-disponibilité)|                                                                                          |
+|[CU03-D1](#cu03-d1-disponibilité) | Pour le service de Monitoring, nous implémenterons une tactique de Removal from service. | 
 |[CU04-D1](#cu04-d1-disponibilité) |
 |[CU05-D1](#cu05-d1-disponibilité) |
 |[CU06-D1](#cu06-d1-disponibilité) |
@@ -767,14 +767,18 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept disponibilite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design                | Pour                                                                                                                                                                                        |  Contre                                                                                                                                                                                                                                                                   | Valeur | Cout|
+|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|-----|
+| <li>Removal from service</li>    | Simple à implémenter, il faut juste bien<br/>détecter les évènements qui pourraient causer <br/>un défaut parce que sinon on empêche<br/>l'utilisation de notre service à nos utilisateurs. | Même si pour cette tactique l'objectif est<br/>de prévenir les défauts en mettant <br/>volontairement des composants de notre<br/>système out-of-service brièvement<br/>nous empêchons quand même pendant <br/>quelques secondes l'utilisateur d'utiliser<br/>le service. |M|M|
+| <li>Transactions</li>            | Le concept ACID est une bonne règle à suivre<br/>pour avoir un service dont les données sont<br/>toujours cohérentes et que celles-ci ne causent <br/>pas de problèmes de disponibilité.    | S'assurer d'avoir des échanges ACID entre<br/>nos systèmes peut être complexe à <br/>implémenter par exemple, avoir un système de<br/>rollback lorsqu'un échange cause une erreur <br/>à la fin de son éxécution est long à implémenter.                                  |M|M|
+| <li>Predictive model</li>        | avantages                                                                                                                                                                                   | désavantages                                                                                                                                                                                                                                                              |M|M|
+| <li>Exception prevention</li>    | avantages                                                                                                                                                                                   | désavantages                                                                                                                                                                                                                                                              |M|M|
+| <li>Increase competence set</li> | avantages                                                                                                                                                                                   | désavantages                                                                                                                                                                                                                                                              |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Nous avons choisis la tactique Removal from service puisqu'elle est quand même simple à implémenter.
+<br/>Notre service étant uniquement utilisable par des requêtes GET, il sera facile de contrôler les appels et de réagir en conséquence.
 
 ## ADD-[Modifiabilité](#rdaq-modifiabilité)
 
@@ -864,16 +868,22 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept performance">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design                     | Pour                                                                                                                                                          |  Contre                                                                                                                                                                          | Valeur | Cout|
+|---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|-----|
+| <li>Manage sampling rate</li>         | avantages                                                                                                                                                     | désavantages                                                                                                                                                                     |M|M|
+| <li>Limit event response</li>         | avantages                                                                                                                                                     | désavantages                                                                                                                                                                     |M|M|
+| <li>Prioritize events</li>            | avantages                                                                                                                                                     | désavantages                                                                                                                                                                     |M|M|
+| <li>Reduce overhead</li>              | avantages                                                                                                                                                     | désavantages                                                                                                                                                                     |M|M|
+| <li>Bound execution times</li>        | Utilie pour limiter le temps que peut prendre une<br/>requête à être processée. Par le fait même, <br/>empêche d'avoir des problèmes de boucles<br/>infinies. | Difficile de déterminer quel sera le temps limite.<br/> Cela peut aussi cause des résultats moins <br/>précis comme par exemple, lorsque<br/>énomément de données sont traitées. |M|M|
+| <li>Increase resource efficiency</li> | avantages                                                                                                                                                     | désavantages                                                                                                                                                                     |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Nous avons choisis la tactique Bound execution times pour limiter le temps qu'une requête peut prendre dans notre système.
+<br/>Puisque c'est un micro-service qui pingera les autres entités du système, il se peut qu'un système soit out-of-service et par le fait
+<br/>même ralentisse l'éxécution de la requête à cause de Timeout.
 
-ADD-Gérer les ressources
+### ADD-Gérer les ressources
 <div class="concept performance">
 
 |Concept de design| Pour | Contre| Valeur | Cout|
@@ -891,14 +901,17 @@ ADD-Gérer les ressources
 
 <div class="concept securite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design                 | Pour                                                                                                                                                                                          |  Contre                                                                                          | Valeur | Cout|
+|-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|--------|-----|
+| <li>Detect intrusion</li>         | avantages                                                                                                                                                                                     | désavantages                                                                                     |M|M|
+| <li>Detect service denial</li>    | Protège d'une attaque DDoS qui est sûrement<br/>l'une des types d'attaque les plus facile à<br/>exercer. Il suffit de surcharger un serveur<br/>d'un nombre de requêtes impossible à traiter. | Ne protège pas des attaques plus sournoises <br/>qui peuvent soutirer de l'information sensible. |M|M|
+| <li>Verify message integrity</li> | avantages                                                                                                                                                                                     | désavantages                                                                                     |M|M|
+| <li>Detect message delay</li>     | avantages                                                                                                                                                                                     | désavantages                                                                                     |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Puisque notre micro-service de détiendra pas d'informations sur ses utilisateurs et qu'il ne possédera pas d'informations sensibles,
+<br/>nous avons choisis de prendre la tactique Detect service denial. De cette façon, notre service ne sera pas surcharger et pourra rester online.
 
 ### ADD-[Résister aux attaques](#rdtq-résister-aux-attaques)
 
@@ -1017,14 +1030,15 @@ ADD-Gérer les ressources
 
 <div class="concept usabilite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design              | Pour                                                                                                           |  Contre                                                                                                                         | Valeur | Cout|
+|--------------------------------|----------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|--------|-----|
+| <li>Maintain task model</li>   | avantages                                                                                                      | désavantages                                                                                                                    |M|M|
+| <li>Maintain user model</li>   | avantages                                                                                                      | désavantages                                                                                                                    |M|M|
+| <li>Maintain system model</li> | Utile pour montrer à l'utilisateur que le système<br/>travaille même s'il ne donne pas de résultats immédiats. | L'état du système doit être représenté dans la vue<br/>et ce de façon évidente, peut prendre un peu de temps<br/>à implémenter. |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Nous avons choisis la tactique maintain system model, il est facile de bien représenter l'état des autres micro-services dans un dashboard. De plus, l'utilisateur aura facilement accès à ce tableau et pourra lui-même vérifier l'état des services. 
 
 ## ADD-[Interopérabilité](#rdaq-interopérabilité)
 
@@ -1045,14 +1059,13 @@ ADD-Gérer les ressources
 
 <div class="concept interoperabilite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design         | Pour                                                                                                                                                                                                                                                                        |  Contre                                                                                                                                                    | Valeur | Cout|
+|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|-----|
+| <li>Discover service</li> | Centralise l'information pour communiquer<br/> avec n'importe quelle service. Pas besoin <br/>de connaître personnellement le service qu'on<br/>veut rejoindre. De plus, lorsqu'un service change<br/> ses informations il suffit de demander au service <br/>de discovery. | Puisque c'est centralisé, il est très important<br/>que le service de Discovery soit fiable et ne <br/>soit pas susceptible de tomber en panne facilement. |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Discover service, c'est la seule...
 
 ### ADD-[Gérer les interfaces](#rdtq-gérer-les-ressources)
 
