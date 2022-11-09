@@ -328,8 +328,8 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 **Scénario**
 1. Un micro-service appelle notre Health Monitor afin de connaître la disponibilité d'un autre micro-service
 2. Le Health Monitor envoie un ping au micro-service demandé en attendant une réponse 
-3. Le Health Monitor renvoi une confirmation indiquant la disponibilité d'un micro-service
-
+3. Le Health Monitor renvoi une confirmation indiquant la disponibilité d'un micro-service à Discovery
+   
 
 **Évènement résultant:**
 - Le Health Monitor renvoie la disponibilité du micro-service demandé
@@ -340,25 +340,25 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 **Cas alternatifs:**
 2a. Le micro-service ne renvoi pas de réponse au Health Monitor 
   - 2a1 On répète l'étape 2 six fois de suite
-  - 2a2 Le Health Monitor renvoie un message d'erreur indiquant que le micro-service est indisponible  
-
+  - 2a2 Le Health Monitor renvoie un message d'erreur indiquant que le micro-service est indisponible à Discovery
+  
 
 **Attributs de qualité**
 
 #### CU03-D1 [**Disponibilité**](#add-disponibilité) 
-<span style="color:red">N/a</span>
+<span style="color:red">Le service doit être disponible 99.9% du temps.</span>
 #### CU03-M1 [**Modifiabilité**](#add-modifiabilité)
-<span style="color:red">Le module du Health Monitor doit posséder le moins de couplage possible afin d'être utilisé facilement</span>
+<span style="color:red">Il doit être possible d'effectuer une modification mineure sur le module du Health Monitor en dedans de 3 heures.</span>
 #### CU03-P1 [**Performance**](#add-performance) 
-<span style="color:red">Le module doit pouvoir recevoir une réponse du micro-service en moins de 100ms</span>
+<span style="color:red">Le module doit pouvoir recevoir une réponse du micro-service en moins de 100ms.</span>
 #### CU03-S1 [**Sécurité**](#add-sécurité)
-<span style="color:red">N/a</span>
+<span style="color:red">Le service doit être protéger des attaques DDOS.</span>
 #### CU03-T1 [**Testabilité**](#add-testabilité) 
-<span style="color:red">N/a</span>
+<span style="color:red">L'on doit pouvoir créer des tests pouvant couvrir 90% du module et ce, en 3 heures.</span>
 #### CU03-U1 [**Usabilité**](#add-usabilité)
-<span style="color:red">L'on doit pouvoir utiliser le module du Health Monitor de manière simple en utilisant le moins de paramètres possible</span>
+<span style="color:red">L'utilisateur doit pouvoir voir en tout temps que le système est actif et qu'il vérifie l'état des requêtes du système.</span>
 #### CU03-I1 [**Interopérabilité**](#add-interopérabilité)
-<span style="color:red">N/a</span>
+<span style="color:red">L'on doit pouvoir communiquer avec les autres modules de manière à ce que l'information pour contacter les autres services soit centraliser pour tous.</span>
 
 **Commentaires:**
 
