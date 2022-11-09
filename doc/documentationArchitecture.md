@@ -767,13 +767,13 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept disponibilite">
 
-| Concept de design                | Pour                                                                                                                                                                                        |  Contre                                                                                                                                                                                                                                                                   | Valeur | Cout|
-|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|-----|
-| <li>Removal from service</li>    | Simple à implémenter, il faut juste bien<br/>détecter les évènements qui pourraient causer <br/>un défaut parce que sinon on empêche<br/>l'utilisation de notre service à nos utilisateurs. | Même si pour cette tactique l'objectif est<br/>de prévenir les défauts en mettant <br/>volontairement des composants de notre<br/>système out-of-service brièvement<br/>nous empêchons quand même pendant <br/>quelques secondes l'utilisateur d'utiliser<br/>le service. |M|M|
-| <li>Transactions</li>            | Le concept ACID est une bonne règle à suivre<br/>pour avoir un service dont les données sont<br/>toujours cohérentes et que celles-ci ne causent <br/>pas de problèmes de disponibilité.    | S'assurer d'avoir des échanges ACID entre<br/>nos systèmes peut être complexe à <br/>implémenter par exemple, avoir un système de<br/>rollback lorsqu'un échange cause une erreur <br/>à la fin de son éxécution est long à implémenter.                                  |M|M|
-| <li>Predictive model</li>        | avantages                                                                                                                                                                                   | désavantages                                                                                                                                                                                                                                                              |M|M|
-| <li>Exception prevention</li>    | avantages                                                                                                                                                                                   | désavantages                                                                                                                                                                                                                                                              |M|M|
-| <li>Increase competence set</li> | avantages                                                                                                                                                                                   | désavantages                                                                                                                                                                                                                                                              |M|M|
+| Concept de design                | Pour                                                                                                                                                                                                     |  Contre                                                                                                                                                                                                                                                                   | Valeur | Cout|
+|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|-----|
+| <li>Removal from service</li>    | Simple à implémenter, il faut juste bien<br/>détecter les évènements qui pourraient causer <br/>un défaut parce que sinon on empêche<br/>l'utilisation de notre service à nos utilisateurs.              | Même si pour cette tactique l'objectif est<br/>de prévenir les défauts en mettant <br/>volontairement des composants de notre<br/>système out-of-service brièvement<br/>nous empêchons quand même pendant <br/>quelques secondes l'utilisateur d'utiliser<br/>le service. |M|M|
+| <li>Transactions</li>            | Le concept ACID est une bonne règle à suivre<br/>pour avoir un service dont les données sont<br/>toujours cohérentes et que celles-ci ne causent <br/>pas de problèmes de disponibilité.                 | S'assurer d'avoir des échanges ACID entre<br/>nos systèmes peut être complexe à <br/>implémenter par exemple, avoir un système de<br/>rollback lorsqu'un échange cause une erreur <br/>à la fin de son éxécution est long à implémenter.                                  |M|M|
+| <li>Predictive model</li>        | Permet de réagir correctement à plusieurs <br/>éventualités qui peuvent causer un défaut.                                                                                                                | Difficile de définir et construire un modèle<br/>de prédiction, sur quelles variables <br/>doit on nous baser?                                                                                                                                                            |M|M|
+| <li>Exception prevention</li>    | Permet de prévenir les exceptions de systèmes.<br/> Évite les fuites de mémoire.                                                                                                                         | Difficile à implémenter.                                                                                                                                                                                                                                                  |M|M|
+| <li>Increase competence set</li> | Donne aux programmes les outils pour gérer les<br/> états en dehors de son ensemble de compétences.<br/> Va lancer exception pour avertir les autres <br/>composants du système sans tout faire planter. | Difficile de prévoir tous les types <br/>d'exceptions.                                                                                                                                                                                                                    |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
@@ -782,18 +782,18 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 ## ADD-[Modifiabilité](#rdaq-modifiabilité)
 
-|Identifiant|Description|
-  |-----------|------------|
-|[CU01-M1](#cu01-m1-modifiabilité) | |
-|[CU02-M1](#cu02-m1-modifiabilité) | |
-|[CU03-M1](#cu03-m1-modifiabilité) | |
-|[CU04-M1](#cu04-m1-modifiabilité) | |
-|[CU05-M1](#cu05-m1-modifiabilité) | |
-|[CU06-M1](#cu06-m1-modifiabilité) | |
-|[CU07-M1](#cu07-m1-modifiabilité) | |
-|[CU08-M1](#cu08-m1-modifiabilité) | |
-|[CU09-M1](#cu09-m1-modifiabilité) | |
-|[CU10-M1](#cu10-m1-modifiabilité) | |
+|Identifiant| Description                                                         |
+  |---------------------------------------------------------------------|------------|
+|[CU01-M1](#cu01-m1-modifiabilité) |                                                                     |
+|[CU02-M1](#cu02-m1-modifiabilité) |                                                                     |
+|[CU03-M1](#cu03-m1-modifiabilité) | Pour le monitoring, nous avons choisi la tactique du defer binding. |
+|[CU04-M1](#cu04-m1-modifiabilité) |                                                                     |
+|[CU05-M1](#cu05-m1-modifiabilité) |                                                                     |
+|[CU06-M1](#cu06-m1-modifiabilité) |                                                                     |
+|[CU07-M1](#cu07-m1-modifiabilité) |                                                                     |
+|[CU08-M1](#cu08-m1-modifiabilité) |                                                                     |
+|[CU09-M1](#cu09-m1-modifiabilité) |                                                                     |
+|[CU10-M1](#cu10-m1-modifiabilité) |                                                                     |
 
 ### ADD-[Réduire la taille des modules](#rdtq-réduire-la-taille-des-modules)
 
@@ -855,7 +855,7 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
   |-----------|------------|
 |[CU01-P1](#cu01-p1-performance) |
 |[CU02-P1](#cu02-p1-performance) |
-|[CU03-P1](#cu03-p1-performance) |
+|[CU03-P1](#cu03-p1-performance) | Pour le monitoring, nous avons choisi la tactique de 
 |[CU04-P1](#cu04-p1-performance) |
 |[CU05-P1](#cu05-p1-performance) |
 |[CU06-P1](#cu06-p1-performance) |
@@ -868,14 +868,14 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept performance">
 
-| Concept de design                     | Pour                                                                                                                                                          |  Contre                                                                                                                                                                          | Valeur | Cout|
-|---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|-----|
-| <li>Manage sampling rate</li>         | avantages                                                                                                                                                     | désavantages                                                                                                                                                                     |M|M|
-| <li>Limit event response</li>         | avantages                                                                                                                                                     | désavantages                                                                                                                                                                     |M|M|
-| <li>Prioritize events</li>            | avantages                                                                                                                                                     | désavantages                                                                                                                                                                     |M|M|
-| <li>Reduce overhead</li>              | avantages                                                                                                                                                     | désavantages                                                                                                                                                                     |M|M|
-| <li>Bound execution times</li>        | Utilie pour limiter le temps que peut prendre une<br/>requête à être processée. Par le fait même, <br/>empêche d'avoir des problèmes de boucles<br/>infinies. | Difficile de déterminer quel sera le temps limite.<br/> Cela peut aussi cause des résultats moins <br/>précis comme par exemple, lorsque<br/>énomément de données sont traitées. |M|M|
-| <li>Increase resource efficiency</li> | avantages                                                                                                                                                     | désavantages                                                                                                                                                                     |M|M|
+| Concept de design                     | Pour                                                                                                                                                                     |  Contre                                                                                                                                                                          | Valeur | Cout|
+|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|-----|
+| <li>Manage sampling rate</li>         | Utile pour traiter un très grand nombre de données, <br/>lorsque ceux-ci peuvent être ignorées pour avoir<br/>une meilleure performance.                                 | Mauvais si la fidélité des données est un aspect<br/>très important.                                                                                                             |M|M|
+| <li>Limit event response</li>         | Utile pour traiter beaucoup de données sur <br/>un grand lapse de temps, les données sont <br/>dans une file d'attente et seront traitées lorsque<br/>ce sera leur tour. | Peut prendre du temps à traiter toutes <br/>les données, certaines requêtes importantes<br/>peuvent être bloquées longtemps.                                                     |M|M|
+| <li>Prioritize events</li>            | Utile pour traiter beaucoup de données et garder<br/>une certaine performance. Priorise les requêtes<br/>jugées plus importantes de la file en premier.                  | Il faut définir sous quelles conditions quels<br/>évènements sont plus importants.                                                                                               |M|M|
+| <li>Reduce overhead</li>              | Meilleure performance parce qu'on enlève l'utilisation<br/>d'intermédiaires.                                                                                             | Perte de cohésion, traitement centralisé, moins<br/>extensible.                                                                                                                  |M|M|
+| <li>Bound execution times</li>        | Utilie pour limiter le temps que peut prendre une<br/>requête à être processée. Par le fait même, <br/>empêche d'avoir des problèmes de boucles<br/>infinies.            | Difficile de déterminer quel sera le temps limite.<br/> Cela peut aussi cause des résultats moins <br/>précis comme par exemple, lorsque<br/>énomément de données sont traitées. |M|M|
+| <li>Increase resource efficiency</li> | Meilleure performance parce que <br/>algorithmes mieux concus.                                                                                                                | Écrire des algorithmes optimales est difficile.                                                                                                                                  |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
@@ -884,18 +884,37 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 <br/>même ralentisse l'éxécution de la requête à cause de Timeout.
 
 ### ADD-Gérer les ressources
+
 <div class="concept performance">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design                                 | Pour                                                                                                                                        |  Contre                                                                                                    | Valeur | Cout|
+|---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|--------|-----|
+| <li>Increase resources</li>                       | Meilleure performance parce que<br/>plus de ressources.                                                                                     | Coûte cher.                                                                                                |M|M|
+| <li>Introduce concurrency</li>                    | Meilleure performance parce que<br/>les processus qui traitent la requête <br/>fonctionnent en parallèle.                                   | Difficile à implémenter.                                                                                   |M|M|
+| <li>Maintain multiple copies of computations</li> | Meilleure performance parce que <br/>les requêtes peuvent être traitées plusieurs <br/>à la fois. Réduit les bloquages sur le même serveur. | Il faut implémenter une logique pour<br/>dispatcher les requêtes.                                          |M|M|
+| <li>Maintain multiple copies of data</li>         | Meilleure performance parce que <br/>les données sont storées sur plusieurs serveurs,<br/> utilisation de caches pour réduire bloquages.    | Équipements coûtent cher.                                                                                  |M|M|
+| <li>Bound queue sizes</li>                        | Limite le nombre de requêtes qui peuvent <br/>s'accumuler dans la file <br/>alors assure une performance.                                   | Il faut définir ce qui arrive lorsque la file <br/>déborde, on fait quoi avec les <br/>nouvelles requêtes? |M|M|
+| <li>Schedule resources</li>                       | Réduit la contention sur les ressources, le réseau, <br/>les processus.                                                                     | Il faut définir quoi faire lorsque lorsqu'il<br/> y a contention sur une ressource.                        |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Nous avons choisis la tactique Maintain multiple copies of computations puisqu'il est quand même facile d'avoir plusieurs
+<br/>container dans portainer.
 
 ## ADD-[Sécurité](#rdaq-sécurité)
+
+| Identifiant                     | Description                                                        |
+|---------------------------------|--------------------------------------------------------------------|
+| [CU01-S1](#cu01-s1-securite) ||
+| [CU02-S1](#cu02-s1-securite) ||
+| [CU03-S1](#cu03-s1-securite) | Pour le monitoring, on a choisi la tactique detect service denial. |
+| [CU04-S1](#cu04-s1-securite) ||
+| [CU05-S1](#cu05-s1-securite) ||
+| [CU06-S1](#cu06-s1-securite) ||
+| [CU07-S1](#cu07-s1-securite) ||
+| [CU08-S1](#cu08-s1-securite) ||
+| [CU09-S1](#cu09-s1-securite) ||
+| [CU10-S1](#cu10-s1-securite) ||
 
 ### ADD-[Détecter les attaques](#rdtq-détecter-les-attaques)
 
@@ -903,10 +922,10 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 | Concept de design                 | Pour                                                                                                                                                                                          |  Contre                                                                                          | Valeur | Cout|
 |-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|--------|-----|
-| <li>Detect intrusion</li>         | avantages                                                                                                                                                                                     | désavantages                                                                                     |M|M|
+| <li>Detect intrusion</li>         | Permet de se protéger des types d'intrusion commun, <br/>puisqu'on utilise une base données contenant les<br/>signatures du traffic réseau.                                                   | Très difficile à implémenter, doit connaître a priori<br/>les types d'intrus.                    |M|M|
 | <li>Detect service denial</li>    | Protège d'une attaque DDoS qui est sûrement<br/>l'une des types d'attaque les plus facile à<br/>exercer. Il suffit de surcharger un serveur<br/>d'un nombre de requêtes impossible à traiter. | Ne protège pas des attaques plus sournoises <br/>qui peuvent soutirer de l'information sensible. |M|M|
-| <li>Verify message integrity</li> | avantages                                                                                                                                                                                     | désavantages                                                                                     |M|M|
-| <li>Detect message delay</li>     | avantages                                                                                                                                                                                     | désavantages                                                                                     |M|M|
+| <li>Verify message integrity</li> | S'assure que le message n'a pas été modifié en<br/>cours de route par un parti tiers qui s'en sert<br/>pour infiltrer le système.                                                             | Le système doit maintenir de l'information redondante.                                           |M|M|
+| <li>Detect message delay</li>     | S'assure que le message n'a pas été modifié en<br/>cours de route en mesurant le temps que prend<br/>le message pour se rendre à destination.                                                 | Le message peut être en retard pour plusieurs raisons <br/>et non juste des attaques.            |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
@@ -954,18 +973,18 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 ## ADD-[Testabilité](#rdaq-testabilité)
 
-|Identifiant|Description|
-  |-----------|------------|
-|[CU01-T1](#cu01-t1-testabilité)|  | 
-|[CU02-T1](#cu02-t1-testabilité)|  | 
-|[CU03-T1](#cu03-t1-testabilité)|  | 
-|[CU04-T1](#cu04-t1-testabilité)|  | 
-|[CU05-T1](#cu05-t1-testabilité)|  | 
-|[CU06-T1](#cu06-t1-testabilité)|  | 
-|[CU07-T1](#cu07-t1-testabilité)|  | 
-|[CU08-T1](#cu08-t1-testabilité)|  | 
-|[CU09-T1](#cu09-t1-testabilité)|  | 
-|[CU10-T1](#cu10-t1-testabilité)|  | 
+|Identifiant| Description                                                                     |
+  |---------------------------------------------------------------------------------|------------|
+|[CU01-T1](#cu01-t1-testabilité)|                                                                                 | 
+|[CU02-T1](#cu02-t1-testabilité)|                                                                                 | 
+|[CU03-T1](#cu03-t1-testabilité)| Pour le monitoring, nous avons choisi de limiter la complexité de la structure. | 
+|[CU04-T1](#cu04-t1-testabilité)|                                                                                 | 
+|[CU05-T1](#cu05-t1-testabilité)|                                                                                 | 
+|[CU06-T1](#cu06-t1-testabilité)|                                                                                 | 
+|[CU07-T1](#cu07-t1-testabilité)|                                                                                 | 
+|[CU08-T1](#cu08-t1-testabilité)|                                                                                 | 
+|[CU09-T1](#cu09-t1-testabilité)|                                                                                 | 
+|[CU10-T1](#cu10-t1-testabilité)|                                                                                 | 
 
 ### ADD-[Controle and observe l'état du système](#rdtq-contrôle-et-observe-létat-du-système)
 
@@ -988,10 +1007,10 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept testabilite">
 
-| Concept de design                              | Pour                                                                              |  Contre                                                                                                                                        | Valeur | Cout|
-|------------------------------------------------|-----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|--------|-----|
-| <li>Limiter la complexité de la structure</li> | En réduisant la complexité du système, celui-ci<br/> devient plus facilement testable. | Si on limite la complexité, on limite <br/>d'autres aspects importants de la conception<br/>logiciel comme l'extensibilité et l'encapsulation. |M|M|
-| <li>Limiter le non-déterminisme</li>           | avantages                                                                         | désavantages                                                                                                                                   |M|M|
+| Concept de design                              | Pour                                                                                                                                   |  Contre                                                                                                                                        | Valeur | Cout|
+|------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|--------|-----|
+| <li>Limiter la complexité de la structure</li> | En réduisant la complexité du système, celui-ci<br/> devient plus facilement testable.                                                 | Si on limite la complexité, on limite <br/>d'autres aspects importants de la conception<br/>logiciel comme l'extensibilité et l'encapsulation. |M|M|
+| <li>Limiter le non-déterminisme</li>           | Si on limite la complexité comportementale du<br/>système, comme le parallélisme non contraint, <br/>celui-ci devient plus facile à tester. | Difficile à cibler les comportements non déterministes<br/>et à les remplacer.                                                                 |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
@@ -1004,7 +1023,7 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
   |-----------|------------|
 |[CU01-U1](#cu01-u1-usabilité) |
 |[CU02-U1](#cu02-u1-usabilité) |
-|[CU03-U1](#cu03-u1-usabilité) |
+|[CU03-U1](#cu03-u1-usabilité) | Pour le monitoring, la tactique maintain system model a été choisi.
 |[CU04-U1](#cu04-u1-usabilité) |
 |[CU05-U1](#cu05-u1-usabilité) |
 |[CU06-U1](#cu06-u1-usabilité) |
@@ -1030,11 +1049,11 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept usabilite">
 
-| Concept de design              | Pour                                                                                                           |  Contre                                                                                                                         | Valeur | Cout|
-|--------------------------------|----------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|--------|-----|
-| <li>Maintain task model</li>   | avantages                                                                                                      | désavantages                                                                                                                    |M|M|
-| <li>Maintain user model</li>   | avantages                                                                                                      | désavantages                                                                                                                    |M|M|
-| <li>Maintain system model</li> | Utile pour montrer à l'utilisateur que le système<br/>travaille même s'il ne donne pas de résultats immédiats. | L'état du système doit être représenté dans la vue<br/>et ce de façon évidente, peut prendre un peu de temps<br/>à implémenter. |M|M|
+| Concept de design              | Pour                                                                                                                                                                                               |  Contre                                                                                                                             | Valeur | Cout|
+|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|--------|-----|
+| <li>Maintain task model</li>   | Utile pour faciliter les tâches que devra réaliiser l'utilisateur,<br/>permet au système d'avoir une certaine connaissance <br/>du contexte des tâches et de les optimiser.                        | C'est un travail minutieux à faire pour s'assurer que<br/>chaque amélioration fonctionne bien, facile d'en oublier.                 |M|M|
+| <li>Maintain user model</li>   | Utile pour connaître les habitudes de certains types <br/>d'utilisateurs et permet de s'adapter à ces utilisateurs<br/>en changeant certaines fonctionnalités ou en permettant<br/>de les changer. | Il peut être difficile de garder un modèle de l'utilisateur<br/>dans un système et de permettre une flexibilité selon <br/>le type. |M|M|
+| <li>Maintain system model</li> | Utile pour montrer à l'utilisateur que le système<br/>travaille même s'il ne donne pas de résultats immédiats.                                                                                     | L'état du système doit être représenté dans la vue<br/>et ce de façon évidente, peut prendre un peu de temps<br/>à implémenter.     |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
@@ -1042,18 +1061,18 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 ## ADD-[Interopérabilité](#rdaq-interopérabilité)
 
-|Identifiant|Description|
-  |-----------|------------|
-|[CU01-I1](#cu01-i1-interopérabilité)| | 
-|[CU02-I1](#cu01-i1-interopérabilité)| |
-|[CU03-I1](#cu01-i1-interopérabilité)| |
-|[CU04-I1](#cu01-i1-interopérabilité)| |
-|[CU05-I1](#cu01-i1-interopérabilité)| |
-|[CU06-I1](#cu01-i1-interopérabilité)| |
-|[CU07-I1](#cu01-i1-interopérabilité)| |
-|[CU08-I1](#cu01-i1-interopérabilité)| |
-|[CU09-I1](#cu01-i1-interopérabilité)| |
-|[CU10-I1](#cu01-i1-interopérabilité)| |
+|Identifiant| Description                                                         |
+  |---------------------------------------------------------------------|------------|
+|[CU01-I1](#cu01-i1-interopérabilité)|                                                                     | 
+|[CU02-I1](#cu01-i1-interopérabilité)|                                                                     |
+|[CU03-I1](#cu01-i1-interopérabilité)| Pour le monitoring, nous avons choisi la tactique discover service. |
+|[CU04-I1](#cu01-i1-interopérabilité)|                                                                     |
+|[CU05-I1](#cu01-i1-interopérabilité)|                                                                     |
+|[CU06-I1](#cu01-i1-interopérabilité)|                                                                     |
+|[CU07-I1](#cu01-i1-interopérabilité)|                                                                     |
+|[CU08-I1](#cu01-i1-interopérabilité)|                                                                     |
+|[CU09-I1](#cu01-i1-interopérabilité)|                                                                     |
+|[CU10-I1](#cu01-i1-interopérabilité)|                                                                     |
 
 ### ADD-[Localiser](#rdtq-localiser)
 
