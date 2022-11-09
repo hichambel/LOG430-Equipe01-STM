@@ -314,33 +314,34 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 
 **Acteurs externe:** 
 - Chargé de laboratoire: Veut pouvoir faire la correction de chaque cas d'utilisation.
-- Un micro-service externe au notre 
+- Un micro-service externe au notre. 
   
 **Précondition:** 
-- Le micro-service du Health Monitor est opérationnel
+- Le micro-service du Health Monitor est opérationnel.
+- Le micro-service Discovery est opérationnel.
 
 **Évènement déclencheur:** 
 - La documentation pour cet attribut est terminé et l'équipe demande au chargé de laboratoire de corriger celle-ci. 
-- L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci
+- L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci.
 - L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
 
 
 **Scénario**
-1. Un micro-service appelle notre Health Monitor afin de connaître la disponibilité d'un autre micro-service
-2. Le Health Monitor envoie un ping au micro-service demandé en attendant une réponse 
-3. Le Health Monitor renvoi une confirmation indiquant la disponibilité d'un micro-service à Discovery
+1. Un micro-service appelle notre Health Monitor afin de connaître la disponibilité d'un autre micro-service.
+2. Le Health Monitor envoie un ping au micro-service demandé en attendant une réponse. 
+3. Le Health Monitor renvoi une confirmation indiquant la disponibilité d'un micro-service à Discovery.
    
 
 **Évènement résultant:**
-- Le Health Monitor renvoie la disponibilité du micro-service demandé
+- Le Health Monitor renvoie la disponibilité du micro-service demandé.
 
 **Postcondition:** 
-- Le Health Monitor est en attente d'un nouvel appel d'un micro-service
+- Le Health Monitor est en attente d'un nouvel appel d'un micro-service.
 
 **Cas alternatifs:**
-2a. Le micro-service ne renvoi pas de réponse au Health Monitor 
-  - 2a1 On répète l'étape 2 six fois de suite
-  - 2a2 Le Health Monitor renvoie un message d'erreur indiquant que le micro-service est indisponible à Discovery
+2a. Le micro-service ne renvoi pas de réponse au Health Monitor. 
+  - 2a1 On répète l'étape 2 six fois de suite.
+  - 2a2 Le Health Monitor renvoie un message d'erreur indiquant que le micro-service est indisponible à Discovery.
   
 
 **Attributs de qualité**
