@@ -329,7 +329,7 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 **Scénario**
 1. Un micro-service appelle notre Health Monitor afin de connaître la disponibilité d'un autre micro-service.
 2. Le Health Monitor envoie un ping au micro-service demandé en attendant une réponse. 
-3. Le Health Monitor renvoi une confirmation indiquant la disponibilité d'un micro-service à Discovery.
+3. Le Health Monitor renvoi une confirmation indiquant la disponibilité d'un micro-service.
    
 
 **Évènement résultant:**
@@ -340,7 +340,7 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 
 **Cas alternatifs:**
 2a. Le micro-service ne renvoi pas de réponse au Health Monitor. 
-  - 2a1 On répète l'étape 2 six fois de suite.
+  - 2a1 On répète l'étape 2 cinq fois de suite.
   - 2a2 Le Health Monitor renvoie un message d'erreur indiquant que le micro-service est indisponible à Discovery.
   
 
