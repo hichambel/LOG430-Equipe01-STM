@@ -22,22 +22,16 @@ export class SanteServiceWebItemComponent implements OnInit {
   recupererStatutServiceWeb(id: string) {
     this.enChargement = true;
 
-    this.santeServiceWebService.recupererStatutServiceWebMOCK(id)
+    this.santeServiceWebService.recupererStatutServiceWeb(id)
     .subscribe({
-      next: (serviceWeb: ServiceWeb) => {
-        setTimeout(() => {
-          this.enChargement = false;
-        }, 500);
+      next: () => {
+        this.enChargement = false;
       },
       error: () => {
-        setTimeout(() => {
-          this.enChargement = false;
-        }, 500);
+        this.enChargement = false;
       },
       complete: () => {
-        setTimeout(() => {
         this.enChargement = false;
-        }, 500);
       } 
     });
   }

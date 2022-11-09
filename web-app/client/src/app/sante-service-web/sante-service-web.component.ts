@@ -26,11 +26,7 @@ export class SanteServiceWebComponent implements OnInit {
   }
 
   recupererServicesWeb() {
-    this.santeServiceWebService.recupererServiceWebMOCK();
-  }
-
-  recupererStatutServiceWeb(id: string) {
-    this.santeServiceWebService.recupererStatutServiceWeb(id);
+    this.santeServiceWebService.recupererServiceWeb();
   }
 
 }

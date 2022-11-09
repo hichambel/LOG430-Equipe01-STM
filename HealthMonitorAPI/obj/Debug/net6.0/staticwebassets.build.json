@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0VhDp6EEP6T+Or+elZVWYgoisJasonIKYYMBAI1o2WQ=",
+  "Source": "HealthMonitorAPI",
+  "BasePath": "_content/HealthMonitorAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

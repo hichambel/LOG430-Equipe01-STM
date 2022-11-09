@@ -4,8 +4,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { tap } from 'rxjs';
 import { ServiceWeb } from './serviceweb.model';
 
-const API_ENDPOINT_HEALTH_MONITOR = '';  // TODO: ajouter l'url de notre api.
-const API_ENDPOINT_DISCOVERY = '';  // TODO: ajouter l'url de Discovery API.
+const API_ENDPOINT_HEALTH_MONITOR = 'http://portainer.10.194.33.151.nip.io:4000/api/healthmonitor';  // TODO: ajouter l'url de notre api.
+const API_ENDPOINT_DISCOVERY = 'http://portainer.10.194.33.151.nip.io:4000/api/healthmonitor';  // TODO: ajouter l'url de Discovery API.
 
 @Injectable({
   providedIn: 'root'
@@ -61,16 +61,22 @@ export class SanteServiceWebService {
    * @param id L'identifiant du service web.
    */
   recupererStatutServiceWeb(id: string) {
-    this.httpClient.get<ServiceWeb>(API_ENDPOINT_HEALTH_MONITOR + '/' + id)
-    .subscribe({
-      next: (serviceWeb: ServiceWeb) => {
-        let index = this.listeServicesWeb.findIndex(unServiceWeb => unServiceWeb.id = id);
-        this.listeServicesWeb[index].code = serviceWeb.code;
+    return this.httpClient.get<ServiceWeb>(API_ENDPOINT_HEALTH_MONITOR + '/' + id)
+      .pipe(tap(response => {
+        let index = this.listeServicesWeb.findIndex(unServiceWeb => unServiceWeb.id == id);
+        this.listeServicesWeb[index].code = response.code;
         this.serviceWebEmitter.emit(this.listeServicesWeb.slice());
-      },
-      error: (e) => this.snackbar.open('Erreur lors de l\'appel au Health Monitor API!'),
-      complete: () => {} 
-    });
+      })
+    );
+    // .subscribe({
+    //   next: (serviceWeb: ServiceWeb) => {
+    //     let index = this.listeServicesWeb.findIndex(unServiceWeb => unServiceWeb.id = id);
+    //     this.listeServicesWeb[index].code = serviceWeb.code;
+    //     this.serviceWebEmitter.emit(this.listeServicesWeb.slice());
+    //   },
+    //   error: (e) => this.snackbar.open('Erreur lors de l\'appel au Health Monitor API!'),
+    //   complete: () => {} 
+    // });
   }
 
   recupererStatutServiceWebMOCK(id: string) {
