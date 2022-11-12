@@ -3,12 +3,11 @@ version: '3.8'
 services:
     dev:
         container_name: health-monitor-api
-        image: health-monitor-api_image:1.0.0
         build:
             context: .
-            target: development
+            # target: development
             dockerfile: ./Dockerfile
-        command: npm run start
+        # command: npm run start
         ports:
             - 3000:3000
             - 9229:9229
@@ -16,7 +15,7 @@ services:
             - nesjs-network
         volumes:
             - Health-Monitor-Api_Volume:/usr/src/app
-            - /usr/app/node_modules
+            # - /usr/app/node_modules
         restart: unless-stopped
 
 volumes:

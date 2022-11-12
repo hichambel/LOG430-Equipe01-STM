@@ -1,9 +1,11 @@
-FROM node:12.19.0-alpine3.9 AS development
+FROM node:alpine
 
-WORKDIR /src
+WORKDIR /usr/src/app
+
+COPY package*.json ./
 
 RUN npm install
 
 COPY . .
 
-CMD ["node", "dist/main"]
+CMD [ "npm", "start" ]
