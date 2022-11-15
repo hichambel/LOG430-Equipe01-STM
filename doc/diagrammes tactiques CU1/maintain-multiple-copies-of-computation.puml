@@ -1,0 +1,30 @@
+@startuml
+actor Client as Client
+participant HealthMonitorAPI as Health
+participant Server1 as S1
+participant Server2 as S2
+
+Health -> S1: loadServerStatus()
+S1 --> Health: server status
+Health -> S2: loadServerStatus()
+S2 --> Health: server status
+
+alt S1 available
+    Client -> Health: request 1
+    Health -> S1: checkServerStatus()
+    S1 --> Health: available
+    Health -> S1: request 1
+    S1 --> Health: response 1
+    Health --> Client: response 1
+
+else S1 unavailable
+    Client -> Health: resquest 2
+    Health -> S1: checkServerStatus()
+    S1 --> Health: unavailable
+    Health -> S2: checkServerStatus()
+    S2 --> Health: available
+    Health -> S2: request 2
+    S2 --> Health: response 2
+    Health --> Client: response 2
+    end
+@enduml

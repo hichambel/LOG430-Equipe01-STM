@@ -1,0 +1,16 @@
+@startuml
+actor Client as Client
+participant HealthMonitorAPI as Health
+participant IpHandler as IP
+participant DOSHandler as DOS
+
+loop requestCount = 50
+    Client -> Health: request
+    Health -> IP: denyServiceCheck(senderIp:string)
+    IP -> IP: addRequestCount(senderIp:string, requestCount:int)
+end
+IP -> DOS: denyAccess(senderIp:string)
+DOS --> IP: deny message
+IP --> Health: deny message 
+Health --> Client: deny message
+@enduml

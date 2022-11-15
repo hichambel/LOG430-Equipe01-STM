@@ -1,0 +1,11 @@
+@startuml
+participant HealthMonitorAPI as Health
+participant DiscoveryAPI as Disc
+participant ExternalAPI as Ext
+
+Ext -> Disc: register()
+Disc -> Disc: addServiceToDiscovery(ipAdress:string)
+Disc -> Health: informNewService(ipAdress:string)
+Health -> Ext: ping
+Ext --> Health: echo
+@enduml
