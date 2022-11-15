@@ -833,8 +833,6 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
-<br/>Nous avons choisi la tactique de l'intermédiaire. Notre service de monitoring connaîtrera les informations
-<br/>des micro-services à surveiller seulement par l'intermédiaire du service de Discovery.
 
 ### ADD-[Defer binding](#rdtq-defer-binding)
 
@@ -855,7 +853,7 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
   |-----------|------------|
 |[CU01-P1](#cu01-p1-performance) |
 |[CU02-P1](#cu02-p1-performance) |
-|[CU03-P1](#cu03-p1-performance) | Pour le monitoring, nous avons choisi la tactique de 
+|[CU03-P1](#cu03-p1-performance) | Pour le monitoring, nous avons choisi la tactique Maintain multiple copies of computations
 |[CU04-P1](#cu04-p1-performance) |
 |[CU05-P1](#cu05-p1-performance) |
 |[CU06-P1](#cu06-p1-performance) |
@@ -1084,7 +1082,8 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
-<br/>Discover service, c'est la seule...
+<br/>Discover service, elle permet de centraliser les informations des micro-services dans une architecture.
+<br/>Pas besoin de connaître les nouveaux services dans un système, il suffit de communiquer avec le service de discovery.
 
 ### ADD-[Gérer les interfaces](#rdtq-gérer-les-ressources)
 
