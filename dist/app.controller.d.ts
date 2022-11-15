@@ -2,5 +2,6 @@ import { AppService } from './app.service';
 export declare class AppController {
     private readonly appService;
     constructor(appService: AppService);
-    getHello(): string;
+    getOneApiHealth(): Promise<any>;
+    getAllApisHealth(req: string): Promise<boolean>;
 }

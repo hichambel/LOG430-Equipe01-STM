@@ -12,8 +12,28 @@ async function bootstrap() {
   .addTag('Calls for other API health')
   .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('', app, document);
 
   await app.listen(3000);
 }
+
+// const microservice = app.connectMicroService({
+//   transport: Transport.RMQ,
+//   options: {
+//     urls: [{
+//       protocol: 'amqp',
+//       hostname: 'rabbitmq',
+//       port: 3000,
+//       username: configService.get('RABBITMQ_DEFAULT_USER') || 'guest',
+//       password: configService.get('RABBITMQ_DEFAULT_PASS') || 'guest',
+//       vhost: 'vhost',
+//     }],
+//     queue: configService.get('RMQ_SERVICE_DISCOVERY_QUEUE') || 'service_registry_queue',
+//     queueOptions: {
+//       durable: true,
+//     },
+//   }
+// }, { inheritAppConfig: true });
+
 bootstrap();
+
