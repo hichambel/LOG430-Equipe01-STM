@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param } from '@nestjs/common';
+import { Body, Controller, Get } from '@nestjs/common';
 import { ApiParam, ApiResponse } from '@nestjs/swagger';
 import { AppService } from './app.service';
 
@@ -29,6 +29,7 @@ export class AppController {
   // ){
   //   const channel = context.getChannelRef();
   //   const originalMessage = context.getMessage();
+  //   this.appService.getAllServices();
   //   console.log("Registered Service: ", data);
   // }
 }

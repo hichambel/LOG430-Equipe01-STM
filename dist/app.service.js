@@ -17,30 +17,24 @@ let AppService = class AppService {
     constructor(http) {
         this.http = http;
     }
-    getHello() {
-        return 'Health Monitor API (Équipe 01)';
-    }
     async getAllServices() {
         const headersRequest = {
             'X-API-KEY': '6leXd37uYyvEjVvC5j3KBeeadyM08Zal5bwSm9gKBJgyO6cqoWa1pacWpriaASzH',
         };
         const request = await this.http
             .get('http://10.194.33.155:3000/services-registry/allServices', { headers: headersRequest })
-            .pipe((0, rxjs_1.map)((res) => { return [res.data, res.status]; }))
+            .pipe((0, rxjs_1.map)((res) => { return res.data; }))
             .pipe((0, rxjs_1.catchError)(() => {
             throw new common_1.ForbiddenException('API not available');
         }));
         const services = await (0, rxjs_1.firstValueFrom)(request);
-        const resString = JSON.stringify(services[0]);
+        const resString = JSON.stringify(services);
         const resParsed = JSON.parse(resString);
-        this.looper(resParsed);
-        return services[0];
-    }
-    async looper(services) {
-        const interval = setInterval(() => this.pingServices(services), 3000);
-        return;
+        setInterval(() => this.pingServices(resParsed), 3000);
+        return services;
     }
     async pingService(req) {
+        console.log(req.name);
         const request = await this.http
             .get(req.url)
             .pipe((0, rxjs_1.map)((res) => { return res.status; }))
@@ -56,35 +50,39 @@ let AppService = class AppService {
             return false;
         }
     }
+    async updateDiscoveryApi(id, available) {
+        const headersRequest = {
+            'X-API-KEY': '6leXd37uYyvEjVvC5j3KBeeadyM08Zal5bwSm9gKBJgyO6cqoWa1pacWpriaASzH',
+        };
+        const bodyRequest = {
+            "serviceId": id,
+            "status": "UP"
+        };
+        if (available) {
+            bodyRequest.status = "UP";
+        }
+        else {
+            bodyRequest.status = "DOWN";
+        }
+        await this.http
+            .post('http://10.194.33.155:3000/services-registry/update-service-status', { headers: headersRequest, data: bodyRequest })
+            .pipe((0, rxjs_1.catchError)(() => {
+            throw new common_1.ForbiddenException('API not available');
+        }));
+    }
     async pingServices(allServices) {
         for (let index = 0; index < allServices.length; index++) {
-            let request;
+            let response;
             if (allServices[index].name != "MONITORING") {
-                request = await this.http
-                    .get(allServices[index].url)
-                    .pipe((0, rxjs_1.map)((res) => { return res.status; }))
-                    .pipe((0, rxjs_1.catchError)(() => {
-                    throw new common_1.ForbiddenException('API not available');
-                }));
+                response = this.pingService(allServices[index]);
+            }
+            if (!allServices[index].isAvailable && response) {
+                this.updateDiscoveryApi(allServices[index].id, true);
             }
             else {
-            }
-            if (!allServices[index].isAvailable && request == 200) {
-                const headersRequest = {
-                    'X-API-KEY': '6leXd37uYyvEjVvC5j3KBeeadyM08Zal5bwSm9gKBJgyO6cqoWa1pacWpriaASzH',
-                };
-                const bodyRequest = {
-                    "serviceId": allServices[index].id,
-                    "status": "UP"
-                };
-                const request = await this.http
-                    .get('http://10.194.33.155:3000/services-registry/update-service-status', { headers: headersRequest, data: bodyRequest })
-                    .pipe((0, rxjs_1.map)((res) => { return [res.data, res.status]; }))
-                    .pipe((0, rxjs_1.catchError)(() => {
-                    throw new common_1.ForbiddenException('API not available');
-                }));
-            }
-            else {
+                if (allServices[index].isAvailable) {
+                    this.updateDiscoveryApi(allServices[index].id, false);
+                }
             }
         }
         return;
