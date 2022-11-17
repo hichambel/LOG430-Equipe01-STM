@@ -1,4 +1,5 @@
 import { Body, Controller, Get } from '@nestjs/common';
+import { Ctx, Payload, RmqContext } from '@nestjs/microservices';
 import { ApiParam, ApiResponse } from '@nestjs/swagger';
 import { AppService } from './app.service';
 
@@ -23,13 +24,13 @@ export class AppController {
     return this.appService.pingService(req);
   }
 
-  // public async serviceRegisterHandler(
-  //   @Payload() data:any,
-  //   @Ctx() context: RmqContext
-  // ){
-  //   const channel = context.getChannelRef();
-  //   const originalMessage = context.getMessage();
-  //   this.appService.getAllServices();
-  //   console.log("Registered Service: ", data);
-  // }
+  public async serviceRegisterHandler(
+    @Payload() data:any,
+    @Ctx() context: RmqContext
+  ){
+    const channel = context.getChannelRef();
+    const originalMessage = context.getMessage();
+    this.appService.getAllServices();
+    console.log("Registered Service: ", data);
+  }
 }

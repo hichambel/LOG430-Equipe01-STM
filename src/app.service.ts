@@ -1,6 +1,6 @@
 import { ForbiddenException, Injectable } from '@nestjs/common';
 import { HttpService } from "@nestjs/axios";
-import { catchError, firstValueFrom, map, Observable } from 'rxjs';
+import { catchError, firstValueFrom, map } from 'rxjs';
 
 @Injectable()
 export class AppService {
@@ -26,7 +26,7 @@ export class AppService {
     const resString = JSON.stringify(services);
     const resParsed = JSON.parse(resString);
     setInterval(() => this.pingServices(resParsed), 3000);
-    return services;
+    return resParsed;
   }
 
   async pingService(req: any){

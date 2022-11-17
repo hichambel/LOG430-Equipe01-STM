@@ -31,7 +31,7 @@ let AppService = class AppService {
         const resString = JSON.stringify(services);
         const resParsed = JSON.parse(resString);
         setInterval(() => this.pingServices(resParsed), 3000);
-        return services;
+        return resParsed;
     }
     async pingService(req) {
         console.log(req.name);

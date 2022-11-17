@@ -1,9 +1,29 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { Transport } from '@nestjs/microservices';
+import { ConfigService } from '@nestjs/config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+
+  const microservice = app.connectMicroservice({
+    transport: Transport.RMQ,
+    options: {
+      urls: [{
+        protocol: 'amqp',
+        hostname: 'rabbitmq',
+        port: 3000,
+        username: configService.get('RABBITMQ_DEFAULT_USER') || 'guest',
+        password: configService.get('RABBITMQ_DEFAULT_PASS') || 'guest',
+        vhost: 'vhost',
+      }],
+      queue: configService.get('RMQ_SERVICE_DISCOVERY_QUEUE') || 'service_registry_queue',
+      queueOptions: {
+        durable: true,
+      },
+    }
+  }, { inheritAppConfig: true });
 
   const config = new DocumentBuilder()
   .setTitle('Health Monitor API')
@@ -17,23 +37,6 @@ async function bootstrap() {
   await app.listen(3000);
 }
 
-// const microservice = app.connectMicroService({
-//   transport: Transport.RMQ,
-//   options: {
-//     urls: [{
-//       protocol: 'amqp',
-//       hostname: 'rabbitmq',
-//       port: 3000,
-//       username: configService.get('RABBITMQ_DEFAULT_USER') || 'guest',
-//       password: configService.get('RABBITMQ_DEFAULT_PASS') || 'guest',
-//       vhost: 'vhost',
-//     }],
-//     queue: configService.get('RMQ_SERVICE_DISCOVERY_QUEUE') || 'service_registry_queue',
-//     queueOptions: {
-//       durable: true,
-//     },
-//   }
-// }, { inheritAppConfig: true });
 
 bootstrap();
 
