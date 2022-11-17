@@ -1,0 +1,12 @@
+@startuml
+participant HealthMonitorAPI as Health
+participant DiscoveryAPI as Disc
+participant ExternalAPI as Ext
+
+Health -> Disc: subscribe()
+Ext -> Disc: subscribe()
+Disc -> Disc: addServiceToDiscovery(ipAdress:string)
+Disc -> Health: publishServiceInformation(ipAdress:string)
+Health -> Ext: checkHealth(ipAdress:string)
+Ext --> Health: status
+@enduml
