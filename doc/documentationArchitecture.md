@@ -1181,7 +1181,9 @@ services en mode.
 
 <span style="color:red">Diagramme(s) de séquence démontrant la réalisation de ce cas d'utilisation</span>
 
-### [**RDCU-CU03**](#cu03)
+### [**RDCU-CU03** - Veux pouvoir vérifier la disponibilité d'un micro-service](#cu03---veux-pouvoir-verifier-la-disponibilite-un-micro-service)
+
+![RDCU-CU03](./rdcu-getOneApiHealth/rdcu-getOneApiHealth.png)
 
 <span style="color:red">Diagramme(s) de séquence démontrant la réalisation de ce cas d'utilisation</span>
 
