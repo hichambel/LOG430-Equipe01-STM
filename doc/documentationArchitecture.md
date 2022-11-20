@@ -811,11 +811,18 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept disponibilite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design               | Pour                                                                                                                                                                               |  Contre                                                                                                                                                                       | Valeur | Cout|
+|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|-----|
+| <li>Redondance active</li>      | Les noeuds redondants processent en parallèle<br/>les inputs ce qui fait que lorsqu'un défaut survient<br/>sur le module originale la transition se fait de façon<br/>instantanée. | Besoin de plus de ressources pour processer<br/>les inputs en double, Il faut aussi implémenter<br/>la façon que les noeuds redondants procèssent<br/>les informations aussi. |M|M|
+| <li>Redondance passive</li>     | Seulement certains noeuds sont redondants et<br/>reçoivent des mises à jour périodiques. La redondance<br/>passive est moins complexe et celle active et coûte<br/>moins cher.     | Assure moins la disponibilité que la redondance <br/>active.                                                                                                                  |M|M|
+| <li>Spare</li>                  | Les noeuds redondants sont activés seulement en cas<br/>de défauts, coûte encore moins cher.                                                                                       | Mauvaise performance de récupération.                                                                                                                                         |M|M|
+| <li>Exception handling</li>     | Permet de savoir la cause et l'endroit d'une panne.<br/>Permet de facilement corriger la source de l'erreur<br/>et réessayer.                                                      | Plus de codes à écrire.                                                                                                                                                       |M|M|
+| <li>Rollback</li>               | Permet de revenir rapidement à un environnement qui<br/>fonctionnait.                                                                                                              | Nécessite de sauvegarder les états des <br/>environnements antérieurs, il faut aussi<br/>les stocker à un endroit.                                                            |M|M|
+| <li>Software upgrade</li>       | Les correctifs pour les clases et les fonctions permettent<br/>de fixer des bugs alors que le ISSU permet d'offrir des<br/>nouvelles fonctionnalités.                              | Très difficile à implémenter.                                                                                                                                                 |M|M|
+| <li>Retry</li>                  | Assume la faute est transitoire et que le fait de réessayer<br/>fonctionnera. Très simple et utile pour les systèmes<br/>où les erreurs sont communes.                             | N'assure pas vraiment une disponibilité.                                                                                                                                      |M|M|
+| <li>Ignore faulty behavior</li> | Utile pour se protéger des attaques, les comportements<br/>à défaut le sont à cause d'un agent extérieur.                                                                          | N'assure pas une disponibilité pour les problèmes <br/>internes.                                                                                                              |M|M|
+| <li>Degradation</li>            | Permet de garder certaines fonctionnalités du système<br/>en cas de défaut.                                                                                                        | Certaines fonctionnalités ne sont plus disponibles,<br/>comment les réintroduire?                                                                                             |M|M|
+| <li>Reconfiguration</li>        | Permet de garder certaines fonctionnalités du système<br/>en cas de défaut.                                                                                                                                                                          | Comment déterminer les responsabilités à <br/>reconfigurer et réassigner? Complexe.                                                                                           |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
@@ -824,11 +831,12 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept disponibilite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design                | Pour | Contre| Valeur | Cout|
+|----------------------------------|------|-------|--------|-----|
+| <li>Shadow</li>                  |avantages| désavantages|M|M|
+| <li>State Resynchronization</li> |avantages| désavantages|M|M|
+| <li>Escalating restart</li>      |avantages| désavantages|M|M|
+| <li>Non stop forwarding</li>     |avantages| désavantages|M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
@@ -1004,11 +1012,16 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept securite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design                | Pour | Contre| Valeur | Cout|
+|----------------------------------|------|-------|--------|-----|
+| <li>Identify actors</li>         |avantages| désavantages|M|M|
+| <li>Authenticate actors</li>     |avantages| désavantages|M|M|
+| <li>Authorize actors</li>        |avantages| désavantages|M|M|
+| <li>Limit access</li>            |avantages| désavantages|M|M|
+| <li>Limit exposure</li>          |avantages| désavantages|M|M|
+| <li>Encrypt data</li>            |avantages| désavantages|M|M|
+| <li>Separate entities</li>       |avantages| désavantages|M|M|
+| <li>Change default settings</li> |avantages| désavantages|M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
@@ -1017,11 +1030,11 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept securite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design      | Pour | Contre| Valeur | Cout|
+|------------------------|------|-------|--------|-----|
+| <li>Revoke access</li> |avantages| désavantages|M|M|
+| <li>Lock computer</li> |avantages| désavantages|M|M|
+| <li>Inform actors</li> |avantages| désavantages|M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
@@ -1030,11 +1043,10 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept securite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design             | Pour | Contre| Valeur | Cout|
+|-------------------------------|------|-------|--------|-----|
+| <li>Maintain audit trail</li> |avantages| désavantages|M|M|
+| <li>Restore</li>              |avantages| désavantages|M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
@@ -1104,11 +1116,12 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept usabilite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design     | Pour | Contre| Valeur | Cout|
+|-----------------------|------|-------|--------|-----|
+| <li>Cancel</li>       |avantages| désavantages|M|M|
+| <li>Undo</li>         |avantages| désavantages|M|M|
+| <li>Pause/resume</li> |avantages| désavantages|M|M|
+| <li>Aggregate</li>    |avantages| désavantages|M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
@@ -1159,11 +1172,10 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept interoperabilite">
 
-|Concept de design| Pour | Contre| Valeur | Cout|
-|-----------------|------|-------|--------|-----|
-| <li>tactique 1</li>|avantages| désavantages|M|M|
-| <li>tactique 2</li>|avantages| désavantages|M|M|
-| <li>tactique 3</li>|avantages| désavantages|M|M|
+| Concept de design         | Pour | Contre| Valeur | Cout|
+|---------------------------|------|-------|--------|-----|
+| <li>Orchestrate</li>      |avantages| désavantages|M|M|
+| <li>Tailor interface</li> |avantages| désavantages|M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
