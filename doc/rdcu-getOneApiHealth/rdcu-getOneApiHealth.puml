@@ -1,0 +1,13 @@
+@startuml
+participant HealthMonitorAPI as hm
+participant Api_Externe as ae
+-> hm : getOneApiHealth(id: string) 
+hm -> hm : pingService(id: string) 
+hm -> ae : http://GET
+hm <-- ae : return response
+alt response.code == "200"
+    <-- hm : return true
+else response.code != "200"
+    <-- hm : return false
+end
+@enduml

@@ -1,0 +1,17 @@
+<mat-spinner *ngIf="enChargement"></mat-spinner>
+<mat-card *ngIf="!enChargement" class="mat-elevation-z4 service-web-card" [ngStyle]="this.serviceWeb.isAvailable ? {'background-color':'#99ff99'} : {'background-color': '#ff6666'}">
+
+    <mat-card-title>{{ this.serviceWeb.name }}</mat-card-title>
+
+    <mat-card-content>
+        <p></p>
+    </mat-card-content>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+        <button mat-raised-button color="basic" (click)="recupererStatutServiceWebParId(this.serviceWeb.id)">
+            <mat-icon>refresh</mat-icon>
+            <span>Faire appel</span>
+        </button>
+    </mat-card-actions>
+
+</mat-card>
