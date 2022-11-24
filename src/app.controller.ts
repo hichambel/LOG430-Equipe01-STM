@@ -1,4 +1,4 @@
-import { Body, Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Param } from '@nestjs/common';
 import { Ctx, Payload, RmqContext } from '@nestjs/microservices';
 import { ApiParam, ApiResponse } from '@nestjs/swagger';
 import { AppService } from './app.service';
@@ -9,9 +9,9 @@ export class AppController {
 
   @Get("all-apis-health")
   @ApiResponse({
-    status: 200,
-    description: 'retourne une liste exhaustive de tous les apis en format JSON'})
-  getOneApiHealth(){
+      status: 200,
+      description: 'retourne une liste exhaustive de tous les apis en format JSON'})
+  getAllApisHealth(){
     return this.appService.getAllServices();
   }
 
@@ -20,17 +20,23 @@ export class AppController {
   @ApiResponse({
     status: 200,
     description: '{ boolean } true si available et false sinon'})
-  getAllApisHealth(@Body() req: string){
-    return this.appService.pingService(req);
+  getOneApiHealthByUrl(@Body() req: string){
+    return this.appService.pingServiceByUrl(req);
   }
 
-  public async serviceRegisterHandler(
-    @Payload() data:any,
-    @Ctx() context: RmqContext
-  ){
-    const channel = context.getChannelRef();
-    const originalMessage = context.getMessage();
-    this.appService.getAllServices();
-    console.log("Registered Service: ", data);
+  @Get("api-health-by-id")
+  // @ApiParam({ name: 'idApi' })
+  getOneApiHealthById(@Param() id: number){
+    return this.appService.pingServiceById(id);
   }
+
+  // public async serviceRegisterHandler(
+  //   @Payload() data:any,
+  //   @Ctx() context: RmqContext
+  // ){
+  //   const channel = context.getChannelRef();
+  //   const originalMessage = context.getMessage();
+  //   this.appService.getAllServices();
+  //   console.log("Registered Service: ", data);
+  // }
 }

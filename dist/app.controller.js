@@ -14,24 +14,20 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppController = void 0;
 const common_1 = require("@nestjs/common");
-const microservices_1 = require("@nestjs/microservices");
 const swagger_1 = require("@nestjs/swagger");
 const app_service_1 = require("./app.service");
 let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
     }
-    getOneApiHealth() {
+    getAllApisHealth() {
         return this.appService.getAllServices();
     }
-    getAllApisHealth(req) {
-        return this.appService.pingService(req);
+    getOneApiHealthByUrl(req) {
+        return this.appService.pingServiceByUrl(req);
     }
-    async serviceRegisterHandler(data, context) {
-        const channel = context.getChannelRef();
-        const originalMessage = context.getMessage();
-        this.appService.getAllServices();
-        console.log("Registered Service: ", data);
+    getOneApiHealthById(id) {
+        return this.appService.pingServiceById(id);
     }
 };
 __decorate([
@@ -43,7 +39,7 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
-], AppController.prototype, "getOneApiHealth", null);
+], AppController.prototype, "getAllApisHealth", null);
 __decorate([
     (0, common_1.Get)("api-health"),
     (0, swagger_1.ApiParam)({ name: 'url' }),
@@ -55,14 +51,14 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
-], AppController.prototype, "getAllApisHealth", null);
+], AppController.prototype, "getOneApiHealthByUrl", null);
 __decorate([
-    __param(0, (0, microservices_1.Payload)()),
-    __param(1, (0, microservices_1.Ctx)()),
+    (0, common_1.Get)("api-health-by-id"),
+    __param(0, (0, common_1.Param)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, microservices_1.RmqContext]),
-    __metadata("design:returntype", Promise)
-], AppController.prototype, "serviceRegisterHandler", null);
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "getOneApiHealthById", null);
 AppController = __decorate([
     (0, common_1.Controller)(),
     __metadata("design:paramtypes", [app_service_1.AppService])

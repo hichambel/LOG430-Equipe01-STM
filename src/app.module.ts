@@ -5,10 +5,7 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [HttpModule, ConfigModule.forRoot({
-    isGlobal: true,
-  }
-  )],
+  imports: [HttpModule],
   controllers: [AppController],
   providers: [AppService],
 })
