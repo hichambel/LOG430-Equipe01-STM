@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
     dev:
-        container_name: health-monitor-api
+        container_name: user-api
         build:
             context: .
             # target: development
@@ -14,12 +14,12 @@ services:
         networks:
             - nesjs-network
         volumes:
-            - Health-Monitor-Api_Volume:/usr/src/app
+            - User-Api_Volume:/usr/src/app
             # - /usr/app/node_modules
         restart: unless-stopped
 
 volumes:
-  Health-Monitor-Api_Volume:
+  User-Api_Volume:
     # external: true
 
 networks:
