@@ -48,7 +48,7 @@
       - [CU03-T1 **Testabilité**](#cu03-t1-testabilité)
       - [CU03-U1 **Usabilité**](#cu03-u1-usabilité)
       - [CU03-I1 **Interopérabilité**](#cu03-i1-interopérabilité)
-    - [**CU04** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu04---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU04** - <span style="color:red">veux pouvoir sauvegarder un trajet selon l'utilisateur</span>](#cu04---veux-pouvoir-sauvegarder-un-trajet-selon-lutilisateur)
       - [CU04-D1 **Disponibilité**](#cu04-d1-disponibilité)
       - [CU04-M1 **Modifiabilité**](#cu04-m1-modifiabilité)
       - [CU04-P1 **Performance**](#cu04-p1-performance)
@@ -363,22 +363,33 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 
 **Commentaires:**
 
-### **CU04** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>
+### **CU04** - <span style="color:red">veux pouvoir sauvegarder un trajet selon l'utilisateur</span>
 
 **Acteurs externe:** 
+- Chargé de laboratoire: Veut pouvoir faire la correction de chaque cas d'utilisation.
 
 **Précondition:** 
-
+- Le micro-service du Health Monitor est opérationnel.
+- Le compte de l'utilisateur à été créé
 **Évènement déclencheur:** 
-
+- La documentation pour cet attribut est terminé et l'équipe demande au chargé de laboratoire de corriger celle-ci. 
+- L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci.
+- L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
 **Scénario**
-
+1. Le (chargé de laboratoire) CL se connecte à son compte en entrant son nom d'utilisateur ainsi que son mot de passe
+2. Le système affiche la liste des trajets sauvegardé par l'utilisateur 
+3. Le CL veut comparer un trajet (voir CU01)
+4. Le CL sauvegarde le trajet entrée  
+5. Le système enregistre le trajet de l'utilisateur et affiche la liste à jour des trajets sauvegardés.
+   
 **Évènement résultant:**
-
+- Le système affiche une liste mise à jour des trajets sauvegardé par le CL 
 **Postcondition:** 
-
+- Le système est en attente d'une nouvelle commande de l'utilisateur
 **Cas alternatifs:**
-
+2a. Le CL envoi un nom d'utilisateur et/ou un mot de passe invalide. 
+  - 2a1 Le système affiche que l'entrée utilisateur est erroné.
+  - 2a2 Au bout de cinq essais manqués, le système bloque l'accès du micro-service à l'utilisateur pendant une durée de 5 minutes 
 **Attributs de qualité**
 
 #### CU04-D1 [**Disponibilité**](#add-disponibilité) 
