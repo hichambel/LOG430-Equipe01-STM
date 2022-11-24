@@ -28,84 +28,93 @@
 - [Cas d'utilisations](#cas-dutilisations)
     - [**CU01** - Veux comparer les temps de trajet.](#cu01---veux-comparer-les-temps-de-trajet)
         - [CU01-D1 **Disponibilité**](#cu01-d1-disponibilité)
-      - [CU01-M1 **Modifiabilité**](#cu01-m1-modifiabilité)
-      - [CU01-P1 **Performance**](#cu01-p1-performance)
-      - [CU01-S1 **Sécurité**](#cu01-s1-sécurité)
-      - [CU01-T1 **Testabilité**](#cu01-t1-testabilité)
-      - [CU01-U1 **Usabilité**](#cu01-u1-usabilité)
-      - [CU01-I1 **Interopérabilité**](#cu01-i1-interopérabilité)
-    - [**CU02** - Veux pouvoir mettre le chaos dans les microservices.](#cu02---veux-pouvoir-mettre-le-chaos-dans-les-microservices)
-      - [CU02-D1 **Disponibilité**](#cu02-d1-disponibilité)
-      - [CU02-M1 **Modifiabilité**](#cu02-m1-modifiabilité)
-      - [CU02-P1 **Performance**](#cu02-p1-performance)
-      - [CU02-S1 **Sécurité**](#cu02-s1-sécurité)
-      - [CU02-T1 **Testabilité**](#cu02-t1-testabilité)
-      - [CU02-U1 **Usabilité**](#cu02-u1-usabilité)
-      - [CU02-I1 **Interopérabilité**](#cu02-i1-interopérabilité)
-    - [**CU03** - <span style="color:red">Veux pouvoir vérifier la disponibilité d'un micro-service</span>](#cu03---veux-pouvoir-vérifier-la-disponibilité-dun-micro-service)
-      - [CU03-D1 **Disponibilité**](#cu03-d1-disponibilité)
-      - [CU03-M1 **Modifiabilité**](#cu03-m1-modifiabilité)
-      - [CU03-P1 **Performance**](#cu03-p1-performance)
-      - [CU03-S1 **Sécurité**](#cu03-s1-sécurité)
-      - [CU03-T1 **Testabilité**](#cu03-t1-testabilité)
-      - [CU03-U1 **Usabilité**](#cu03-u1-usabilité)
-      - [CU03-I1 **Interopérabilité**](#cu03-i1-interopérabilité)
-    - [**CU04** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu04---vous-devez-proposer-un-nouveau-cas-dutilisation)
-      - [CU04-D1 **Disponibilité**](#cu04-d1-disponibilité)
-      - [CU04-M1 **Modifiabilité**](#cu04-m1-modifiabilité)
-      - [CU04-P1 **Performance**](#cu04-p1-performance)
-      - [CU04-S1 **Sécurité**](#cu04-s1-sécurité)
-      - [CU04-T1 **Testabilité**](#cu04-t1-testabilité)
-      - [CU04-U1 **Usabilité**](#cu04-u1-usabilité)
-      - [CU04-I1 **Interopérabilité**](#cu04-i1-interopérabilité)
-    - [**CU05** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu05---vous-devez-proposer-un-nouveau-cas-dutilisation)
-      - [CU05-D1 **Disponibilité**](#cu05-d1-disponibilité)
-      - [CU05-M1 **Modifiabilité**](#cu05-m1-modifiabilité)
-      - [CU05-P1 **Performance**](#cu05-p1-performance)
-      - [CU05-S1 **Sécurité**](#cu05-s1-sécurité)
-      - [CU05-T1 **Testabilité**](#cu05-t1-testabilité)
-      - [CU05-U1 **Usabilité**](#cu05-u1-usabilité)
-      - [CU05-I1 **Interopérabilité**](#cu05-i1-interopérabilité)
-    - [**CU06** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu06---vous-devez-proposer-un-nouveau-cas-dutilisation)
-      - [CU06-D1 **Disponibilité**](#cu06-d1-disponibilité)
-      - [CU06-M1 **Modifiabilité**](#cu06-m1-modifiabilité)
-      - [CU06-P1 **Performance**](#cu06-p1-performance)
-      - [CU06-S1 **Sécurité**](#cu06-s1-sécurité)
-      - [CU06-T1 **Testabilité**](#cu06-t1-testabilité)
-      - [CU06-U1 **Usabilité**](#cu06-u1-usabilité)
-      - [CU06-I1 **Interopérabilité**](#cu06-i1-interopérabilité)
-    - [**CU07** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu07---vous-devez-proposer-un-nouveau-cas-dutilisation)
-      - [CU07-D1 **Disponibilité**](#cu07-d1-disponibilité)
-      - [CU07-M1 **Modifiabilité**](#cu07-m1-modifiabilité)
-      - [CU07-P1 **Performance**](#cu07-p1-performance)
-      - [CU07-S1 **Sécurité**](#cu07-s1-sécurité)
-      - [CU07-T1 **Testabilité**](#cu07-t1-testabilité)
-      - [CU07-U1 **Usabilité**](#cu07-u1-usabilité)
-      - [CU07-I1 **Interopérabilité**](#cu07-i1-interopérabilité)
-    - [**CU08** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu08---vous-devez-proposer-un-nouveau-cas-dutilisation)
-      - [CU08-D1 **Disponibilité**](#cu08-d1-disponibilité)
-      - [CU08-M1 **Modifiabilité**](#cu08-m1-modifiabilité)
-      - [CU08-P1 **Performance**](#cu08-p1-performance)
-      - [CU08-S1 **Sécurité**](#cu08-s1-sécurité)
-      - [CU08-T1 **Testabilité**](#cu08-t1-testabilité)
-      - [CU08-U1 **Usabilité**](#cu08-u1-usabilité)
-      - [CU08-I1 **Interopérabilité**](#cu08-i1-interopérabilité)
-    - [**CU09** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu09---vous-devez-proposer-un-nouveau-cas-dutilisation)
-      - [CU09-D1 **Disponibilité**](#cu09-d1-disponibilité)
-      - [CU09-M1 **Modifiabilité**](#cu09-m1-modifiabilité)
-      - [CU09-P1 **Performance**](#cu09-p1-performance)
-      - [CU09-S1 **Sécurité**](#cu09-s1-sécurité)
-      - [CU09-T1 **Testabilité**](#cu09-t1-testabilité)
-      - [CU09-U1 **Usabilité**](#cu09-u1-usabilité)
-      - [CU09-I1 **Interopérabilité**](#cu09-i1-interopérabilité)
-    - [**CU10** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation.</span>](#cu10---vous-devez-proposer-un-nouveau-cas-dutilisation)
-      - [CU10-D1 **Disponibilité**](#cu10-d1-disponibilité)
-      - [CU10-M1 **Modifiabilité**](#cu10-m1-modifiabilité)
-      - [CU10-P1 **Performance**](#cu10-p1-performance)
-      - [CU10-S1 **Sécurité**](#cu10-s1-sécurité)
-      - [CU10-T1 **Testabilité**](#cu10-t1-testabilité)
-      - [CU10-U1 **Usabilité**](#cu10-u1-usabilité)
-      - [CU10-I1 **Interopérabilité**](#cu10-i1-interopérabilité)
+        - [CU01-M1 **Modifiabilité**](#cu01-m1-modifiabilité)
+        - [CU01-P1 **Performance**](#cu01-p1-performance)
+        - [CU01-S1 **Sécurité**](#cu01-s1-sécurité)
+        - [CU01-T1 **Testabilité**](#cu01-t1-testabilité)
+        - [CU01-U1 **Usabilité**](#cu01-u1-usabilité)
+        - [CU01-I1 **Interopérabilité**](#cu01-i1-interopérabilité)
+    - [**
+      CU02** - Veux pouvoir mettre le chaos dans les microservices.](#cu02---veux-pouvoir-mettre-le-chaos-dans-les-microservices)
+        - [CU02-D1 **Disponibilité**](#cu02-d1-disponibilité)
+        - [CU02-M1 **Modifiabilité**](#cu02-m1-modifiabilité)
+        - [CU02-P1 **Performance**](#cu02-p1-performance)
+        - [CU02-S1 **Sécurité**](#cu02-s1-sécurité)
+        - [CU02-T1 **Testabilité**](#cu02-t1-testabilité)
+        - [CU02-U1 **Usabilité**](#cu02-u1-usabilité)
+        - [CU02-I1 **Interopérabilité**](#cu02-i1-interopérabilité)
+    - [**
+      CU03** - <span style="color:red">Veux pouvoir vérifier la disponibilité d'un micro-service</span>](#cu03---veux-pouvoir-vérifier-la-disponibilité-dun-micro-service)
+        - [CU03-D1 **Disponibilité**](#cu03-d1-disponibilité)
+        - [CU03-M1 **Modifiabilité**](#cu03-m1-modifiabilité)
+        - [CU03-P1 **Performance**](#cu03-p1-performance)
+        - [CU03-S1 **Sécurité**](#cu03-s1-sécurité)
+        - [CU03-T1 **Testabilité**](#cu03-t1-testabilité)
+        - [CU03-U1 **Usabilité**](#cu03-u1-usabilité)
+        - [CU03-I1 **Interopérabilité**](#cu03-i1-interopérabilité)
+    - [**
+      CU04** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu04---vous-devez-proposer-un-nouveau-cas-dutilisation)
+        - [CU04-D1 **Disponibilité**](#cu04-d1-disponibilité)
+        - [CU04-M1 **Modifiabilité**](#cu04-m1-modifiabilité)
+        - [CU04-P1 **Performance**](#cu04-p1-performance)
+        - [CU04-S1 **Sécurité**](#cu04-s1-sécurité)
+        - [CU04-T1 **Testabilité**](#cu04-t1-testabilité)
+        - [CU04-U1 **Usabilité**](#cu04-u1-usabilité)
+        - [CU04-I1 **Interopérabilité**](#cu04-i1-interopérabilité)
+    - [**
+      CU05** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu05---vous-devez-proposer-un-nouveau-cas-dutilisation)
+        - [CU05-D1 **Disponibilité**](#cu05-d1-disponibilité)
+        - [CU05-M1 **Modifiabilité**](#cu05-m1-modifiabilité)
+        - [CU05-P1 **Performance**](#cu05-p1-performance)
+        - [CU05-S1 **Sécurité**](#cu05-s1-sécurité)
+        - [CU05-T1 **Testabilité**](#cu05-t1-testabilité)
+        - [CU05-U1 **Usabilité**](#cu05-u1-usabilité)
+        - [CU05-I1 **Interopérabilité**](#cu05-i1-interopérabilité)
+    - [**
+      CU06** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu06---vous-devez-proposer-un-nouveau-cas-dutilisation)
+        - [CU06-D1 **Disponibilité**](#cu06-d1-disponibilité)
+        - [CU06-M1 **Modifiabilité**](#cu06-m1-modifiabilité)
+        - [CU06-P1 **Performance**](#cu06-p1-performance)
+        - [CU06-S1 **Sécurité**](#cu06-s1-sécurité)
+        - [CU06-T1 **Testabilité**](#cu06-t1-testabilité)
+        - [CU06-U1 **Usabilité**](#cu06-u1-usabilité)
+        - [CU06-I1 **Interopérabilité**](#cu06-i1-interopérabilité)
+    - [**
+      CU07** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu07---vous-devez-proposer-un-nouveau-cas-dutilisation)
+        - [CU07-D1 **Disponibilité**](#cu07-d1-disponibilité)
+        - [CU07-M1 **Modifiabilité**](#cu07-m1-modifiabilité)
+        - [CU07-P1 **Performance**](#cu07-p1-performance)
+        - [CU07-S1 **Sécurité**](#cu07-s1-sécurité)
+        - [CU07-T1 **Testabilité**](#cu07-t1-testabilité)
+        - [CU07-U1 **Usabilité**](#cu07-u1-usabilité)
+        - [CU07-I1 **Interopérabilité**](#cu07-i1-interopérabilité)
+    - [**
+      CU08** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu08---vous-devez-proposer-un-nouveau-cas-dutilisation)
+        - [CU08-D1 **Disponibilité**](#cu08-d1-disponibilité)
+        - [CU08-M1 **Modifiabilité**](#cu08-m1-modifiabilité)
+        - [CU08-P1 **Performance**](#cu08-p1-performance)
+        - [CU08-S1 **Sécurité**](#cu08-s1-sécurité)
+        - [CU08-T1 **Testabilité**](#cu08-t1-testabilité)
+        - [CU08-U1 **Usabilité**](#cu08-u1-usabilité)
+        - [CU08-I1 **Interopérabilité**](#cu08-i1-interopérabilité)
+    - [**
+      CU09** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>](#cu09---vous-devez-proposer-un-nouveau-cas-dutilisation)
+        - [CU09-D1 **Disponibilité**](#cu09-d1-disponibilité)
+        - [CU09-M1 **Modifiabilité**](#cu09-m1-modifiabilité)
+        - [CU09-P1 **Performance**](#cu09-p1-performance)
+        - [CU09-S1 **Sécurité**](#cu09-s1-sécurité)
+        - [CU09-T1 **Testabilité**](#cu09-t1-testabilité)
+        - [CU09-U1 **Usabilité**](#cu09-u1-usabilité)
+        - [CU09-I1 **Interopérabilité**](#cu09-i1-interopérabilité)
+    - [**
+      CU10** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation.</span>](#cu10---vous-devez-proposer-un-nouveau-cas-dutilisation)
+        - [CU10-D1 **Disponibilité**](#cu10-d1-disponibilité)
+        - [CU10-M1 **Modifiabilité**](#cu10-m1-modifiabilité)
+        - [CU10-P1 **Performance**](#cu10-p1-performance)
+        - [CU10-S1 **Sécurité**](#cu10-s1-sécurité)
+        - [CU10-T1 **Testabilité**](#cu10-t1-testabilité)
+        - [CU10-U1 **Usabilité**](#cu10-u1-usabilité)
+        - [CU10-I1 **Interopérabilité**](#cu10-i1-interopérabilité)
 - [Vue architecturale de contexte](#vue-architecturale-de-contexte)
     - [Présentation primaire](#présentation-primaire)
     - [Catalogue d'éléments](#catalogue-déléments)
@@ -115,7 +124,7 @@
     - [<s>Vues associées</s> pas nécessaire puisque c'est la première vue que vous réalisé pour votre système.](#svues-associéess-pas-nécessaire-puisque-cest-la-première-vue-que-vous-réalisé-pour-votre-système)
 - [Conception axée sur les attributs de qualité](#conception-axée-sur-les-attributs-de-qualité)
     - [ADD-Disponibilité](#add-disponibilité)
-        - [ADD-détection de faute](#add-détection-de-faute)
+        - [ADD-Détection de faute](#add-détection-de-faute)
         - [ADD-Préparation et réparation](#add-préparation-et-réparation)
         - [ADD-Réintroduction](#add-réintroduction)
         - [ADD-Prévention des fautes](#add-prévention-des-fautes)
@@ -126,6 +135,7 @@
         - [ADD-Defer binding](#add-defer-binding)
     - [ADD-Performance](#add-performance)
         - [ADD-Contrôler la demande en ressources](#add-contrôler-la-demande-en-ressources)
+        - [ADD-Gérer les ressources](#add-gérer-les-ressources)
     - [ADD-Sécurité](#add-sécurité)
         - [ADD-Détecter les attaques](#add-détecter-les-attaques)
         - [ADD-Résister aux attaques](#add-résister-aux-attaques)
@@ -357,44 +367,51 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 ### **CU03** - <span style="color:red">Veux pouvoir vérifier la disponibilité d'un micro-service</span>
 
 **Acteurs externe:**
+
 - Chargé de laboratoire: Veut pouvoir faire la correction de chaque cas d'utilisation.
 - Un micro-service externe au notre.
-**Précondition:**- Le micro-service du Health Monitor est opérationnel.
+  **Précondition:**- Le micro-service du Health Monitor est opérationnel.
 - Le micro-service Discovery est opérationnel.
 
-**Évènement déclencheur:**- La documentation pour cet attribut est terminé et l'équipe demande au chargé de laboratoire de corriger celle-ci. 
+**Évènement déclencheur:**- La documentation pour cet attribut est terminé et l'équipe demande au chargé de laboratoire
+de corriger celle-ci.
+
 - L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci.
 - L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
 
 **Scénario**
+
 1. Un micro-service appelle notre Health Monitor afin de connaître la disponibilité d'un autre micro-service.
-2. Le Health Monitor envoie un ping au micro-service demandé en attendant une réponse. 
+2. Le Health Monitor envoie un ping au micro-service demandé en attendant une réponse.
 3. Le Health Monitor renvoi une confirmation indiquant la disponibilité d'un micro-service.
-   
 
 **Évènement résultant:**
+
 - Le Health Monitor renvoie la disponibilité du micro-service demandé.
 
 **Postcondition:**- Le Health Monitor est en attente d'un nouvel appel d'un micro-service.
 
 **Cas alternatifs:**
-2a. Le micro-service ne renvoi pas de réponse au Health Monitor. 
-  - 2a1 On répète l'étape 2 cinq fois de suite.
-  - 2a2 Le Health Monitor renvoie un message d'erreur indiquant que le micro-service est indisponible à Discovery.
-  
+2a. Le micro-service ne renvoi pas de réponse au Health Monitor.
+
+- 2a1 On répète l'étape 2 cinq fois de suite.
+- 2a2 Le Health Monitor renvoie un message d'erreur indiquant que le micro-service est indisponible à Discovery.
 
 **Attributs de qualité**
 
 #### CU03-D1 [**Disponibilité**](#add-disponibilité)
 
 <span style="color:red">Le service doit être disponible 99.9% du temps.</span>
+
 #### CU03-M1 [**Modifiabilité**](#add-modifiabilité)
 
-<span style="color:red">Il doit être possible d'effectuer une modification mineure sur le module du Health Monitor en dedans de 3 heures.</span>
+<span style="color:red">Il doit être possible d'effectuer une modification mineure sur le module du Health Monitor en
+dedans de 3 heures.</span>
 
 #### CU03-P1 [**Performance**](#add-performance)
 
 <span style="color:red">Le module doit pouvoir recevoir une réponse du micro-service en moins de 100ms.</span>
+
 #### CU03-S1 [**Sécurité**](#add-sécurité)
 
 <span style="color:red">Le service doit être protéger des attaques DDOS.</span>
@@ -402,12 +419,16 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 #### CU03-T1 [**Testabilité**](#add-testabilité)
 
 <span style="color:red">L'on doit pouvoir créer des tests pouvant couvrir 90% du module et ce, en 3 heures.</span>
+
 #### CU03-U1 [**Usabilité**](#add-usabilité)
 
-<span style="color:red">L'utilisateur doit pouvoir voir en tout temps que le système est actif et qu'il vérifie l'état des requêtes du système.</span>
+<span style="color:red">L'utilisateur doit pouvoir voir en tout temps que le système est actif et qu'il vérifie l'état
+des requêtes du système.</span>
+
 #### CU03-I1 [**Interopérabilité**](#add-interopérabilité)
 
-<span style="color:red">L'on doit pouvoir communiquer avec les autres modules de manière à ce que l'information pour contacter les autres services soit centraliser pour tous.</span>
+<span style="color:red">L'on doit pouvoir communiquer avec les autres modules de manière à ce que l'information pour
+contacter les autres services soit centraliser pour tous.</span>
 
 **Commentaires:**
 
@@ -802,10 +823,7 @@ tactiques et identifier clairement la raison de votre choix.
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
-<div>
-Nous avons choisi le Monitor et le Ping/Echo. Le fait d'encapsuler la responsabilité en un seul micro-service et la simplicité du Ping/Echo,<br/>
-permet d'avoir une architecture simple et efficace à implémenter. Ce choix assure aussi une flexibilité, si plus tard on veut inclure le Heartbeat.
-</div>
+<br/>Nous avons choisis la tactique Monitor pour notre micro-service de gestion de trajets selon un utilisateur. Nous avons implémenté le micro-service de monitoring alors il sera plus simple d'implémenter cette tactique.
 
 ### ADD-[Préparation et réparation](#rdtq-préparation-et-réparation)
 
@@ -826,20 +844,22 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Nous avons choisis la tactique Exception handling pour notre micro-service de gestion de trajets selon un utilisateur. Notre service aura plusieurs fonctionnalités alors il sera important de savoir l'endroit de la source d'erreur.
 
 ### ADD-[Réintroduction](#rdtq-réintroduction)
 
 <div class="concept disponibilite">
 
-| Concept de design                | Pour | Contre| Valeur | Cout|
-|----------------------------------|------|-------|--------|-----|
-| <li>Shadow</li>                  |avantages| désavantages|M|M|
-| <li>State Resynchronization</li> |avantages| désavantages|M|M|
-| <li>Escalating restart</li>      |avantages| désavantages|M|M|
-| <li>Non stop forwarding</li>     |avantages| désavantages|M|M|
+| Concept de design                | Pour                                                                                                                         |  Contre                                                            | Valeur | Cout|
+|----------------------------------|------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|--------|-----|
+| <li>Shadow</li>                  | Permet de réintroduire le service en retrait <br/>pour repopuler de façon <br/>incrémentale et de monitorer.                 | Il faut implémenter la logique de réintroduction<br/>incrémentale. |M|M|
+| <li>State Resynchronization</li> | Permet de réintroduire le service en utilisant<br/>la redondance active. Assure la véracité des<br/>données traitées.        | Complexe à implémenter.                                            |M|M|
+| <li>Escalating restart</li>      | Permet de réintroduire le service granulairement, <br/>par phases. Minimise le niveau de services<br/>affectés.              | Complexe à implémenter.                                            |M|M|
+| <li>Non stop forwarding</li>     | Permet de continuer le transfert de paquets<br/>sur les routes connues, en attendant la<br/>réparation des tables de routage. | Plus au niveau réseautique.                                        |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Nous avons choisis la tactique Escalating restart pour notre micro-service de gestion de trajets selon un utilisateur. Ce sera utile pour notre micro-service de gestion de trajets selon un utilisateur, parce que notre service peut être divisé en plusieurs morceaux et ceux-ci peuvent être réintroduits progressivement.
 
 ### ADD-[Prévention des fautes](#rdtq-prévention-des-fautes)
 
@@ -883,7 +903,7 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
-<br/>Split module parce que c'est la seule...
+<br/>Nous avons choisis la tactique Split module pour notre micro-service de gestion de trajets selon un utilisateur. Notre micro-service aura plusieurs responsabilités et il sera primordiale de bien séparer les modules pour permettre une bonne extensibilité des fonctionnalités.
 
 ### ADD-[Augmenter la cohésion](#rdtq-augmenter-la-cohésion)
 
@@ -895,7 +915,7 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
-<br/>Increase semantic coherence parce que c'est la seule...
+<br/>Nous avons choisis la tactique Increase semantic coherence pour notre micro-service de gestion de trajets selon un utilisateur. Notre micro-service aura plusieurs responsabilités et celles-ci devront être bien séparées pour assurer une bonne cohésion.
 
 ### ADD-[Réduire le couplage](#rdtq-réduire-le-couplage)
 
@@ -911,6 +931,7 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Nous avons choisis la tactique intermédiaire pour notre micro-service de gestion de trajets selon un utilisateur. Notre micro-service sera utilisé par d'autres applications alors notre système s'enregistrera au près d'un service de discovery.
 
 ### ADD-[Defer binding](#rdtq-defer-binding)
 
@@ -959,7 +980,7 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 <br/>Puisque c'est un micro-service qui pingera les autres entités du système, il se peut qu'un système soit out-of-service et par le fait
 <br/>même ralentisse l'éxécution de la requête à cause de Timeout.
 
-### ADD-Gérer les ressources
+### ADD-[Gérer les ressources](#rdtq-gérer-les-ressources)
 
 <div class="concept performance">
 
@@ -1012,44 +1033,47 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept securite">
 
-| Concept de design                | Pour | Contre| Valeur | Cout|
-|----------------------------------|------|-------|--------|-----|
-| <li>Identify actors</li>         |avantages| désavantages|M|M|
-| <li>Authenticate actors</li>     |avantages| désavantages|M|M|
-| <li>Authorize actors</li>        |avantages| désavantages|M|M|
-| <li>Limit access</li>            |avantages| désavantages|M|M|
-| <li>Limit exposure</li>          |avantages| désavantages|M|M|
-| <li>Encrypt data</li>            |avantages| désavantages|M|M|
-| <li>Separate entities</li>       |avantages| désavantages|M|M|
-| <li>Change default settings</li> |avantages| désavantages|M|M|
+| Concept de design                | Pour                                                                                                                                                              |  Contre                                                                             | Valeur | Cout|
+|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|--------|-----|
+| <li>Identify actors</li>         | Permet au service de reconnaître la source<br/>d'une requête.                                                                                                     | À implémenter avec autre tactique. <br/>Pas suffisant.                              |M|M|
+| <li>Authenticate actors</li>     | Assure au système que les requêtes <br/>faites par un acteur authentifié <br/>sont légitimes.                                                                     | À implémenter avec autre tactique. <br/>Pas suffisant.                              |M|M|
+| <li>Authorize actors</li>        | Donne des privilèges aux acteurs qui sont<br/>authentifiés. Assure que ces requêtes<br/>reliées aux privilèges sont légitimes.                                    | À implémenter avec autre tactique. <br/>Pas suffisant.                              |M|M|
+| <li>Limit access</li>            | Bloque certains accès critiques aux systèmes,<br/> comme la mémoire et les connexions réseaux.                                                                    | Certaines accès sont bloqués à des <br/>acteurs légitimes.                          |M|M|
+| <li>Limit exposure</li>          | Réduit le nombre d'accès possibles et par<br/> le fait même, la probabilités d'une attaque.                                                                       | Ne protège pas activement le système.                                               |M|M|
+| <li>Encrypt data</li>            | Protège la communication d'informations<br/> sensibles sur les liens publiques.                                                                                   | Il faut implémenter le système d'encryptage<br/>(VPN, SSL, clés publiques/privées). |M|M|
+| <li>Separate entities</li>       | Sépare les données sensibles des données<br/>non-sensibles pour réduire la possibilité<br/>d'attaques venant de ceux qui ont accès<br/>aux données non-sensibles. | Séparer physiquement nécessite <br/>d'autres serveurs/réseaux.                      |M|M|
+| <li>Change default settings</li> | Empêche les acteurs malicieux d'avoir <br/>accès au système à cause des paramètres par <br/>défaut connues publiquement.                                          | À implémenter avec autre tactique. <br/>Pas suffisant.                                                                           |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Nous avons choisis les tactiques authenticate et authorize actors, puisque notre micro-service, qui fera la gestion des trajets selon l'utilisateur, nécessitera une connexion pour savoir quelles trajets sont à qui.
 
 ### ADD-[Réagir aux attaques](#rdtq-réagir-aux-attaques)
 
 <div class="concept securite">
 
-| Concept de design      | Pour | Contre| Valeur | Cout|
-|------------------------|------|-------|--------|-----|
-| <li>Revoke access</li> |avantages| désavantages|M|M|
-| <li>Lock computer</li> |avantages| désavantages|M|M|
-| <li>Inform actors</li> |avantages| désavantages|M|M|
+| Concept de design      | Pour                                                                                |  Contre                      | Valeur | Cout|
+|------------------------|-------------------------------------------------------------------------------------|------------------------------|--------|-----|
+| <li>Revoke access</li> | Permet de limiter les dégâts d'une attaque.                                         | L'attaque est déjà en court. |M|M|
+| <li>Lock computer</li> | Bloque un ordinateur suspect d'une attaque éventuelle.                              | Le blocage est temporaire.   |M|M|
+| <li>Inform actors</li> | Permet aux acteurs pouvant aider à une<br/>éventuelle attaque de réagir rapidement. | L'attaque est déjà en court.                 |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Nous avons choisis la tactique de barrer un ordinateur lorsqu'une activité suspecte est détectée. Ça semble être la seule tactique qui bloque l'attaque, même si c'est temporaire.
 
 ### ADD-[Récupérer d'une attaque](#rdtq-récupérer-dune-attaque)
 
 <div class="concept securite">
 
-| Concept de design             | Pour | Contre| Valeur | Cout|
-|-------------------------------|------|-------|--------|-----|
-| <li>Maintain audit trail</li> |avantages| désavantages|M|M|
-| <li>Restore</li>              |avantages| désavantages|M|M|
+| Concept de design             | Pour                                                                                                                                                                                     |  Contre                                   | Valeur | Cout|
+|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|--------|-----|
+| <li>Maintain audit trail</li> | Permet de maintenir un historique des utilisateurs,<br/>des actions et des effets sur notre système. <br/>Ce qui rend plus facile d'identifier les acteurs et <br/>effets d'une attaque. | Comment et où maintenir cette historique? |M|M|
+| <li>Restore</li>              | Qui relève d'une tactique de disponibilité. Permet <br/>de restaurer le système.                                                                                                         | Peut être complexe à implémenter.         |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Nous avons choisis la tactique restore et plus précisément, le escalating restart. Ce sera utile pour notre micro-service de gestion de trajets selon un utilisateur, parce que notre service peut être divisé en plusieurs morceaux et ceux-ci peuvent être réintroduits progressivement.
 
 ## ADD-[Testabilité](#rdaq-testabilité)
 
@@ -1081,7 +1105,7 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
-<br/>À décider en groupe...
+<br/>Nous avons choisis la tactique d'interfaces spécialisées, celle-ci nous permettra de bien tester les exigences fonctionnelles de gestion de trajets selon un utilisateur, puisque ce service aura plus fonctions clées.
 
 ### ADD-[Limiter la complexité](#rdtq-limiter-la-complexité)
 
@@ -1116,15 +1140,16 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept usabilite">
 
-| Concept de design     | Pour | Contre| Valeur | Cout|
-|-----------------------|------|-------|--------|-----|
-| <li>Cancel</li>       |avantages| désavantages|M|M|
-| <li>Undo</li>         |avantages| désavantages|M|M|
-| <li>Pause/resume</li> |avantages| désavantages|M|M|
-| <li>Aggregate</li>    |avantages| désavantages|M|M|
+| Concept de design     | Pour                                                                                                |  Contre                                                                                | Valeur | Cout|
+|-----------------------|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|--------|-----|
+| <li>Cancel</li>       | Une commande peut-être annulé par l'utilisateur<br/>facilement, sans causer d'effets secondaires.   | Un écouteur doit être implémenté pour réagir<br/>à l'annulation.                       |M|M|
+| <li>Undo</li>         | Permet à l'utilisateur de retourner le système<br/>à un état ultérieur.                             | Un patron memento doit être implémenté et<br/>pas toutes les actions sont réversibles. |M|M|
+| <li>Pause/resume</li> | Permet de libérer temporairement les ressources,<br/>ces dernières peuvent être utilisées ailleurs. | Complexe à implémenter.                                                                |M|M|
+| <li>Aggregate</li>    | Permet à l'utilisateur d'effectuer des tâches répetitives<br/>plus facilement.                      | Implémentation nécessaire.                                                             |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Nous avons choisis la tactique aggregate. Puisque notre micro-service fera la gestion de trajets selon un utilisateur, il sera important de permettre à l'utilisateur de, par exemple, supprimer plusieurs trajets en même temps. 
 
 ### ADD-[Supporter l'initiative du système](#rdtq-supporter-linitiative-du-système)
 
@@ -1172,13 +1197,14 @@ permet d'avoir une architecture simple et efficace à implémenter. Ce choix ass
 
 <div class="concept interoperabilite">
 
-| Concept de design         | Pour | Contre| Valeur | Cout|
-|---------------------------|------|-------|--------|-----|
-| <li>Orchestrate</li>      |avantages| désavantages|M|M|
-| <li>Tailor interface</li> |avantages| désavantages|M|M|
+| Concept de design         | Pour                                                                                         |  Contre                                                                                      | Valeur | Cout|
+|---------------------------|----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|--------|-----|
+| <li>Orchestrate</li>      | Permet aux systèmes d'intéragir plus facilement<br/>lorsque les interactions sont complexes. | Difficile à implémenter, nécessite l'implémentation<br/>d'un patron, par exemple, médiateur. |M|M|
+| <li>Tailor interface</li> | Permet de cacher des fonctions <br/>particulières aux utilisateurs non connus.               | Peut enlever des fonctions importantes <br/>de l'interface.                                       |M|M|
 
 </div>
 <span style="color:red">Quelle tactique avez vous choisi et pourquoi?</span>
+<br/>Nous avons choisis la tactique Tailor interfaces. Pour notre micro-service de gestion de trajets selon un utilisateur, nous permettront l'accès à certaines fonctions seulement aux utilisateurs connus.
 
 # Réalisation des cas d'utilisation
 
