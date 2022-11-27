@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import { Subscription } from 'rxjs';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +13,11 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
+  private utilisateurSub!: Subscription;
+  estAuthentifier: boolean = false;
   estMobile: boolean = false;
 
-  constructor(private observer: BreakpointObserver) {
+  constructor(private observer: BreakpointObserver, private authService: AuthService) {
     
   }
 
@@ -35,6 +39,10 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
         this.sidenav.open();
       });
     }
+  }
+
+  deconnecter() {
+    this.authService.deconnecter();
   }
 
   ngOnInit(): void {
@@ -60,7 +68,9 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     });
   }
 
-  ngOnDestroy(): void { }
+  ngOnDestroy(): void { 
+    this.utilisateurSub.unsubscribe();
+  }
 
   nom = 'Equipe 01';
   title = 'Gestionnaire de trajets';

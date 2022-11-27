@@ -1,0 +1,26 @@
+<div *ngIf="enChargement" style="text-align: center; margin:0 auto;">
+    <mat-spinner></mat-spinner>
+</div>
+<mat-card fxLayout="column">
+    <mat-card-title>
+        Connexion
+    </mat-card-title>
+    <mat-card-content>
+        <form class="formulaire" [formGroup]="formulaireConnexion" (ngSubmit)="connecter()">
+            <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Courriel</mat-label>
+                <input type="email" matInput formControlName="courriel" [errorStateMatcher]="matcher"
+                        placeholder="Ex. pat@example.com">
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Mot de passe</mat-label>
+                <input matInput [type]="cacherMdp ? 'password' : 'text'" formControlName="mdp" (keyup)="gererEntrer($event)">
+                <mat-icon mat-icon-button matSuffix (click)="cacherMdp = !cacherMdp" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="cacherMdp">
+                    {{ cacherMdp ? 'visibility_off' : 'visibility' }}
+                </mat-icon>
+            </mat-form-field>
+            <button mat-raised-button type="submit" color="primary" [disabled]="!formulaireConnexion.valid">Se connecter</button>
+          </form>
+    </mat-card-content>
+</mat-card>

@@ -22,12 +22,16 @@ import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 import { PageNonTrouveComponent } from './page-non-trouve/page-non-trouve.component';
 import { SanteServiceWebComponent } from './sante-service-web/sante-service-web.component';
 import { SanteServiceWebItemComponent } from './sante-service-web/sante-service-web-item/sante-service-web-item.component';
+import { InscriptionComponent } from './inscription/inscription.component';
+import { ConnexionComponent } from './connexion/connexion.component';
 
 
 const appRoutes: Routes =  [
   { path: '', redirectTo: '/connexion', pathMatch: 'full' },
   { path: 'acceuil', component: AcceuilComponent },
   { path: 'sante', component: SanteServiceWebComponent },
+  { path: 'inscription', component: InscriptionComponent },
+  { path: 'connexion', component: ConnexionComponent },
 
   { path: '**', component: PageNonTrouveComponent }
 ];
@@ -38,7 +42,9 @@ const appRoutes: Routes =  [
     AcceuilComponent,
     PageNonTrouveComponent,
     SanteServiceWebComponent,
-    SanteServiceWebItemComponent
+    SanteServiceWebItemComponent,
+    InscriptionComponent,
+    ConnexionComponent
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,15 @@
     Acceuil
   </button>
 
+  <span class="spacer"></span>
+  <div *ngIf="!estAuthentifier">
+    <button mat-button routerLink="/inscription">Inscription</button>
+    <button mat-button routerLink="/connexion">Connexion</button>
+  </div>
+  <div *ngIf="estAuthentifier">
+    <button mat-button (click)="deconnecter()">Déconnexion</button>
+  </div>
+
 </mat-toolbar>
   
 <mat-sidenav-container>
