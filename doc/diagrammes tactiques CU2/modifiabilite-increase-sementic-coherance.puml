@@ -1,0 +1,15 @@
+@startuml
+actor C.L as CL
+participant AuthenticationHandler as Auth
+participant DatabaseHandler as DB
+participant ExceptionHandler as Ex
+
+title CU2: Modifiabilite - Increase Sementic Coherance - Mauvais password authentification
+
+CL -> Auth: login(username:String, password:String)
+Auth -> DB: authenticateUser(username:String, password:String)
+DB --> Auth: wrongPasswordException
+Auth -> Ex: handleException(wrongPasswordException)
+Ex --> Auth: error message
+Auth --> CL: error message
+@enduml

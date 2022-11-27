@@ -1,0 +1,20 @@
+@startuml
+actor C.L as CL
+participant AuthenticationAPI as Auth
+participant DatabaseHandler as DB
+participant RouteManagerAPI as Route
+
+title CU2: Interoperabilité - Tailor Interface - Enlever la possibilité d'ajouter une route pour les non-admins
+
+CL -> Auth: authenticateUser(username:String, password:String)
+Auth -> DB: isPasswordValid(username:String, password:String)
+DB --> Auth: true
+Auth --> CL: login success
+alt user type = admin
+    CL -> Route: addNewRoute()
+    Route --> CL: success message
+else
+    CL -> Route: addNewRoute()
+    Route --> CL: errorMessage = user must be an admin
+end
+@enduml

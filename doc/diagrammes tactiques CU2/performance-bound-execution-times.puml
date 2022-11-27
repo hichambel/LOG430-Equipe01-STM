@@ -1,0 +1,13 @@
+@startuml
+actor C.L as CL
+participant RouteManagerAPI as Route
+
+title CU2: Performance - Bound Execution Times
+
+CL -> Route: addRoute(name:String, startingPoint:String, endingPoint:String)
+alt request > 10 seconds
+    Route --> CL: timeout error
+else
+    Route --> CL: success message
+end
+@enduml
