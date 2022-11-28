@@ -1269,10 +1269,10 @@ services en mode.
 
 ### [RDTQ-Réintroduction](#add-réintroduction)
 
-<span style="color:red">nom de la tactique</span>
+<span style="color:red">Escalating Restart</span>
 
-<span style="color:red">Diagramme(s) de séquence ou autre information pertinente démontrant la réalisation de(s)
-tactique(s)</span>
+![plot](./images%20diagrammes%20tactiques%20CU2/disponibilité-escalating-restart.PNG)
+
 
 ### [RDTQ-Prévention des fautes](#add-prévention-des-fautes)
 
@@ -1373,10 +1373,9 @@ tactique(s)</span>
 
 ### [RDTQ-Récupérer d'une attaque](#add-récupérer-dune-attaque)
 
-<span style="color:red">nom de la tactique</span>
+<span style="color:red">Escalating Restart (Restore)</span>
 
-<span style="color:red">Diagramme(s) de séquence ou autre information pertinente démontrant la réalisation de(s)
-tactique(s)</span>
+![plot](./images%20diagrammes%20tactiques%20CU2/disponibilité-escalating-restart.PNG)
 
 ### Relation entre les éléments architectuale et les exigences de sécurité
 
@@ -1397,9 +1396,9 @@ tactique(s)</span>
 
 ### [RDTQ-Contrôle et observe l'état du système](#add-controle-and-observe-létat-du-système)[](https://file%2B.vscode-resource.vscode-cdn.net/Users/yvanross/sources/log430/LOG430-STM/doc/documentationArchitecture.md#add-usabilit%C3%A9)
 
-<span style="color:red">nom de la tactique</span>
+<span style="color:red">Specialized Interfaces</span>
 
-
+![plot](./images%20diagrammes%20tactiques%20CU2/testabilite-specialized-interfaces.PNG)
 
 ### [RDTQ-limiter la complexité](#add-limiter-la-complexité)
 
