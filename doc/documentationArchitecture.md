@@ -1257,17 +1257,15 @@ services en mode.
 
 ### [RDTQ-Détection de faute](#add-détection-de-faute)
 
-<span style="color:red">nom de la tactique</span>
+<span style="color:red">Monitor</span>
 
-<span style="color:red">Diagramme(s) de séquence ou autre information pertinente démontrant la réalisation de(s)
-tactique(s)</span>
+![plot](./images%20diagrammes%20tactiques%20CU2/disponibilite-monitor.PNG)
 
 ### [RDTQ-Préparation et réparation](#add-préparation-et-réparation)
 
-<span style="color:red">nom de la tactique</span>
+<span style="color:red">Exception Handling</span>
 
-<span style="color:red">Diagramme(s) de séquence ou autre information pertinente démontrant la réalisation de(s)
-tactique(s)</span>
+![plot](./images%20diagrammes%20tactiques%20CU2/disponibilite-exception-handling.PNG)
 
 ### [RDTQ-Réintroduction](#add-réintroduction)
 
@@ -1301,24 +1299,21 @@ tactique(s)</span>
 
 ### [RDTQ-Réduire la taille des modules](#add-réduire-la-taille-des-modules)
 
-<span style="color:red">nom de la tactique</span>
+<span style="color:red">Split Module</span>
 
-<span style="color:red">Diagramme(s) de séquence ou autre information pertinente démontrant la réalisation de(s)
-tactique(s)</span>
+![plot](./images%20diagrammes%20tactiques%20CU2/modifiabilite-split-modules.PNG)
 
 ### [RDTQ-Augmenter la cohésion](#add-augmenter-la-cohésion)
 
-<span style="color:red">nom de la tactique</span>
+<span style="color:red">Increase Semantic Coherance</span>
 
-<span style="color:red">Diagramme(s) de séquence ou autre information pertinente démontrant la réalisation de(s)
-tactique(s)</span>
+![plot](./images%20diagrammes%20tactiques%20CU2/modifiabilite-increase-sementic-coherance.PNG)
 
 ### [RDTQ-Réduire le couplage](#add-réduire-le-couplage)
 
-<span style="color:red">nom de la tactique</span>
+<span style="color:red">Intermediaire</span>
 
-<span style="color:red">Diagramme(s) de séquence ou autre information pertinente démontrant la réalisation de(s)
-tactique(s)</span>
+![plot](./images%20diagrammes%20tactiques%20CU2/modifiabilite-intermediaire.PNG)
 
 ### [RDTQ-Defer binding](#add-defer-binding)
 
@@ -1345,10 +1340,9 @@ tactique(s)</span>
 
 ### [RDTQ-Contrôler la demande en ressources](#add-contrôler-la-demande-en-ressources)
 
-<span style="color:red">nom de la tactique</span>
+<span style="color:red">Bound Execution Times</span>
 
-<span style="color:red">Diagramme(s) de séquence ou autre information pertinente démontrant la réalisation de(s)
-tactique(s)</span>
+![plot](./images%20diagrammes%20tactiques%20CU2/performance-bound-execution-times.PNG)
 
 ### [RDTQ-Gérer les ressources](#add-gérer-les-ressources)
 
@@ -1367,17 +1361,15 @@ tactique(s)</span>
 
 ### [RDTQ-Résister aux attaques](#add-résister-aux-attaques)
 
-<span style="color:red">nom de la tactique</span>
+<span style="color:red">Authentication</span>
 
-<span style="color:red">Diagramme(s) de séquence ou autre information pertinente démontrant la réalisation de(s)
-tactique(s)</span>
+![plot](./images%20diagrammes%20tactiques%20CU2/security-authenticate.PNG)
 
 ### [RDTQ-Réagir aux attaques](#add-réagir-aux-attaques)
 
-<span style="color:red">nom de la tactique</span>
+<span style="color:red">Lock computer</span>
 
-<span style="color:red">Diagramme(s) de séquence ou autre information pertinente démontrant la réalisation de(s)
-tactique(s)</span>
+![plot](./images%20diagrammes%20tactiques%20CU2/security-lock-computer.PNG)
 
 ### [RDTQ-Récupérer d'une attaque](#add-récupérer-dune-attaque)
 
@@ -1407,8 +1399,7 @@ tactique(s)</span>
 
 <span style="color:red">nom de la tactique</span>
 
-<span style="color:red">Diagramme(s) de séquence ou autre information pertinente démontrant la réalisation de(s)
-tactique(s)</span>
+
 
 ### [RDTQ-limiter la complexité](#add-limiter-la-complexité)
 
@@ -1436,10 +1427,9 @@ tactique(s)</span>
 
 ### [RDTQ-Supporter l'initiative de l'usager](#add-supporter-linitiative-de-lusager)
 
-<span style="color:red">nom de la tactique</span>
+<span style="color:red">Aggregate</span>
 
-<span style="color:red">Diagramme(s) de séquence ou autre information pertinente démontrant la réalisation de(s)
-tactique(s)</span>
+![plot](./images%20diagrammes%20tactiques%20CU2/usability-aggregate.PNG)
 
 ### [RDTQ-Supporter l'initiative du système](#add-supporter-linitiative-du-système)
 
@@ -1473,10 +1463,9 @@ tactique(s)</span>
 
 ### [RDTQ-Gérer les interfaces](#add-gérer-les-interfaces)
 
-<span style="color:red">nom de la tactique</span>
+<span style="color:red">Tailor interface</span>
 
-<span style="color:red">Diagramme(s) de séquence ou autre information pertinente démontrant la réalisation de(s)
-tactique(s)</span>
+![plot](./images%20diagrammes%20tactiques%20CU2/interoperabilite-tailor-interface.PNG)
 
 ### Relation entre les éléments architectuale et les exigences d'interopérabilité
 
