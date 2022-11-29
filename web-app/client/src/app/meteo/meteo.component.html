@@ -1,5 +1,5 @@
 <div fxLayout="row wrap">
-    <div class="col-md-5">
+    <div class="col-md-5 temp">
         <div class="container" fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%">
             <h3 class="title">La date de la température demandée</h3>
             <form class="formulaire" [formGroup]="formulaireMeteo" (ngSubmit)="rechercherMeteo()">
@@ -27,9 +27,11 @@
     <div class="col-md-7">  
         <mat-card *ngIf="reponse">
             <mat-card-content>
-              <p>
-                {{ reponse }}
-              </p>
+                <p>Température : {{ reponse.main.feels_like }} degré</p>
+                <br>
+                <p>Humidité : {{ reponse.main.humidity }} %</p>
+                <br>
+                <p>Ciel : {{ reponse.weather[0].description }}</p>
             </mat-card-content>
         </mat-card>
         

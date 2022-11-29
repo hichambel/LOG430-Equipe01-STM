@@ -12,7 +12,7 @@ import { MeteoService } from './meteo.service';
 })
 export class MeteoComponent implements OnInit {
 
-  reponse: any;
+  reponse: Meteo | undefined;
 
   enChargement: boolean = false;
 
@@ -64,10 +64,7 @@ export class MeteoComponent implements OnInit {
     let heureTemperature = this.formulaireMeteo.get('heureTemperature')?.value;
 
     this.meteoService.rechercherMeteo(dateTemperature, heureTemperature).subscribe({
-      next: (reponse: any) => {
-        //let obj = JSON.parse(reponse[0]);
-        //var temp = obj.main.temp;
-        //console.log(reponse[0].main);
+      next: (reponse: Meteo) => {
         this.reponse = reponse;
         this.enChargement = false;
       },
@@ -77,8 +74,6 @@ export class MeteoComponent implements OnInit {
       },
       complete: () => {}
     });
-  
-    this.formulaireMeteo.reset();
   }
 
 }
