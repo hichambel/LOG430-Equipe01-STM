@@ -24,6 +24,7 @@ import { SanteServiceWebComponent } from './sante-service-web/sante-service-web.
 import { SanteServiceWebItemComponent } from './sante-service-web/sante-service-web-item/sante-service-web-item.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ConnexionComponent } from './connexion/connexion.component';
+import { MeteoComponent } from './meteo/meteo.component';
 
 
 const appRoutes: Routes =  [
@@ -32,6 +33,7 @@ const appRoutes: Routes =  [
   { path: 'sante', component: SanteServiceWebComponent },
   { path: 'inscription', component: InscriptionComponent },
   { path: 'connexion', component: ConnexionComponent },
+  { path: 'meteo', component: MeteoComponent },
 
   { path: '**', component: PageNonTrouveComponent }
 ];
@@ -44,7 +46,8 @@ const appRoutes: Routes =  [
     SanteServiceWebComponent,
     SanteServiceWebItemComponent,
     InscriptionComponent,
-    ConnexionComponent
+    ConnexionComponent,
+    MeteoComponent
   ],
   imports: [
     BrowserModule,
