@@ -64,10 +64,10 @@ export class MeteoComponent implements OnInit {
     let heureTemperature = this.formulaireMeteo.get('heureTemperature')?.value;
 
     this.meteoService.rechercherMeteo(dateTemperature, heureTemperature).subscribe({
-      next: (reponse: Meteo[]) => {
+      next: (reponse: any) => {
         //let obj = JSON.parse(reponse[0]);
         //var temp = obj.main.temp;
-        console.log(reponse[0].main);
+        //console.log(reponse[0].main);
         this.reponse = reponse;
         this.enChargement = false;
       },

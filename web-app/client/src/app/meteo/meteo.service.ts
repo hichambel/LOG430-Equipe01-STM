@@ -15,17 +15,18 @@ export class MeteoService {
 
   rechercherMeteo(dateTemperature: string, heureTemperature: string) : Observable<any> {
     let params = new HttpParams();
-    params = params.append('date', '2022-11-30');
-    console.log('date : ' + dateTemperature);
+    params = params.append('date', '2022-11-30'); // TODO : Ajuster la date reçu en paramètre au format AAAA-MM-JJ
     params = params.append('hour', heureTemperature);
     params = params.append('token', ACCESS_TOKEN);
+
+    console.log('date : ' + dateTemperature);
     console.log('heure : ' + heureTemperature);
     console.log(params);
 
     return this.httpClient.get<any>(API_ENDPOINT_METEO + 'weather', {params: params})
     .pipe(tap(reponse => {
         console.log('La température est de : ');
-        console.log(reponse.length);
+        console.log(reponse);
       })
     );
   }
