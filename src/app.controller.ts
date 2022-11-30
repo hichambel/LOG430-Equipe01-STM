@@ -30,11 +30,11 @@ export class AppController {
     return this.appService.pingServiceById(id);
   }
 
-  @Post("updateUser")
-  // @ApiParam({ name: 'idApi' })
-  updateDiscoveryApi(@Body() body: any){
-    return this.appService.updateDiscoveryApi(body.serviceId, body.status);
-  }
+  // @Post("updateUser")
+  // // @ApiParam({ name: 'idApi' })
+  // updateDiscoveryApi(@Body() body: any){
+  //   return this.appService.updateDiscoveryApi(body.serviceId, body.status);
+  // }
 
   // public async serviceRegisterHandler(
   //   @Payload() data:any,
