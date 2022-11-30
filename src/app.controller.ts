@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { Ctx, Payload, RmqContext } from '@nestjs/microservices';
 import { ApiParam, ApiResponse } from '@nestjs/swagger';
 import { AppService } from './app.service';
@@ -28,6 +28,12 @@ export class AppController {
   // @ApiParam({ name: 'idApi' })
   getOneApiHealthById(@Param() id: number){
     return this.appService.pingServiceById(id);
+  }
+
+  @Post("updateUser")
+  // @ApiParam({ name: 'idApi' })
+  updateDiscoveryApi(@Body() body: any){
+    return this.appService.updateDiscoveryApi(body.serviceId, body.status);
   }
 
   // public async serviceRegisterHandler(

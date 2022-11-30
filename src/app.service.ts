@@ -42,7 +42,6 @@ export class AppService implements OnApplicationBootstrap {
         map((res) => { return res.status }),
       )
     } catch (error) {
-      console.log("Mauvais url doofus");
     }
     
     
@@ -111,11 +110,15 @@ export class AppService implements OnApplicationBootstrap {
   }
 
   async updateDiscoveryApi(id: number, available: boolean){
+    console.log("Le id : " + id + " et le available : " + available)
     const customConfig = {
       headers: {
-        'X-API-KEY': '6leXd37uYyvEjVvC5j3KBeeadyM08Zal5bwSm9gKBJgyO6cqoWa1pacWpriaASzH'
+        "X-API-KEY": "6leXd37uYyvEjVvC5j3KBeeadyM08Zal5bwSm9gKBJgyO6cqoWa1pacWpriaASzH"
       }
     };
+    const headers = {
+      'X-API-KEY': '6leXd37uYyvEjVvC5j3KBeeadyM08Zal5bwSm9gKBJgyO6cqoWa1pacWpriaASzH'
+    }
     // const headersRequest = {
     //   'X-API-KEY': '6leXd37uYyvEjVvC5j3KBeeadyM08Zal5bwSm9gKBJgyO6cqoWa1pacWpriaASzH',
     // };
@@ -131,18 +134,21 @@ export class AppService implements OnApplicationBootstrap {
       bodyRequest.status = "DOWN";
     }
 
-    console.log("Bodyrequest : " + JSON.stringify(bodyRequest));
+    console.log("Bodyrequest : " + bodyRequest.serviceId + " " + bodyRequest.status);
 
     const response = await this.http
       .post('http://10.194.33.155:3000/services-registry/update-service-status', bodyRequest, customConfig)
+      .pipe(
+        map((res) => { return res.status }),
+      )
       .pipe(
         catchError(() => {
           throw new ForbiddenException('API not available');
         }),
       );
-    // const service = await lastValueFrom(response);
-    // const requestString = JSON.stringify(service);
-    // console.log("Status : " + requestString);
+    const service = await lastValueFrom(response);
+    //const requestString = JSON.stringify(service);
+    //console.log("Status : " + requestString);
   }
 
   async pingServices(allServices: any){
@@ -157,7 +163,7 @@ export class AppService implements OnApplicationBootstrap {
         await this.updateDiscoveryApi(allServices[index].id, true);
       } else {
         if(allServices[index].isAvailable && response == false){
-          console.log("service to be updated Name : " + allServices[index].name + " and Url : " + allServices[index].url);
+          console.log("service to be updated caliss Name : " + allServices[index].name + " and Url : " + allServices[index].url);
           await this.updateDiscoveryApi(allServices[index].id, false);
         }
       }

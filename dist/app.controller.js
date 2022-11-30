@@ -29,6 +29,9 @@ let AppController = class AppController {
     getOneApiHealthById(id) {
         return this.appService.pingServiceById(id);
     }
+    updateDiscoveryApi(body) {
+        return this.appService.updateDiscoveryApi(body.serviceId, body.status);
+    }
 };
 __decorate([
     (0, common_1.Get)("all-apis-health"),
@@ -59,6 +62,13 @@ __decorate([
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "getOneApiHealthById", null);
+__decorate([
+    (0, common_1.Post)("updateUser"),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "updateDiscoveryApi", null);
 AppController = __decorate([
     (0, common_1.Controller)(),
     __metadata("design:paramtypes", [app_service_1.AppService])

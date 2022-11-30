@@ -5,4 +5,5 @@ export declare class AppController {
     getAllApisHealth(): Promise<any>;
     getOneApiHealthByUrl(req: string): Promise<boolean>;
     getOneApiHealthById(id: number): Promise<boolean>;
+    updateDiscoveryApi(body: any): Promise<void>;
 }
