@@ -202,11 +202,11 @@
 
 # Scénario d'objectif d'affaire
 ## OA-1. Faciliter le recrutement des nouveaux chargés de laboratoire.
-<span style="color:red">Expliquer et démontrez comment votre architecture permet la réalisation de votre scénario d'objectif d'affaire. </span>
+<span style="color:red">Notre architecture permet la réalisation de cet objectif d'affaire, car dans notre acrhitecture nous avons mis l'emphase sur la documentation claire ainsi qu'une architecture simple à comprendre afin de faciliter la correction des chargés de laboratoire. En facilitant leurs travail, cela pourra pousser davantages d'étudiants à devenir des chargés de laboratoires.</span>
 
 
 ## OA-2. Validez si le transport par autobus est toujours plus rapide, peu importe l'heure de la journée
-<span style="color:red">Expliquer et démontrez comment votre architecture permet la réalisation de votre scénario d'objectif d'affaire. </span>
+<span style="color:red">Notre architecture permet la réalisation de cet objectif d'affaire, car il intègre les modules permettant de calculer le temps de trajet par bus et montre la réponse sur une interface graphique. Notre architecture détail davantages les modules permettant d'assurer la disponibilité du module de calcul de trajets ainsi que celui permettant de sauvegarder des trajets spécifiques selon un utilisateur.  </span>
 
 # Cas d'utilisations
 ### **CU01** - Veux comparer les temps de trajet.
