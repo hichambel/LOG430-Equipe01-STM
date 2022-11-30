@@ -1,0 +1,19 @@
+@startuml
+actor Dev as Dev
+participant AuthenticationAPI as Auth
+participant TestUser as User
+
+title CU2: Testability - Specialized Interfaces
+
+Dev -> Auth: npm test
+Auth --> User: createPointOfInterest()
+User --> User: addPointOfInterest(poi: POI)
+alt list.pop() === poi
+    User --> Auth: test passed
+    Auth --> Dev: test passed
+else
+    User --> Auth: test failed
+    Auth --> Dev: test failed
+end
+
+@enduml

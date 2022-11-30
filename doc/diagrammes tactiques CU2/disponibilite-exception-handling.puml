@@ -1,0 +1,17 @@
+@startuml
+actor C.L as CL
+participant AuthenticationAPI as Auth
+participant DatabaseHandler as DB
+
+title CU2: Disponibilité - Exception Handling - Wrong password
+
+CL -> Auth: authenticateUser(username:String, password:String)
+Auth -> DB: isPasswordValid(username:String, password:String)
+alt isPasswordValid == true
+    DB --> Auth: true
+    Auth --> CL: login success
+else
+    DB --> Auth: WrongPasswordException
+    Auth --> CL: error message
+end 
+@enduml

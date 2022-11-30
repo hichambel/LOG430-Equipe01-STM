@@ -1,0 +1,17 @@
+@startuml
+participant RouteManagerAPI as Route
+participant MonitorHandler as Monitor
+participant DatabaseHandler as DB
+participant AuthenticationAPI as Auth
+
+title CU2: Disponibilité - Monitor
+
+Route -> Monitor: checkDatabaseState(targetIp:string)
+Monitor -> DB: ping
+DB --> Monitor: return code
+Monitor --> Route: return code
+Route -> Monitor: checkAuthState(targetIp:string)
+Monitor -> Auth: ping
+Auth --> Monitor: return code
+Monitor --> Route: return code
+@enduml

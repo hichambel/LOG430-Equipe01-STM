@@ -1,0 +1,25 @@
+@startuml
+actor C.L as CL
+participant AuthenticationAPI as AuthAPI
+participant ExceptionHandler as Exc
+participant AuthenticationHandler as Auth
+participant DatabaseHandler as DB
+participant NewAuthentificationHandler as NewAuth
+participant NewDatabaseHandler as NewDB
+
+
+
+title CU2: Modifiabilite - Escalating Restart - Erreur Système
+
+CL -> AuthAPI: login(username:String, password:String)
+AuthAPI ->Auth : login(username:String, password:String)
+Auth ->x DB: authenticateUser(username:String, password:String)
+Auth -> Exc: handleException(escalatingRestart)
+Exc --> Auth: «destroy»
+destroy Auth
+Auth -> DB: «destroy»
+destroy DB
+Exc -> NewAuth : «create» 
+NewAuth -> NewDB : «create» 
+
+@enduml
