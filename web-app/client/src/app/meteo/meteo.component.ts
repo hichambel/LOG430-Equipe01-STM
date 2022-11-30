@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Title } from '@angular/platform-browser';
 import { Meteo } from './meteo.model';
 import { MeteoService } from './meteo.service';
 
@@ -48,10 +49,11 @@ export class MeteoComponent implements OnInit {
         {value: '23', viewValue: '23:00'},
       ];
 
-  constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, private meteoService: MeteoService) { }
+  constructor(public titleService: Title, private formBuilder: FormBuilder, private snackBar: MatSnackBar, private meteoService: MeteoService) { }
 
 
   ngOnInit(): void {
+    this.titleService.setTitle("Page Météo");
   }
 
   rechercherMeteo() {

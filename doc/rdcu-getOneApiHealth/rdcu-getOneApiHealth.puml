@@ -1,13 +1,16 @@
 @startuml
+title RDCU-CU03 - Veux pouvoir vérifier la disponibilité d'un micro-service
+
+participant Client as c
 participant HealthMonitorAPI as hm
 participant Api_Externe as ae
--> hm : getOneApiHealth(id: string) 
+c -> hm : getOneApiHealth(id: string) 
 hm -> hm : pingService(id: string) 
 hm -> ae : http://GET
 hm <-- ae : return response
 alt response.code == "200"
-    <-- hm : return true
+    c <-- hm : return true
 else response.code != "200"
-    <-- hm : return false
+    c <-- hm : return false
 end
 @enduml
