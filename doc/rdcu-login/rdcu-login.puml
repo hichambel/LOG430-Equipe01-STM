@@ -1,0 +1,42 @@
+@startuml
+title RDCU-CUXX - Veux pouvoir consulter un trajet enregistré
+
+participant Client as c
+participant AuthController as ac
+participant AuthService as a
+participant UserService as u
+participant DBContextUser as db
+participant Argon2 as ar
+participant JwtService as j
+participant TrajetController as t
+participant TrajetService as ts
+participant DBContextTrajet as dbt
+
+c -> ac : login(data: UserDTO) 
+ac -> a : login(data: UserDTO)
+a -> u : findByEmail(data.email)
+u -> db : find({ email }).exec()
+db --> u : return user: Promise<User>
+u --> a : return user: User
+alt user == null 
+    a --> ac : return BadRequestException('Credentials do not match')
+    ac --> c : return BadRequestException('Credentials do not match')
+end
+a -> ar : verify(user.password, data.password)
+ar --> a : return isPasswordMatches: boolean
+alt isPasswordMatches == false 
+    a --> ac : return BadRequestException('Credentials do not match')
+    ac --> c : return BadRequestException('Credentials do not match')
+end
+a -> a : getToken(user.id, user.email)
+a -> j : signAsync(user.id, user.email)
+j --> a : return token
+a -> u : update(user.id, token)
+u -> db : findByIdAndUpdate(user.id, token).exec()
+a --> ac : retun token: Promise<string>
+ac --> c : return token
+
+
+
+
+@enduml
