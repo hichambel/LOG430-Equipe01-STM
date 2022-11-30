@@ -13,7 +13,7 @@ services:
         networks:
             - nesjs-network
         volumes:
-            - User-Api_Volume:/usr/user-api/src/app
+            - User-Api_Volume:/usr/src/app
             # - /usr/app/node_modules
         restart: unless-stopped
 
