@@ -1,22 +1,23 @@
 @startuml
-title RDCU-CUXX - Veux pouvoir consulter un trajet enregistré
+title RDCU-CU04 - Veux pouvoir sauvegarder un trajet
 
 participant Client as c
 participant AuthController as ac
 participant AuthService as a
 participant UserService as u
-participant DBContextUser as db
+participant UtilisateurModel as um
 participant Argon2 as ar
 participant JwtService as j
 participant TrajetController as t
+participant AuthGuard as ag
 participant TrajetService as ts
 participant DBContextTrajet as dbt
 
 c -> ac : login(data: UserDTO) 
 ac -> a : login(data: UserDTO)
 a -> u : findByEmail(data.email)
-u -> db : find({ email }).exec()
-db --> u : return user: Promise<User>
+u -> um : find({ email }).exec()
+um --> u : return user: Promise<User>
 u --> a : return user: User
 alt user == null 
     a --> ac : return BadRequestException('Credentials do not match')
@@ -32,11 +33,23 @@ a -> a : getToken(user.id, user.email)
 a -> j : signAsync(user.id, user.email)
 j --> a : return token
 a -> u : update(user.id, token)
-u -> db : findByIdAndUpdate(user.id, token).exec()
+u -> um : findByIdAndUpdate(user.id, token).exec()
 a --> ac : retun token: Promise<string>
 ac --> c : return token
 
+c -> t : save(data: TrajetDTO, token)
+t -> ag : verifyToken(token)
+ag --> t : return  tokenIsValid: boolean
+alt tokenIsValid == false 
+    t --> c : return ForbiddenException('Not Authorized')
+    
+end
+t -> ts : save(data: TrajetDTO, token)
 
 
+create utilisateurModel
+ts -> utilisateurModel : new UtilisateurModel(createUtilisateurDto)
+
+ts -> utilisateurModel : save()
 
 @enduml
