@@ -1209,11 +1209,9 @@ services en mode.
 
 ![RDCU-CU03](./rdcu-getOneApiHealth/rdcu-getOneApiHealth.png)
 
-<span style="color:red">Diagramme(s) de séquence démontrant la réalisation de ce cas d'utilisation</span>
+### [**RDCU-CU04** - Veux pouvoir sauvegarder un trajet](#cu04---veux-pouvoir-sauvegarder-un-trajet)
 
-### **RDCU-CU04** -
-
-<span style="color:red">Diagramme(s) de séquence démontrant la réalisation de ce cas d'utilisation</span>
+![RDCU-CU04](./rdcu-sauvegarder-trajet/rdcu-sauvegarder-trajet.png)
 
 ### **RDCU-CU05** -
 

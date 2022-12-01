@@ -1,0 +1,59 @@
+<div *ngIf="enChargement" style="text-align: center;">
+    <mat-spinner></mat-spinner>
+</div>
+<mat-card fxLayout="column" *ngIf="!enChargement">
+    <mat-card-title>
+        Inscription
+    </mat-card-title>
+    <mat-card-content>
+        <form class="formulaire" [formGroup]="formulaireInscription" (ngSubmit)="inscrire()">
+
+            <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Courriel</mat-label>
+                <input type="email" matInput formControlName="courriel" [errorStateMatcher]="matcher"
+                        placeholder="Ex. pat@example.com" name="courriel">
+                <mat-error *ngIf="!formulaireInscription.get('courriel')?.valid">
+                    Veuillez entrer une adresse courriel valide !
+                </mat-error>
+                
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Mot de passe</mat-label>
+                <input matInput [type]="cacherMdp ? 'password' : 'text'" name="mdp" formControlName="mdp">
+                <mat-icon mat-icon-button matSuffix (click)="cacherMdp = !cacherMdp" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="cacherMdp">
+                    {{ cacherMdp ? 'visibility_off' : 'visibility' }}
+                </mat-icon>
+                <mat-error *ngIf="formulaireInscription.get('mdp')?.hasError('required')">
+                    Veuillez saisir un mot de passe !
+                </mat-error>
+                <mat-error *ngIf="formulaireInscription.get('mdp')?.hasError('pattern')">
+                    Le mot de passe ne répond pas aux critères minimals !
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Confirmer le mot de passe</mat-label>
+                <input matInput [type]="cacherMdpConfirmation ? 'password' : 'text'" name="mdpConfirmation" formControlName="mdpConfirmation"  (keyup)="gererEntrer($event)">
+                <mat-icon mat-icon-button matSuffix (click)="cacherMdpConfirmation = !cacherMdpConfirmation" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="cacherMdpConfirmation">
+                    {{ cacherMdpConfirmation ? 'visibility_off' : 'visibility' }}
+                </mat-icon>
+                <mat-error *ngIf="formulaireInscription.get('mdpConfirmation')?.hasError('motDePasseValidator')">
+                    Les mots de passe de correspondent pas !
+                </mat-error>
+            </mat-form-field>
+
+            <mat-hint>
+                Votre mot de passe doit contenir au moins : 
+                <br>• huit (8) caractères
+                <br>• une lettre (a-z)
+                <br>• une majuscule (A-Z)
+                <br>• un chiffre (0-9)
+                <br>• un caractère spécial (ex.: !, @, #, $, %, ?, &, *, .)<br>
+            </mat-hint>
+            
+            <br>
+            <button mat-raised-button type="submit" color="primary" [disabled]="!formulaireInscription.valid">S'inscrire</button>
+          </form>
+    </mat-card-content>
+</mat-card>
