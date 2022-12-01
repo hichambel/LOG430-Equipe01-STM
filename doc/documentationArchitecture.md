@@ -1261,6 +1261,8 @@ services en mode.
 
 ![plot](./images%20diagrammes%20tactiques%20CU2/disponibilité-escalating-restart.PNG)
 
+Dans ce diagramme de RDCU, on utilise la tactique d'escalating restart. Ainsi, l'on détruit une instance de Authentication Handler et de DatabaseHandler, puis l'on en créer
+une nouvelle.
 
 ### [RDTQ-Prévention des fautes](#add-prévention-des-fautes)
 
