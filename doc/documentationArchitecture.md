@@ -210,9 +210,6 @@
 ## OA-1. Faciliter le recrutement des nouveaux chargés de laboratoire.
 <span style="color:red">Notre architecture permet la réalisation de cet objectif d'affaire, car dans notre acrhitecture nous avons mis l'emphase sur la documentation claire ainsi qu'une architecture simple à comprendre afin de faciliter la correction des chargés de laboratoire. En facilitant leurs travail, cela pourra pousser davantages d'étudiants à devenir des chargés de laboratoires.</span>
 
-<span style="color:red">Expliquer et démontrez comment votre architecture permet la réalisation de votre scénario
-d'objectif d'affaire. </span>
-
 ## OA-2. Validez si le transport par autobus est toujours plus rapide, peu importe l'heure de la journée
 <span style="color:red">Notre architecture permet la réalisation de cet objectif d'affaire, car il intègre les modules permettant de calculer le temps de trajet par bus et montre la réponse sur une interface graphique. Notre architecture détail davantages les modules permettant d'assurer la disponibilité du module de calcul de trajets ainsi que celui permettant de sauvegarder des trajets spécifiques selon un utilisateur.  </span>
 
@@ -421,7 +418,7 @@ contacter les autres services soit centraliser pour tous.</span>
 
 **Commentaires:**
 
-### **CU04** - <span style="color:red">veux pouvoir sauvegarder un trajet selon l'utilisateur</span>
+### **CU04** - <span style="color:red">Veux pouvoir sauvegarder un trajet selon l'utilisateur</span>
 
 **Acteurs externe:** 
 - Chargé de laboratoire: Veut pouvoir faire la correction de chaque cas d'utilisation.
@@ -1245,19 +1242,19 @@ services en mode.
 
 <span style="color:red">Monitor</span>
 
-![plot](./images%20diagrammes%20tactiques%20CU2/disponibilite-monitor.PNG)
+![plot](./images%20diagrammes%20tactiques%20CU2/disponibilite-monitor.png)
 
 ### [RDTQ-Préparation et réparation](#add-préparation-et-réparation)
 
 <span style="color:red">Exception Handling</span>
 
-![plot](./images%20diagrammes%20tactiques%20CU2/disponibilite-exception-handling.PNG)
+![plot](./images%20diagrammes%20tactiques%20CU2/disponibilite-exception-handling.png)
 
 ### [RDTQ-Réintroduction](#add-réintroduction)
 
 <span style="color:red">Escalating Restart</span>
 
-![plot](./images%20diagrammes%20tactiques%20CU2/disponibilité-escalating-restart.PNG)
+![plot](./images%20diagrammes%20tactiques%20CU2/disponibilité-escalating-restart.png)
 
 Dans ce diagramme de RDCU, on utilise la tactique d'escalating restart. Ainsi, l'on détruit une instance de Authentication Handler et de DatabaseHandler, puis l'on en créer
 une nouvelle.
@@ -1289,19 +1286,19 @@ une nouvelle.
 
 <span style="color:red">Split Module</span>
 
-![plot](./images%20diagrammes%20tactiques%20CU2/modifiabilite-split-modules.PNG)
+![plot](./images%20diagrammes%20tactiques%20CU2/modifiabilite-split-modules.png)
 
 ### [RDTQ-Augmenter la cohésion](#add-augmenter-la-cohésion)
 
 <span style="color:red">Increase Semantic Coherance</span>
 
-![plot](./images%20diagrammes%20tactiques%20CU2/modifiabilite-increase-sementic-coherance.PNG)
+![plot](./images%20diagrammes%20tactiques%20CU2/modifiabilite-increase-sementic-coherance.png)
 
 ### [RDTQ-Réduire le couplage](#add-réduire-le-couplage)
 
 <span style="color:red">Intermediaire</span>
 
-![plot](./images%20diagrammes%20tactiques%20CU2/modifiabilite-intermediaire.PNG)
+![plot](./images%20diagrammes%20tactiques%20CU2/modifiabilite-intermediaire.png)
 
 ### [RDTQ-Defer binding](#add-defer-binding)
 
@@ -1330,7 +1327,7 @@ une nouvelle.
 
 <span style="color:red">Bound Execution Times</span>
 
-![plot](./images%20diagrammes%20tactiques%20CU2/performance-bound-execution-times.PNG)
+![plot](./images%20diagrammes%20tactiques%20CU2/performance-bound-execution-times.png)
 
 ### [RDTQ-Gérer les ressources](#add-gérer-les-ressources)
 
@@ -1351,19 +1348,19 @@ une nouvelle.
 
 <span style="color:red">Authentication</span>
 
-![plot](./images%20diagrammes%20tactiques%20CU2/security-authenticate.PNG)
+![plot](./images%20diagrammes%20tactiques%20CU2/security-authenticate.png)
 
 ### [RDTQ-Réagir aux attaques](#add-réagir-aux-attaques)
 
 <span style="color:red">Lock computer</span>
 
-![plot](./images%20diagrammes%20tactiques%20CU2/security-lock-computer.PNG)
+![plot](./images%20diagrammes%20tactiques%20CU2/security-lock-computer.png)
 
 ### [RDTQ-Récupérer d'une attaque](#add-récupérer-dune-attaque)
 
 <span style="color:red">Escalating Restart (Restore)</span>
 
-![plot](./images%20diagrammes%20tactiques%20CU2/disponibilité-escalating-restart.PNG)
+![plot](./images%20diagrammes%20tactiques%20CU2/disponibilité-escalating-restart.png)
 
 ### Relation entre les éléments architectuale et les exigences de sécurité
 
@@ -1386,7 +1383,7 @@ une nouvelle.
 
 <span style="color:red">Specialized Interfaces</span>
 
-![plot](./images%20diagrammes%20tactiques%20CU2/testabilite-specialized-interfaces.PNG)
+![plot](./images%20diagrammes%20tactiques%20CU2/testabilite-specialized-interfaces.png)
 
 ### [RDTQ-limiter la complexité](#add-limiter-la-complexité)
 
@@ -1452,7 +1449,7 @@ une nouvelle.
 
 <span style="color:red">Tailor interface</span>
 
-![plot](./images%20diagrammes%20tactiques%20CU2/interoperabilite-tailor-interface.PNG)
+![plot](./images%20diagrammes%20tactiques%20CU2/interoperabilite-tailor-interface.png)
 
 ### Relation entre les éléments architectuale et les exigences d'interopérabilité
 
@@ -1513,6 +1510,7 @@ une nouvelle.
 ### Vue #1
 
 > #### Présentation primaire
+> ![img.png](./vues/deploiement-Vue_allocation.png)
 >#### Catalogue d'éléments
 
 |Élement|Description|lien vers document d'interfaces|
@@ -1523,8 +1521,6 @@ une nouvelle.
 >#### Guide de variabilité
 >#### Raisonnement
 >#### Vues associées
-
-### Vue #2 ...
 
 # Conclusion
 
