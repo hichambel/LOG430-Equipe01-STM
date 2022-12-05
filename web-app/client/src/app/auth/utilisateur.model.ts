@@ -1,10 +1,10 @@
 export class Utilisateur {
-    constructor(public courriel: string, public id: string, private _token: string, private _tokenExpirationDate: Date) {}
+    constructor(public courriel: string, public id: string, public accessToken?: string, public refreshToken?: string) {}
 
-    get token() {
+    /*get token() {
         if (!this._tokenExpirationDate || new Date() > this._tokenExpirationDate) {
             return '';
         }
         return this._token;
-    }
+    }*/
 }

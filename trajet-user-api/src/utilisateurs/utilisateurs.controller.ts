@@ -1,7 +1,8 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
 import { UtilisateursService } from './utilisateurs.service';
 import { CreateUtilisateurDto } from './dto/create-utilisateur.dto';
 import { UpdateUtilisateurDto } from './dto/update-utilisateur.dto';
+import { AccessTokenGuard } from 'src/common/guards/accessToken.guard';
 
 @Controller('utilisateurs')
 export class UtilisateursController {
@@ -27,11 +28,13 @@ export class UtilisateursController {
     return this.utilisateursService.findByEmail(id);
   }
 
+  @UseGuards(AccessTokenGuard)
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateUtilisateurDto: UpdateUtilisateurDto) {
     return this.utilisateursService.update(id, updateUtilisateurDto);
   }
-
+  
+  @UseGuards(AccessTokenGuard)
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.utilisateursService.remove(id);
