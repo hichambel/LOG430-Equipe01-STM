@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { ObjectId } from 'mongodb';
 import { CreateUtilisateurDto } from './dto/create-utilisateur.dto';
 import { UpdateUtilisateurDto } from './dto/update-utilisateur.dto';
 import { Utilisateur, UtilisateurDocument } from './schemas/utilisateur.shema';
@@ -33,6 +34,7 @@ export class UtilisateursService {
   }
 
   remove(id: string): Promise<UtilisateurDocument> {
-    return this.utilisateurModel.findByIdAndDelete(id).exec();
+    let objectId = new ObjectId(id);
+    return this.utilisateurModel.findByIdAndDelete(objectId).exec();
   }
 }
