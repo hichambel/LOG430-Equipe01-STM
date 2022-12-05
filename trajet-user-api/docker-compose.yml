@@ -9,6 +9,8 @@ services:
         command: npm run start
         ports:
             - 6000:6000
+        networks:
+            - health-monitor-api-stack_nesjs-network
         volumes:
             - trajet-user-api_Volume:/usr/src/app
             # - /usr/app/node_modules
@@ -17,3 +19,6 @@ services:
 volumes:
   trajet-user-api_Volume:
     external: true
+
+networks:
+    health-monitor-api-stack_nesjs-network:
