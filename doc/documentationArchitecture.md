@@ -50,7 +50,7 @@
       - [CU03-T1 **Testabilité**](#cu03-t1-testabilité)
       - [CU03-U1 **Usabilité**](#cu03-u1-usabilité)
       - [CU03-I1 **Interopérabilité**](#cu03-i1-interopérabilité)
-    - [**CU04** - veux pouvoir sauvegarder un trajet selon l'utilisateur](#cu04---veux-pouvoir-sauvegarder-un-trajet-selon-lutilisateur)
+    - [**CU04** - Veux pouvoir sauvegarder un trajet selon l'utilisateur](#cu04---veux-pouvoir-sauvegarder-un-trajet-selon-lutilisateur)
       - [CU04-D1 **Disponibilité**](#cu04-d1-disponibilité)
       - [CU04-M1 **Modifiabilité**](#cu04-m1-modifiabilité)
       - [CU04-P1 **Performance**](#cu04-p1-performance)
@@ -145,7 +145,7 @@
     - [**RDCU-CU01** - Veux comparer les temps de trajet.](#rdcu-cu01---veux-comparer-les-temps-de-trajet)
     - [**RDCU-CU02** - Veux pouvoir mettre le chaos dans les](#rdcu-cu02---veux-pouvoir-mettre-le-chaos-dans-les)
     - [**RDCU-CU03** - Veux pouvoir vérifier la disponibilité d'un micro-service](#rdcu-cu03---veux-pouvoir-vérifier-la-disponibilité-dun-micro-service)
-    - [**RDCU-CU04** -](#rdcu-cu04--)
+    - [**RDCU-CU04** - Veux pouvoir sauvegarder un trajet](#rdcu-cu04---veux-pouvoir-sauvegarder-un-trajet)
     - [**RDCU-CU05** -](#rdcu-cu05--)
     - [**RDCU-CU06** -](#rdcu-cu06--)
     - [**RDCU-CU07** -](#rdcu-cu07--)
@@ -195,7 +195,6 @@
     - [Vue #2...](#vue-2-1)
   - [Vues architecturales de type allocation](#vues-architecturales-de-type-allocation)
     - [Vue #1](#vue-1-2)
-    - [Vue #2 ...](#vue-2-)
 - [Conclusion](#conclusion)
 - [Documentation des interfaces](#documentation-des-interfaces)
 
@@ -1474,6 +1473,7 @@ une nouvelle.
 ### Vue #1
 
 > #### Présentation primaire
+> ![img.png](./vues/vue_module.png)
 >#### Catalogue d'éléments
 
 |Élement|Description|lien vers document d'interfaces|
@@ -1481,6 +1481,7 @@ une nouvelle.
 |el1|responsabilité incluant les liens vers les diagrammes de séquence démontrant le fonctionnement de celui-ci|http://www.etsmtl.ca|
 
 > #### Diagramme de contexte
+> ![img.png](./vues/vue_contexte.png)
 >#### Guide de variabilité
 >#### Raisonnement
 >#### Vues associées
@@ -1492,6 +1493,7 @@ une nouvelle.
 ### Vue #1
 
 > #### Présentation primaire
+> ![img.png](./vues/vue_CC.png)
 >#### Catalogue d'éléments
 
 |Élement|Description|lien vers document d'interfaces|
@@ -1499,6 +1501,8 @@ une nouvelle.
 |el1|responsabilité incluant les liens vers les diagrammes de séquence démontrant le fonctionnement de celui-ci|http://www.etsmtl.ca|
 
 > #### Diagramme de contexte
+> ![img.png](./vues/vue_contexte.png)
+
 >#### Guide de variabilité
 >#### Raisonnement
 >#### Vues associées
@@ -1518,6 +1522,7 @@ une nouvelle.
 |el1|responsabilité incluant les liens vers les diagrammes de séquence démontrant le fonctionnement de celui-ci|http://www.etsmtl.ca|
 
 > #### Diagramme de contexte
+>  ![img.png](./vues/vue_contexte.png)
 >#### Guide de variabilité
 >#### Raisonnement
 >#### Vues associées
