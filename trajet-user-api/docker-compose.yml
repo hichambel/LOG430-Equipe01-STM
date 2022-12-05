@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+    dev:
+        container_name: trajet-user-api
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        command: npm run start
+        ports:
+            - 6000:6000
+        networks:
+            - nesjs-network
+        volumes:
+            - trajet-user-api_Volume:/usr/src/app
+            # - /usr/app/node_modules
+        restart: unless-stopped
+
+volumes:
+  trajet-user-api_Volume:
+    external: true
+
+networks:
+    nesjs-network:

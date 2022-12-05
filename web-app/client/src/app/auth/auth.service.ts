@@ -9,8 +9,8 @@ import { Utilisateur } from './utilisateur.model';
 // const API_ENDPOINT_INSCRIPTION = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=' + API_KEY;
 // const API_ENDPOINT_CONNEXION = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=' + API_KEY;
 
-const API_ENDPOINT_INSCRIPTION = 'http://10.194.33.151:5000/signup'; // TODO: confirmer l'URL ENDPOINT
-const API_ENDPOINT_CONNEXION = 'http://10.194.33.151:3000/login'; // TODO: confirmer l'URL ENDPOINT
+const API_ENDPOINT_INSCRIPTION = 'http://localhost:3000/auth/signup'; // TODO: confirmer l'URL ENDPOINT
+const API_ENDPOINT_CONNEXION = 'http://localhost:3000/auth/signin'; // TODO: confirmer l'URL ENDPOINT
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -28,20 +28,20 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) { }
 
   connecter(courriel: string, mdp: string): Observable<any> {
-    return this.http.post<AuthResponseData>(
+    return this.http.post<any>(
       API_ENDPOINT_CONNEXION,
       { 
-        courriel: courriel,
-        mdp: mdp,
+        email: courriel,
+        password: mdp
       },
       httpOptions
       )
       .pipe(tap(reponse => {
+        console.log('je recois cette reponse : ', reponse.stringify());
         this.gererAuthentification(
           reponse.courriel,
           reponse.id,
-          reponse.token,
-          reponse.dateExpirationToken
+          reponse.refreshToken
         );
       })
     );
@@ -60,8 +60,7 @@ export class AuthService {
         this.gererAuthentification(
           reponse.courriel,
           reponse.id,
-          reponse.token,
-          reponse.dateExpirationToken
+          reponse.refreshToken,
         );
       })
     );
@@ -77,7 +76,7 @@ export class AuthService {
     this.chronoExpirationToken = null;
   }
 
-  autoConnexion() {
+  /*autoConnexion() {
     const utilisateurJSON = localStorage.getItem('utilisateur');
 
     if (!utilisateurJSON) {
@@ -97,7 +96,7 @@ export class AuthService {
       this.autoDeconnexion(dureeExpiration);
       this.utilisateur.next(utilisateur);
     }
-  }
+  }*/
 
   autoDeconnexion(dureeExpiration: number) { // en milisecondes
     this.chronoExpirationToken = setTimeout(() => {
@@ -105,16 +104,16 @@ export class AuthService {
     }, dureeExpiration);
   }
 
-  private gererAuthentification(courriel: string, utilisateurId: string, token: string, dateExpirationToken: string) {
+  private gererAuthentification(courriel: string, utilisateurId: string, token: string) {
     // const expirationDate = new Date(new Date().getTime() + expiresIn * 1000);
-    const expirationDate = new Date(dateExpirationToken);
-    const utilisateur = new Utilisateur(courriel, utilisateurId, token, expirationDate);
+    // const expirationDate = new Date(dateExpirationToken);
+    const utilisateur = new Utilisateur(courriel, utilisateurId, token);
 
     this.utilisateur.next(utilisateur);
 
-    var expiresIn = expirationDate.getTime() - new Date().getTime();
+    //var expiresIn = expirationDate.getTime() - new Date().getTime();
 
-    this.autoDeconnexion(expiresIn);
+    //this.autoDeconnexion(expiresIn);
     localStorage.setItem('utilisateur', JSON.stringify(utilisateur));
   }
 
