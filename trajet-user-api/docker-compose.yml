@@ -12,12 +12,12 @@ services:
         networks:
             - nesjs-network
         volumes:
-            - trajet-user-api_Volume:/usr/src/app
+            - Health-Monitor-Api_Volume:/usr/src/app
             # - /usr/app/node_modules
         restart: unless-stopped
 
 volumes:
-  trajet-user-api_Volume:
+  Health-Monitor-Api_Volume:
     external: true
 
 networks:
