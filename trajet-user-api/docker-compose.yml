@@ -8,19 +8,19 @@ services:
             dockerfile: ./Dockerfile
         command: npm run start
         ports:
-            - 6000:6000
+            - 4000:80
         networks:
             - nesjs-network
         volumes:
-            - Health-Monitor-Api_Volume:/usr/src/app
+            - trajet-user-api_Volume:/usr/src/app
             # - /usr/app/node_modules
         restart: unless-stopped
 
 volumes:
-  Health-Monitor-Api_Volume:
+  trajet-user-api_Volume:
     external: true
 
 networks:
     nesjs-network:
-        name: health-monitor-api-stack_nesjs-network
+        name: trajet-user-api-stack_nesjs-network
         external: true
