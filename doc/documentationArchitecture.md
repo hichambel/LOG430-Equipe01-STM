@@ -58,7 +58,7 @@
       - [CU04-T1 **Testabilité**](#cu04-t1-testabilité)
       - [CU04-U1 **Usabilité**](#cu04-u1-usabilité)
       - [CU04-I1 **Interopérabilité**](#cu04-i1-interopérabilité)
-    - [**CU05** - vous devez proposer un nouveau cas d'utilisation](#cu05---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU05** - Veux créer trajet automobile](#cu05---vous-devez-proposer-un-nouveau-cas-dutilisation)
       - [CU05-D1 **Disponibilité**](#cu05-d1-disponibilité)
       - [CU05-M1 **Modifiabilité**](#cu05-m1-modifiabilité)
       - [CU05-P1 **Performance**](#cu05-p1-performance)
@@ -66,7 +66,7 @@
       - [CU05-T1 **Testabilité**](#cu05-t1-testabilité)
       - [CU05-U1 **Usabilité**](#cu05-u1-usabilité)
       - [CU05-I1 **Interopérabilité**](#cu05-i1-interopérabilité)
-    - [**CU06** - vous devez proposer un nouveau cas d'utilisation](#cu06---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU06** - Veux créer trajet STM](#cu06---vous-devez-proposer-un-nouveau-cas-dutilisation)
       - [CU06-D1 **Disponibilité**](#cu06-d1-disponibilité)
       - [CU06-M1 **Modifiabilité**](#cu06-m1-modifiabilité)
       - [CU06-P1 **Performance**](#cu06-p1-performance)
@@ -74,7 +74,7 @@
       - [CU06-T1 **Testabilité**](#cu06-t1-testabilité)
       - [CU06-U1 **Usabilité**](#cu06-u1-usabilité)
       - [CU06-I1 **Interopérabilité**](#cu06-i1-interopérabilité)
-    - [**CU07** - vous devez proposer un nouveau cas d'utilisation](#cu07---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU07** - Veux calculer temps trajet automobile](#cu07---vous-devez-proposer-un-nouveau-cas-dutilisation)
       - [CU07-D1 **Disponibilité**](#cu07-d1-disponibilité)
       - [CU07-M1 **Modifiabilité**](#cu07-m1-modifiabilité)
       - [CU07-P1 **Performance**](#cu07-p1-performance)
@@ -82,7 +82,7 @@
       - [CU07-T1 **Testabilité**](#cu07-t1-testabilité)
       - [CU07-U1 **Usabilité**](#cu07-u1-usabilité)
       - [CU07-I1 **Interopérabilité**](#cu07-i1-interopérabilité)
-    - [**CU08** - vous devez proposer un nouveau cas d'utilisation](#cu08---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU08** - Veux calculer temps trajet STM](#cu08---vous-devez-proposer-un-nouveau-cas-dutilisation)
       - [CU08-D1 **Disponibilité**](#cu08-d1-disponibilité)
       - [CU08-M1 **Modifiabilité**](#cu08-m1-modifiabilité)
       - [CU08-P1 **Performance**](#cu08-p1-performance)
@@ -90,7 +90,7 @@
       - [CU08-T1 **Testabilité**](#cu08-t1-testabilité)
       - [CU08-U1 **Usabilité**](#cu08-u1-usabilité)
       - [CU08-I1 **Interopérabilité**](#cu08-i1-interopérabilité)
-    - [**CU09** - vous devez proposer un nouveau cas d'utilisation](#cu09---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU09** - Veux avoir la météo](#cu09---vous-devez-proposer-un-nouveau-cas-dutilisation)
       - [CU09-D1 **Disponibilité**](#cu09-d1-disponibilité)
       - [CU09-M1 **Modifiabilité**](#cu09-m1-modifiabilité)
       - [CU09-P1 **Performance**](#cu09-p1-performance)
@@ -98,7 +98,7 @@
       - [CU09-T1 **Testabilité**](#cu09-t1-testabilité)
       - [CU09-U1 **Usabilité**](#cu09-u1-usabilité)
       - [CU09-I1 **Interopérabilité**](#cu09-i1-interopérabilité)
-    - [**CU10** - vous devez proposer un nouveau cas d'utilisation.](#cu10---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU10** - Veux pouvoir centraliser les services du système](#cu10---vous-devez-proposer-un-nouveau-cas-dutilisation)
       - [CU10-D1 **Disponibilité**](#cu10-d1-disponibilité)
       - [CU10-M1 **Modifiabilité**](#cu10-m1-modifiabilité)
       - [CU10-P1 **Performance**](#cu10-p1-performance)
@@ -146,12 +146,12 @@
     - [**RDCU-CU02** - Veux pouvoir mettre le chaos dans les](#rdcu-cu02---veux-pouvoir-mettre-le-chaos-dans-les)
     - [**RDCU-CU03** - Veux pouvoir vérifier la disponibilité d'un micro-service](#rdcu-cu03---veux-pouvoir-vérifier-la-disponibilité-dun-micro-service)
     - [**RDCU-CU04** - Veux pouvoir sauvegarder un trajet](#rdcu-cu04---veux-pouvoir-sauvegarder-un-trajet)
-    - [**RDCU-CU05** -](#rdcu-cu05--)
-    - [**RDCU-CU06** -](#rdcu-cu06--)
-    - [**RDCU-CU07** -](#rdcu-cu07--)
-    - [**RDCU-CU08** -](#rdcu-cu08--)
-    - [**RDCU-CU09** -](#rdcu-cu09--)
-    - [**RDCU-CU10** -](#rdcu-cu10--)
+    - [**RDCU-CU05** - Veux créer trajet automobile](#rdcu-cu05--)
+    - [**RDCU-CU06** - Veux créer trajet STM](#rdcu-cu06--)
+    - [**RDCU-CU07** - Veux calculer temps trajet automobile](#rdcu-cu07--)
+    - [**RDCU-CU08** - Veux calculer temps trajet STM](#rdcu-cu08--)
+    - [**RDCU-CU09** - Veux avoir la météo](#rdcu-cu09--)
+    - [**RDCU-CU10** - Veux pouvoir centraliser les services du système](#rdcu-cu10--)
 - [Réalisation des attributs de qualité](#réalisation-des-attributs-de-qualité)
   - [RDAQ-Disponibilité](#rdaq-disponibilité)
     - [RDTQ-Détection de faute](#rdtq-détection-de-faute)
@@ -202,7 +202,9 @@
 
 # Introduction
 
-> TODO: insérer votre introduction
+> L'objectif de ce projet est de documenter et développer un système de comparaison de temps de trajet basée sur une architecture de microservices.
+> Ce système permettra de de comparer les temps de trajets entre les autobus et les automobiles. Ce document contient les objectifs d'affaires, les cas d'utilisation,
+> les scénarios de qualité priorisés, des vues architecturales permettant de démonter chacune des tactiques, des vues modules, des vues composants et connecteurs et des vues d'allocation.
 
 # Scénario d'objectif d'affaire
 
@@ -254,23 +256,36 @@
    comparatif.
 
 **Attributs de qualité**
+
 Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario en terme d'objectif et de mesure.
 
-##### CU01-D1 [**Disponibilité**](#add-disponibilité)
+#### CU01-D1 [**Disponibilité**](#add-disponibilité)
 
-<span style="color:red"> Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
+
 #### CU01-M1 [**Modifiabilité**](#add-modifiabilité)
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+
+<span style="color:red">N/a</span>
+
 #### CU01-P1 [**Performance**](#add-performance)
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+
+<span style="color:red">N/a</span>
+
 #### CU01-S1 [**Sécurité**](#add-sécurité)
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+
+<span style="color:red">N/a</span>
+
 #### CU01-T1 [**Testabilité**](#add-testabilité)
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
-#### CU01-U1 [**Usabilité**](#add-testabilité)
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+
+<span style="color:red">N/a</span>
+
+#### CU01-U1 [**Usabilité**](#add-usabilité)
+
+<span style="color:red">N/a</span>
+
 #### CU01-I1 [**Interopérabilité**](#add-interopérabilité)
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
@@ -319,31 +334,31 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 
 #### CU02-D1 [**Disponibilité**](#add-disponibilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU02-M1 [**Modifiabilité**](#add-modifiabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU02-P1 [**Performance**](#add-performance)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU02-S1 [**Sécurité**](#add-sécurité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU02-T1 [**Testabilité**](#add-testabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU02-U1 [**Usabilité**](#add-usabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU02-I1 [**Interopérabilité**](#add-interopérabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
@@ -355,12 +370,13 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 
 - Chargé de laboratoire: Veut pouvoir faire la correction de chaque cas d'utilisation.
 - Un micro-service externe au notre.
-  **Précondition:**- Le micro-service du Health Monitor est opérationnel.
+
+**Précondition:**
+- Le micro-service du Health Monitor est opérationnel.
 - Le micro-service Discovery est opérationnel.
 
-**Évènement déclencheur:**- La documentation pour cet attribut est terminé et l'équipe demande au chargé de laboratoire
-de corriger celle-ci.
-
+**Évènement déclencheur:**
+- La documentation pour cet attribut est terminé et l'équipe demande au chargé de laboratoire de corriger celle-ci.
 - L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci.
 - L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
 
@@ -371,16 +387,15 @@ de corriger celle-ci.
 3. Le Health Monitor renvoi une confirmation indiquant la disponibilité d'un micro-service.
 
 **Évènement résultant:**
-
 - Le Health Monitor renvoie la disponibilité du micro-service demandé.
 
-**Postcondition:**- Le Health Monitor est en attente d'un nouvel appel d'un micro-service.
+**Postcondition:**
+- Le Health Monitor est en attente d'un nouvel appel d'un micro-service.
 
 **Cas alternatifs:**
-2a. Le micro-service ne renvoi pas de réponse au Health Monitor.
-
-- 2a1 On répète l'étape 2 cinq fois de suite.
-- 2a2 Le Health Monitor renvoie un message d'erreur indiquant que le micro-service est indisponible à Discovery.
+2. a Le micro-service ne renvoi pas de réponse au Health Monitor.
+2. a1 On répète l'étape 2 cinq fois de suite.
+2. a2 Le Health Monitor renvoie un message d'erreur indiquant que le micro-service est indisponible à Discovery.
 
 **Attributs de qualité**
 
@@ -422,13 +437,15 @@ contacter les autres services soit centraliser pour tous.</span>
 **Acteurs externe:** 
 - Chargé de laboratoire: Veut pouvoir faire la correction de chaque cas d'utilisation.
 
-**Précondition:** 
+**Précondition:**
 - Le micro-service du Health Monitor est opérationnel.
 - Le compte de l'utilisateur à été créé
+
 **Évènement déclencheur:** 
 - La documentation pour cet attribut est terminé et l'équipe demande au chargé de laboratoire de corriger celle-ci. 
 - L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci.
 - L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
+
 **Scénario**
 1. Le (chargé de laboratoire) CL se connecte à son compte en entrant son nom d'utilisateur ainsi que son mot de passe
 2. Le système affiche la liste des trajets sauvegardé par l'utilisateur 
@@ -438,12 +455,15 @@ contacter les autres services soit centraliser pour tous.</span>
    
 **Évènement résultant:**
 - Le système affiche une liste mise à jour des trajets sauvegardé par le CL 
+
 **Postcondition:** 
 - Le système est en attente d'une nouvelle commande de l'utilisateur
+
 **Cas alternatifs:**
-2a. Le CL envoi un nom d'utilisateur et/ou un mot de passe invalide. 
-  - 2a1 Le système affiche que l'entrée utilisateur est erroné.
-  - 2a2 Au bout de cinq essais manqués, le système bloque l'accès du micro-service à l'utilisateur pendant une durée de 5 minutes 
+
+2. a   Le CL envoi un nom d'utilisateur et/ou un mot de passe invalide. 
+2. a1  Le système affiche que l'entrée utilisateur est erroné.
+2. a2  Au bout de cinq essais manqués, le système bloque l'accès du micro-service à l'utilisateur pendant une durée de 5 minutes 
 
 **Attributs de qualité**
 
@@ -464,115 +484,167 @@ contacter les autres services soit centraliser pour tous.</span>
 
 **Commentaires:**
 
-### **CU05** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>
+### **CU05** - <span style="color:red">Veux créer trajet automobile</span>
 
 **Acteurs externe:**
 
+- **Chargé de laboratoire:** Veut pouvoir faire la correction de chaque cas d'utilisation.
+
 **Précondition:**
+
+- Tous les microservices sont opérationnels
 
 **Évènement déclencheur:**
 
+- La documentation pour ce cas d'utilisation est terminé et l'équipe demande au chargé de laboratoire de corriger
+  celle-ci.
+- L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci
+- L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
+
 **Scénario**
+
+1. Le (chargé de laboratoire) CL sélectionne une intersection de départ et une intersection d'arrivée.
+3. Le système affiche que le trajet a bien été créé et l'ajoute dans la liste.
 
 **Évènement résultant:**
 
+- Le système affiche une liste des trajets automobiles qui sont crées.
+
 **Postcondition:**
 
+- Le système est en attente d'une nouvelle commande de l'utilisateur
+
 **Cas alternatifs:**
+
+1. a  Le CL sélectionne une intersection de départ, des intersections passantes et une intersection d'arrivée.
 
 **Attributs de qualité**
 
 #### CU05-D1 [**Disponibilité**](#add-disponibilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU05-M1 [**Modifiabilité**](#add-modifiabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU05-P1 [**Performance**](#add-performance)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU05-S1 [**Sécurité**](#add-sécurité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU05-T1 [**Testabilité**](#add-testabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU05-U1 [**Usabilité**](#add-usabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU05-I1 [**Interopérabilité**](#add-interopérabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
-### **CU06** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>
+### **CU06** - <span style="color:red">Veux créer trajet STM</span>
 
 **Acteurs externe:**
 
+- **Chargé de laboratoire:** Veut pouvoir faire la correction de chaque cas d'utilisation.
+
 **Précondition:**
+
+- Tous les microservices sont opérationnels
 
 **Évènement déclencheur:**
 
+- La documentation pour ce cas d'utilisation est terminé et l'équipe demande au chargé de laboratoire de corriger
+  celle-ci.
+- L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci
+- L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
+
 **Scénario**
+
+1. Le (chargé de laboratoire) CL sélectionne une intersection de départ et une intersection d'arrivée.
+3. Le système affiche que le trajet a bien été créé et l'ajoute dans la liste.
 
 **Évènement résultant:**
 
+- Le système affiche une liste des trajets automobiles qui sont crées.
+
 **Postcondition:**
 
+- Le système est en attente d'une nouvelle commande de l'utilisateur
+
 **Cas alternatifs:**
+
+1. a  Le CL sélectionne une intersection de départ, des intersections passantes et une intersection d'arrivée.
 
 **Attributs de qualité**
 
 #### CU06-D1 [**Disponibilité**](#add-disponibilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU06-M1 [**Modifiabilité**](#add-modifiabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU06-P1 [**Performance**](#add-performance)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU06-S1 [**Sécurité**](#add-sécurité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU06-T1 [**Testabilité**](#add-testabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU06-U1 [**Usabilité**](#add-usabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU06-I1 [**Interopérabilité**](#add-interopérabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
-### **CU07** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>
+### **CU07** - <span style="color:red">Veux calculer temps trajet automobile</span>
 
 **Acteurs externe:**
 
+- **Chargé de laboratoire:** Veut pouvoir faire la correction de chaque cas d'utilisation.
+
 **Précondition:**
+
+- Tous les microservices sont opérationnels
 
 **Évènement déclencheur:**
 
+- La documentation pour ce cas d'utilisation est terminé et l'équipe demande au chargé de laboratoire de corriger
+  celle-ci.
+- L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci
+- L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
+
 **Scénario**
+
+1. Le (chargé de laboratoire) CL sélectionne un trajet automobile.
+2. Le système affiche un graphique du temps de déplacement.
 
 **Évènement résultant:**
 
+- Le système affiche un graphique du temps de déplacement.
+
 **Postcondition:**
+
+- Le système est en attente d'une nouvelle commande de l'utilisateur
 
 **Cas alternatifs:**
 
@@ -580,47 +652,63 @@ contacter les autres services soit centraliser pour tous.</span>
 
 #### CU07-D1 [**Disponibilité**](#add-disponibilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU07-M1 [**Modifiabilité**](#add-modifiabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU07-P1 [**Performance**](#add-performance)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU07-S1 [**Sécurité**](#add-sécurité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU07-T1 [**Testabilité**](#add-testabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU07-U1 [**Usabilité**](#add-usabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU07-I1 [**Interopérabilité**](#add-interopérabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
-### **CU08** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>
+### **CU08** - <span style="color:red">Veux calculer temps trajet STM</span>
 
 **Acteurs externe:**
 
+- **Chargé de laboratoire:** Veut pouvoir faire la correction de chaque cas d'utilisation.
+
 **Précondition:**
+
+- Tous les microservices sont opérationnels
 
 **Évènement déclencheur:**
 
+- La documentation pour ce cas d'utilisation est terminé et l'équipe demande au chargé de laboratoire de corriger
+  celle-ci.
+- L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci
+- L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
+
 **Scénario**
+
+1. Le (chargé de laboratoire) CL sélectionne un trajet STM.
+2. Le système affiche un graphique du temps de déplacement.
 
 **Évènement résultant:**
 
+- Le système affiche un graphique du temps de déplacement.
+
 **Postcondition:**
+
+- Le système est en attente d'une nouvelle commande de l'utilisateur
 
 **Cas alternatifs:**
 
@@ -628,127 +716,165 @@ contacter les autres services soit centraliser pour tous.</span>
 
 #### CU08-D1 [**Disponibilité**](#add-disponibilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU08-M1 [**Modifiabilité**](#add-modifiabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU08-P1 [**Performance**](#add-performance)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU08-S1 [**Sécurité**](#add-sécurité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU08-T1 [**Testabilité**](#add-testabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU08-U1 [**Usabilité**](#add-usabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU08-I1 [**Interopérabilité**](#add-interopérabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
-### **CU09** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>
+### **CU09** - <span style="color:red">Veux avoir la météo</span>
 
 **Acteurs externe:**
 
+- **Chargé de laboratoire:** Veut pouvoir faire la correction de chaque cas d'utilisation.
+
 **Précondition:**
+
+- Tous les microservices sont opérationnels
 
 **Évènement déclencheur:**
 
+- La documentation pour ce cas d'utilisation est terminé et l'équipe demande au chargé de laboratoire de corriger
+  celle-ci.
+- L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci
+- L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
+
 **Scénario**
+
+1. Le CL sélectionne une date et une heure de départ.
+2. Le système affiche dans une interface graphique la température, l'humidité et si le ciel est dégagé.
 
 **Évènement résultant:**
 
+- Le système affiche la température de la date désirée sur l'île de Montréal.
+
 **Postcondition:**
 
+- Le système est en attente d'une nouvelle commande de l'utilisateur.
+
 **Cas alternatifs:**
+
+2. a  La date ou l'heure de départ est invalide, l'interface affiche une erreur.
 
 **Attributs de qualité**
 
 #### CU09-D1 [**Disponibilité**](#add-disponibilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU09-M1 [**Modifiabilité**](#add-modifiabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU09-P1 [**Performance**](#add-performance)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU09-S1 [**Sécurité**](#add-sécurité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU09-T1 [**Testabilité**](#add-testabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU09-U1 [**Usabilité**](#add-usabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU09-I1 [**Interopérabilité**](#add-interopérabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
-### **CU10** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation.</span>
+### **CU10** - <span style="color:red">Veux pouvoir centraliser les services du système</span>
 
 **Acteurs externe:**
 
+- **Microservice:** Veut pouvoir s'enregistrer au service de discovery et avoir les informations des autres services.
+- **App core** Veut avoir les informations des autres services.
+
 **Précondition:**
+
+- Tous les microservices sont opérationnels
 
 **Évènement déclencheur:**
 
+- La documentation pour ce cas d'utilisation est terminé et l'équipe demande au chargé de laboratoire de corriger
+  celle-ci.
+- L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci
+- L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
+
 **Scénario**
+
+1. Le microservice s'enregistre auprès du service de discovery
+2. Il reçoit une réponse comme quoi il s'est bien enregistré
 
 **Évènement résultant:**
 
+- Le système est maintenant enregistré auprès du discovery service.
+
 **Postcondition:**
 
+- Le système est en attente.
+
 **Cas alternatifs:**
+
+1. a  L'application core veut connaître les informations d'un autres services.
+2. a  L'application core connaît maintenant l'adresse pour communiquer à un autre microservice et peut faire traiter de l'information.
 
 **Attributs de qualité**
 
 #### CU10-D1 [**Disponibilité**](#add-disponibilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU10-M1 [**Modifiabilité**](#add-modifiabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU10-P1 [**Performance**](#add-performance)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU10-S1 [**Sécurité**](#add-sécurité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU10-T1 [**Testabilité**](#add-testabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU10-U1 [**Usabilité**](#add-usabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU10-I1 [**Interopérabilité**](#add-interopérabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
