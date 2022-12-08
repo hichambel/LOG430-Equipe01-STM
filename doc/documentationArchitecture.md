@@ -27,7 +27,7 @@
   - [OA-2. Validez si le transport par autobus est toujours plus rapide, peu importe l'heure de la journée](#oa-2-validez-si-le-transport-par-autobus-est-toujours-plus-rapide-peu-importe-lheure-de-la-journée)
 - [Cas d'utilisations](#cas-dutilisations)
     - [**CU01** - Veux comparer les temps de trajet.](#cu01---veux-comparer-les-temps-de-trajet)
-        - [CU01-D1 **Disponibilité**](#cu01-d1-disponibilité)
+      - [CU01-D1 **Disponibilité**](#cu01-d1-disponibilité)
       - [CU01-M1 **Modifiabilité**](#cu01-m1-modifiabilité)
       - [CU01-P1 **Performance**](#cu01-p1-performance)
       - [CU01-S1 **Sécurité**](#cu01-s1-sécurité)
@@ -58,7 +58,7 @@
       - [CU04-T1 **Testabilité**](#cu04-t1-testabilité)
       - [CU04-U1 **Usabilité**](#cu04-u1-usabilité)
       - [CU04-I1 **Interopérabilité**](#cu04-i1-interopérabilité)
-    - [**CU05** - vous devez proposer un nouveau cas d'utilisation](#cu05---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU05** - Veux créer trajet automobile](#cu05---veux-créer-trajet-automobile)
       - [CU05-D1 **Disponibilité**](#cu05-d1-disponibilité)
       - [CU05-M1 **Modifiabilité**](#cu05-m1-modifiabilité)
       - [CU05-P1 **Performance**](#cu05-p1-performance)
@@ -66,7 +66,7 @@
       - [CU05-T1 **Testabilité**](#cu05-t1-testabilité)
       - [CU05-U1 **Usabilité**](#cu05-u1-usabilité)
       - [CU05-I1 **Interopérabilité**](#cu05-i1-interopérabilité)
-    - [**CU06** - vous devez proposer un nouveau cas d'utilisation](#cu06---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU06** - Veux créer trajet STM](#cu06---veux-créer-trajet-stm)
       - [CU06-D1 **Disponibilité**](#cu06-d1-disponibilité)
       - [CU06-M1 **Modifiabilité**](#cu06-m1-modifiabilité)
       - [CU06-P1 **Performance**](#cu06-p1-performance)
@@ -74,7 +74,7 @@
       - [CU06-T1 **Testabilité**](#cu06-t1-testabilité)
       - [CU06-U1 **Usabilité**](#cu06-u1-usabilité)
       - [CU06-I1 **Interopérabilité**](#cu06-i1-interopérabilité)
-    - [**CU07** - vous devez proposer un nouveau cas d'utilisation](#cu07---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU07** - Veux calculer temps trajet automobile](#cu07---veux-calculer-temps-trajet-automobile)
       - [CU07-D1 **Disponibilité**](#cu07-d1-disponibilité)
       - [CU07-M1 **Modifiabilité**](#cu07-m1-modifiabilité)
       - [CU07-P1 **Performance**](#cu07-p1-performance)
@@ -82,7 +82,7 @@
       - [CU07-T1 **Testabilité**](#cu07-t1-testabilité)
       - [CU07-U1 **Usabilité**](#cu07-u1-usabilité)
       - [CU07-I1 **Interopérabilité**](#cu07-i1-interopérabilité)
-    - [**CU08** - vous devez proposer un nouveau cas d'utilisation](#cu08---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU08** - Veux calculer temps trajet STM](#cu08---veux-calculer-temps-trajet-stm)
       - [CU08-D1 **Disponibilité**](#cu08-d1-disponibilité)
       - [CU08-M1 **Modifiabilité**](#cu08-m1-modifiabilité)
       - [CU08-P1 **Performance**](#cu08-p1-performance)
@@ -90,7 +90,7 @@
       - [CU08-T1 **Testabilité**](#cu08-t1-testabilité)
       - [CU08-U1 **Usabilité**](#cu08-u1-usabilité)
       - [CU08-I1 **Interopérabilité**](#cu08-i1-interopérabilité)
-    - [**CU09** - vous devez proposer un nouveau cas d'utilisation](#cu09---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU09** - Veux avoir la météo](#cu09---veux-avoir-la-météo)
       - [CU09-D1 **Disponibilité**](#cu09-d1-disponibilité)
       - [CU09-M1 **Modifiabilité**](#cu09-m1-modifiabilité)
       - [CU09-P1 **Performance**](#cu09-p1-performance)
@@ -98,7 +98,7 @@
       - [CU09-T1 **Testabilité**](#cu09-t1-testabilité)
       - [CU09-U1 **Usabilité**](#cu09-u1-usabilité)
       - [CU09-I1 **Interopérabilité**](#cu09-i1-interopérabilité)
-    - [**CU10** - vous devez proposer un nouveau cas d'utilisation.](#cu10---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU10** - Veux pouvoir centraliser les services du système](#cu10---veux-pouvoir-centraliser-les-services-du-système)
       - [CU10-D1 **Disponibilité**](#cu10-d1-disponibilité)
       - [CU10-M1 **Modifiabilité**](#cu10-m1-modifiabilité)
       - [CU10-P1 **Performance**](#cu10-p1-performance)
@@ -202,7 +202,9 @@
 
 # Introduction
 
-> TODO: insérer votre introduction
+> L'objectif de ce projet est de documenter et développer un système de comparaison de temps de trajet basée sur une architecture de microservices.
+> Ce système permettra de de comparer les temps de trajets entre les autobus et les automobiles. Ce document contient les objectifs d'affaires, les cas d'utilisation,
+> les scénarios de qualité priorisés, des vues architecturales permettant de démonter chacune des tactiques, des vues modules, des vues composants et connecteurs et des vues d'allocation.
 
 # Scénario d'objectif d'affaire
 
@@ -254,23 +256,36 @@
    comparatif.
 
 **Attributs de qualité**
+
 Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario en terme d'objectif et de mesure.
 
-##### CU01-D1 [**Disponibilité**](#add-disponibilité)
+#### CU01-D1 [**Disponibilité**](#add-disponibilité)
 
-<span style="color:red"> Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
+
 #### CU01-M1 [**Modifiabilité**](#add-modifiabilité)
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+
+<span style="color:red">N/a</span>
+
 #### CU01-P1 [**Performance**](#add-performance)
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+
+<span style="color:red">N/a</span>
+
 #### CU01-S1 [**Sécurité**](#add-sécurité)
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+
+<span style="color:red">N/a</span>
+
 #### CU01-T1 [**Testabilité**](#add-testabilité)
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
-#### CU01-U1 [**Usabilité**](#add-testabilité)
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+
+<span style="color:red">N/a</span>
+
+#### CU01-U1 [**Usabilité**](#add-usabilité)
+
+<span style="color:red">N/a</span>
+
 #### CU01-I1 [**Interopérabilité**](#add-interopérabilité)
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
@@ -319,31 +334,31 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 
 #### CU02-D1 [**Disponibilité**](#add-disponibilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU02-M1 [**Modifiabilité**](#add-modifiabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU02-P1 [**Performance**](#add-performance)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU02-S1 [**Sécurité**](#add-sécurité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU02-T1 [**Testabilité**](#add-testabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU02-U1 [**Usabilité**](#add-usabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU02-I1 [**Interopérabilité**](#add-interopérabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
@@ -355,12 +370,13 @@ Documenter l'ensemble des attributs de qualité qui s'appliquent à ce scénario
 
 - Chargé de laboratoire: Veut pouvoir faire la correction de chaque cas d'utilisation.
 - Un micro-service externe au notre.
-  **Précondition:**- Le micro-service du Health Monitor est opérationnel.
+
+**Précondition:**
+- Le micro-service du Health Monitor est opérationnel.
 - Le micro-service Discovery est opérationnel.
 
-**Évènement déclencheur:**- La documentation pour cet attribut est terminé et l'équipe demande au chargé de laboratoire
-de corriger celle-ci.
-
+**Évènement déclencheur:**
+- La documentation pour cet attribut est terminé et l'équipe demande au chargé de laboratoire de corriger celle-ci.
 - L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci.
 - L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
 
@@ -371,16 +387,15 @@ de corriger celle-ci.
 3. Le Health Monitor renvoi une confirmation indiquant la disponibilité d'un micro-service.
 
 **Évènement résultant:**
-
 - Le Health Monitor renvoie la disponibilité du micro-service demandé.
 
-**Postcondition:**- Le Health Monitor est en attente d'un nouvel appel d'un micro-service.
+**Postcondition:**
+- Le Health Monitor est en attente d'un nouvel appel d'un micro-service.
 
 **Cas alternatifs:**
-2a. Le micro-service ne renvoi pas de réponse au Health Monitor.
-
-- 2a1 On répète l'étape 2 cinq fois de suite.
-- 2a2 Le Health Monitor renvoie un message d'erreur indiquant que le micro-service est indisponible à Discovery.
+2. a Le micro-service ne renvoi pas de réponse au Health Monitor.
+2. a1 On répète l'étape 2 cinq fois de suite.
+2. a2 Le Health Monitor renvoie un message d'erreur indiquant que le micro-service est indisponible à Discovery.
 
 **Attributs de qualité**
 
@@ -422,13 +437,15 @@ contacter les autres services soit centraliser pour tous.</span>
 **Acteurs externe:** 
 - Chargé de laboratoire: Veut pouvoir faire la correction de chaque cas d'utilisation.
 
-**Précondition:** 
+**Précondition:**
 - Le micro-service du Health Monitor est opérationnel.
 - Le compte de l'utilisateur à été créé
+
 **Évènement déclencheur:** 
 - La documentation pour cet attribut est terminé et l'équipe demande au chargé de laboratoire de corriger celle-ci. 
 - L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci.
 - L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
+
 **Scénario**
 1. Le (chargé de laboratoire) CL se connecte à son compte en entrant son nom d'utilisateur ainsi que son mot de passe
 2. Le système affiche la liste des trajets sauvegardé par l'utilisateur 
@@ -438,12 +455,15 @@ contacter les autres services soit centraliser pour tous.</span>
    
 **Évènement résultant:**
 - Le système affiche une liste mise à jour des trajets sauvegardé par le CL 
+
 **Postcondition:** 
 - Le système est en attente d'une nouvelle commande de l'utilisateur
+
 **Cas alternatifs:**
-2a. Le CL envoi un nom d'utilisateur et/ou un mot de passe invalide. 
-  - 2a1 Le système affiche que l'entrée utilisateur est erroné.
-  - 2a2 Au bout de cinq essais manqués, le système bloque l'accès du micro-service à l'utilisateur pendant une durée de 5 minutes 
+
+2. a   Le CL envoi un nom d'utilisateur et/ou un mot de passe invalide. 
+2. a1  Le système affiche que l'entrée utilisateur est erroné.
+2. a2  Au bout de cinq essais manqués, le système bloque l'accès du micro-service à l'utilisateur pendant une durée de 5 minutes 
 
 **Attributs de qualité**
 
@@ -464,115 +484,167 @@ contacter les autres services soit centraliser pour tous.</span>
 
 **Commentaires:**
 
-### **CU05** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>
+### **CU05** - <span style="color:red">Veux créer trajet automobile</span>
 
 **Acteurs externe:**
 
+- **Chargé de laboratoire:** Veut pouvoir faire la correction de chaque cas d'utilisation.
+
 **Précondition:**
+
+- Tous les microservices sont opérationnels
 
 **Évènement déclencheur:**
 
+- La documentation pour ce cas d'utilisation est terminé et l'équipe demande au chargé de laboratoire de corriger
+  celle-ci.
+- L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci
+- L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
+
 **Scénario**
+
+1. Le (chargé de laboratoire) CL sélectionne une intersection de départ et une intersection d'arrivée.
+3. Le système affiche que le trajet a bien été créé et l'ajoute dans la liste.
 
 **Évènement résultant:**
 
+- Le système affiche une liste des trajets automobiles qui sont crées.
+
 **Postcondition:**
 
+- Le système est en attente d'une nouvelle commande de l'utilisateur
+
 **Cas alternatifs:**
+
+1. a  Le CL sélectionne une intersection de départ, des intersections passantes et une intersection d'arrivée.
 
 **Attributs de qualité**
 
 #### CU05-D1 [**Disponibilité**](#add-disponibilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU05-M1 [**Modifiabilité**](#add-modifiabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU05-P1 [**Performance**](#add-performance)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU05-S1 [**Sécurité**](#add-sécurité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU05-T1 [**Testabilité**](#add-testabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU05-U1 [**Usabilité**](#add-usabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU05-I1 [**Interopérabilité**](#add-interopérabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
-### **CU06** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>
+### **CU06** - <span style="color:red">Veux créer trajet STM</span>
 
 **Acteurs externe:**
 
+- **Chargé de laboratoire:** Veut pouvoir faire la correction de chaque cas d'utilisation.
+
 **Précondition:**
+
+- Tous les microservices sont opérationnels
 
 **Évènement déclencheur:**
 
+- La documentation pour ce cas d'utilisation est terminé et l'équipe demande au chargé de laboratoire de corriger
+  celle-ci.
+- L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci
+- L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
+
 **Scénario**
+
+1. Le (chargé de laboratoire) CL sélectionne une intersection de départ et une intersection d'arrivée.
+3. Le système affiche que le trajet a bien été créé et l'ajoute dans la liste.
 
 **Évènement résultant:**
 
+- Le système affiche une liste des trajets automobiles qui sont crées.
+
 **Postcondition:**
 
+- Le système est en attente d'une nouvelle commande de l'utilisateur
+
 **Cas alternatifs:**
+
+1. a  Le CL sélectionne une intersection de départ, des intersections passantes et une intersection d'arrivée.
 
 **Attributs de qualité**
 
 #### CU06-D1 [**Disponibilité**](#add-disponibilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU06-M1 [**Modifiabilité**](#add-modifiabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU06-P1 [**Performance**](#add-performance)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU06-S1 [**Sécurité**](#add-sécurité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU06-T1 [**Testabilité**](#add-testabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU06-U1 [**Usabilité**](#add-usabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU06-I1 [**Interopérabilité**](#add-interopérabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
-### **CU07** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>
+### **CU07** - <span style="color:red">Veux calculer temps trajet automobile</span>
 
 **Acteurs externe:**
 
+- **Chargé de laboratoire:** Veut pouvoir faire la correction de chaque cas d'utilisation.
+
 **Précondition:**
+
+- Tous les microservices sont opérationnels
 
 **Évènement déclencheur:**
 
+- La documentation pour ce cas d'utilisation est terminé et l'équipe demande au chargé de laboratoire de corriger
+  celle-ci.
+- L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci
+- L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
+
 **Scénario**
+
+1. Le (chargé de laboratoire) CL sélectionne un trajet automobile.
+2. Le système affiche un graphique du temps de déplacement.
 
 **Évènement résultant:**
 
+- Le système affiche un graphique du temps de déplacement.
+
 **Postcondition:**
+
+- Le système est en attente d'une nouvelle commande de l'utilisateur
 
 **Cas alternatifs:**
 
@@ -580,47 +652,63 @@ contacter les autres services soit centraliser pour tous.</span>
 
 #### CU07-D1 [**Disponibilité**](#add-disponibilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU07-M1 [**Modifiabilité**](#add-modifiabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU07-P1 [**Performance**](#add-performance)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU07-S1 [**Sécurité**](#add-sécurité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU07-T1 [**Testabilité**](#add-testabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU07-U1 [**Usabilité**](#add-usabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU07-I1 [**Interopérabilité**](#add-interopérabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
-### **CU08** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>
+### **CU08** - <span style="color:red">Veux calculer temps trajet STM</span>
 
 **Acteurs externe:**
 
+- **Chargé de laboratoire:** Veut pouvoir faire la correction de chaque cas d'utilisation.
+
 **Précondition:**
+
+- Tous les microservices sont opérationnels
 
 **Évènement déclencheur:**
 
+- La documentation pour ce cas d'utilisation est terminé et l'équipe demande au chargé de laboratoire de corriger
+  celle-ci.
+- L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci
+- L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
+
 **Scénario**
+
+1. Le (chargé de laboratoire) CL sélectionne un trajet STM.
+2. Le système affiche un graphique du temps de déplacement.
 
 **Évènement résultant:**
 
+- Le système affiche un graphique du temps de déplacement.
+
 **Postcondition:**
+
+- Le système est en attente d'une nouvelle commande de l'utilisateur
 
 **Cas alternatifs:**
 
@@ -628,127 +716,165 @@ contacter les autres services soit centraliser pour tous.</span>
 
 #### CU08-D1 [**Disponibilité**](#add-disponibilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU08-M1 [**Modifiabilité**](#add-modifiabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU08-P1 [**Performance**](#add-performance)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU08-S1 [**Sécurité**](#add-sécurité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU08-T1 [**Testabilité**](#add-testabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU08-U1 [**Usabilité**](#add-usabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU08-I1 [**Interopérabilité**](#add-interopérabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
-### **CU09** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation</span>
+### **CU09** - <span style="color:red">Veux avoir la météo</span>
 
 **Acteurs externe:**
 
+- **Chargé de laboratoire:** Veut pouvoir faire la correction de chaque cas d'utilisation.
+
 **Précondition:**
+
+- Tous les microservices sont opérationnels
 
 **Évènement déclencheur:**
 
+- La documentation pour ce cas d'utilisation est terminé et l'équipe demande au chargé de laboratoire de corriger
+  celle-ci.
+- L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci
+- L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
+
 **Scénario**
+
+1. Le CL sélectionne une date et une heure de départ.
+2. Le système affiche dans une interface graphique la température, l'humidité et si le ciel est dégagé.
 
 **Évènement résultant:**
 
+- Le système affiche la température de la date désirée sur l'île de Montréal.
+
 **Postcondition:**
 
+- Le système est en attente d'une nouvelle commande de l'utilisateur.
+
 **Cas alternatifs:**
+
+2. a  La date ou l'heure de départ est invalide, l'interface affiche une erreur.
 
 **Attributs de qualité**
 
 #### CU09-D1 [**Disponibilité**](#add-disponibilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU09-M1 [**Modifiabilité**](#add-modifiabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU09-P1 [**Performance**](#add-performance)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU09-S1 [**Sécurité**](#add-sécurité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU09-T1 [**Testabilité**](#add-testabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU09-U1 [**Usabilité**](#add-usabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU09-I1 [**Interopérabilité**](#add-interopérabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
-### **CU10** - <span style="color:red">vous devez proposer un nouveau cas d'utilisation.</span>
+### **CU10** - <span style="color:red">Veux pouvoir centraliser les services du système</span>
 
 **Acteurs externe:**
 
+- **Microservice:** Veut pouvoir s'enregistrer au service de discovery et avoir les informations des autres services.
+- **App core** Veut avoir les informations des autres services.
+
 **Précondition:**
+
+- Tous les microservices sont opérationnels
 
 **Évènement déclencheur:**
 
+- La documentation pour ce cas d'utilisation est terminé et l'équipe demande au chargé de laboratoire de corriger
+  celle-ci.
+- L'intégration est complété et l'équipe demande au chargé de laboratoire de corriger celle-ci
+- L'implémentation est complété est l'équipe demande au chargé de laboratoire de corriger celle-ci.
+
 **Scénario**
+
+1. Le microservice s'enregistre auprès du service de discovery
+2. Il reçoit une réponse comme quoi il s'est bien enregistré
 
 **Évènement résultant:**
 
+- Le système est maintenant enregistré auprès du discovery service.
+
 **Postcondition:**
 
+- Le système est en attente.
+
 **Cas alternatifs:**
+
+1. a  L'application core veut connaître les informations d'un autres services.
+2. a  L'application core connaît maintenant l'adresse pour communiquer à un autre microservice et peut faire traiter de l'information.
 
 **Attributs de qualité**
 
 #### CU10-D1 [**Disponibilité**](#add-disponibilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU10-M1 [**Modifiabilité**](#add-modifiabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU10-P1 [**Performance**](#add-performance)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU10-S1 [**Sécurité**](#add-sécurité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU10-T1 [**Testabilité**](#add-testabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU10-U1 [**Usabilité**](#add-usabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 #### CU10-I1 [**Interopérabilité**](#add-interopérabilité)
 
-<span style="color:red">Définir l'exigence que qualité associé à ce scénario ou N/a</span>
+<span style="color:red">N/a</span>
 
 **Commentaires:**
 
@@ -1473,17 +1599,37 @@ une nouvelle.
 ### Vue #1
 
 > #### Présentation primaire
-> ![img.png](./vues/vue_module.png)
+> ![plot](./vues/vue_module.png)
 >#### Catalogue d'éléments
 
 |Élement|Description|lien vers document d'interfaces|
 |-------|-----------|-------------------------------|
-|el1|responsabilité incluant les liens vers les diagrammes de séquence démontrant le fonctionnement de celui-ci|http://www.etsmtl.ca|
+|Discovery|Instance de l'objet Discovery. Ce module enregistre les nouveaux micro-services dans le système et envoie les informations pour contacter les différents micro-services. ||
+|IDiscovery|Point d'entrée de Discovery.||
+|IDiscoveryRegister|Interface de Discovery qui permet de s'enregister au près du micro-service. ||
+|HealthMonitorService|Instance de l'objet HealthMonitorService. Ce module envoie des requêtes PING aux autres modules du système afin de vérifier leurs état.||
+|HealthMonitorController|Point d'entrée du Health Monitor qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|TrajetService|Instance de l'objet TrajetService. Ce module permet de calculer le meilleur itinéraire pour un trajet donné.||
+|ITrajetService|Point d'entrée de TrajetService.||
+|MeteoService|Instance de l'objet MeteoService. Ce module permet de retourner la météo à un moment donné.||
+|IMeteoService|Point d'entrée de MeteoService.||
+|ChaosMonkeyService|Instance de l'objet ChaosMonkeyService. Ce module permet de déconnecter un micro-service du système afin de vérifier sa solidité.||
+|IChaosMonkeyService|Point d'entrée de ChaosMonkeyService.||
+|AuthService|Instance de l'objet AuthService. Ce module permet à l'utilisateur de créer un compte ainsi que de se connecter et se déconnecter.||
+|UtilisateursService|Instance de l'objet UtilisateursService. Ce module agit comme un DAO auprès de la base de donnée.||
+|AddTrajetService|Instance de l'objet AddTrajetService. Ce module permet à l'utilisateur de sauvegarder un trajet.||
+|AuthController|Point d'entrée du AuthService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|UtilisateurController|Point d'entrée du UtilisateurService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|TrajetController|Point d'entrée du TrajetService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+
+
 
 > #### Diagramme de contexte
-> ![img.png](./vues/vue_contexte.png)
+> ![plot.png](./vues/vue_contexte.png)
 >#### Guide de variabilité
 >#### Raisonnement
+Cette vue montre le fonctionnement du système de monitoring et de Authentication. Ainsi l'on peut voir que le module du HealthMonitorService envoie un PING 
+aux autres modules afin de recevoir leurs état. Celui-ci met ensuite à jours Discovery afin que celui-ci partage l'état de services. Cela permet ainsi de détecter une faute dans le système et de réagir. Pour ce qui est du système d'authentication, celui-ci est subdivisé en trois modules. AuthService et AddTrajetService permettent de se connecter à son compte utilisateur et d'ajouter un nouveau service au système via des points d'accès. UtilisateurService agit comme DAO et permet de connecter se connecter à la base de données tout en réduisant le couplage.
 >#### Vues associées
 
 ### Vue #2...
@@ -1493,18 +1639,33 @@ une nouvelle.
 ### Vue #1
 
 > #### Présentation primaire
-> ![img.png](./vues/vue_CC.png)
+> ![plot.png](./vues/vue_CC.png)
 >#### Catalogue d'éléments
 
 |Élement|Description|lien vers document d'interfaces|
 |-------|-----------|-------------------------------|
-|el1|responsabilité incluant les liens vers les diagrammes de séquence démontrant le fonctionnement de celui-ci|http://www.etsmtl.ca|
+|Discovery Service|Instance de Discovery. Ce composant enregistre les nouveaux micro-services dans le système et envoie les informations pour contacter les différents micro-services. ||
+|IDiscovery|Point d'entrée de Discovery.||
+|HealthMonitorService|Composant HealthMonitorService. Ce composant permet de gérer le monitoring du système.||
+|HealthMonitorController|Point d'entrée du Health Monitor qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|TrajetService|Composant TrajetService. Ce composant permet de calculer le meilleur itinéraire pour un trajet donné.||
+|ITrajetService|Point d'entrée de TrajetService.||
+|MeteoService|Composant MeteoService. Ce composant permet de retourner la météo à un moment donné.||
+|IMeteoService|Point d'entrée de MeteoService.||
+|ChaosMonkeyService|Composant ChaosMonkeyService. Ce composant permet de déconnecter un micro-service du système afin de vérifier sa solidité.||
+|IChaosMonkeyService|Point d'entrée de ChaosMonkeyService.|
+|UserService|Composant UtilisateursService. Ce composant permet de gérer les comptes utilisateurs.||
+|AuthController|Point d'entrée du AuthService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|UtilisateurController|Point d'entrée du UtilisateurService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|TrajetController|Point d'entrée du TrajetService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+
 
 > #### Diagramme de contexte
-> ![img.png](./vues/vue_contexte.png)
+> ![plot.png](./vues/vue_contexte.png)
 
 >#### Guide de variabilité
 >#### Raisonnement
+Cette vue permet de montrer les différents points d'accès des composants du système. Tout les micro-services utilisent l'interface de Discovery afin de s'enregistrer sur le service. Les services peuvent ensuite demander à Discovery les points d'accès des autres services pour y accéder. Pour ce qui est du health monitoring, un controleur permet d'indiquer quelle requête à été envoyé par les autre micro-services. Pour ce qui est de Authentication, trois controleur permettent de gérer les différentes actions de authentication. AuthController et TrajetController permettent respectivement de controler la connexion et déconnexion au système et de sauvegarder un nouveau trajet. UtilisateurController permet d'effectuer une facade entre la base de donnné et le système en agissant de point d'entrée au DAO qui est UtilisateurService.   
 >#### Vues associées
 
 ### Vue #2...
@@ -1514,26 +1675,34 @@ une nouvelle.
 ### Vue #1
 
 > #### Présentation primaire
-> ![img.png](./vues/deploiement-Vue_allocation.png)
+> ![plot.png](./vues/deploiement-Vue_allocation.png)
 >#### Catalogue d'éléments
 
 |Élement|Description|lien vers document d'interfaces|
 |-------|-----------|-------------------------------|
-|el1|responsabilité incluant les liens vers les diagrammes de séquence démontrant le fonctionnement de celui-ci|http://www.etsmtl.ca|
+|Meteo|Service meteo qui sert à renvoyer la météo pour un emplacement donnée.||
+|CreateVehiculeRoute|Service que l'utilisateur appel pour demander un trajet en voiture.||
+|CalculerVehiculeRoute|Ce service permet de calculer le temps pour un trajet en voiture envoyé par l'utilisateur. Ce service est complémentaire au service de CreateVehiculeRoute.||
+|ChaosMonkey|Ce service sert à déconnecter les autres micro-services du sytème afin de tester l'attribut de disponibilité de ceux-ci.||
+|ComparePOI|Ce service permet de comparer des points d'interêt marqué par l'utilisateur.||
+|ServiceDiscovery|Le service de Discovery permet de gérer l'accès aux différents services du système en envoyant les informations demander pour se connecter à un service.||
+|CalculateSTMRoutes|Ce service permet de calculer le temps pour un trajet en transport en commun envoyé par l'utilisateur. Ce service est complémentaire au service de CreateSTMRoutes.||
+|CreateSTMRoutes|Service que l'utilisateur appel pour demander un trajet en transport en commun.||
+|HealthMonitor|Ce service agit comme un monitor pour les autres services et permet de voir quels services sont actifs ou inactifs.||
+|UserAPI|Ce service sert à l'utilisateur afin de se connecter à son compte utilisateur et envoyé les trajets qu'il souhaite enregistrer dans la base de données.||
+|MongoBD|Base de donnée qui enregistre les trajets enregistrés des utilisateurs.||
+
 
 > #### Diagramme de contexte
->  ![img.png](./vues/vue_contexte.png)
+>  ![plot.png](./vues/vue_contexte.png)
 >#### Guide de variabilité
->#### Raisonnement
+>#### Raisonnement 
+Ce diagramme divise les services dans plusieurs machines virtuelles qui appartiennent à chaque équipe. Tous les services sont reliés au service de Discovery afin de centraliser l'information des adresses pour accéder à chaque service. Le userAPI sert de porte d'accès pour la base de donnée qui contient les informations des trajets sauvegardés par le user.
 >#### Vues associées
 
 # Conclusion
 
-> TODO: insérer votre conclusion
-
-
-N'oubliez pas d'effacer les TODO et ce texte et de générer une version PDF de ce document pour votre remise finale.
-Créer un tag git avec la commande "git tag rapport1"
+> En conclusion, nous avons explicité dans ce document les diagrammes et informations nécessaires afin de répondre aux objectifs d'affaires du laboratoire tout en implémentant les attributs de qualités. Ainsi le document d'architecture démontre au travers de vues modules, composants et connecteurs, déploiement et contexte la structure du système de trajet en intégrant les attributs de qualités au sein de ceux-ci.
 
 # Documentation des interfaces
 
