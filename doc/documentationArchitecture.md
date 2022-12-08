@@ -202,7 +202,7 @@
 
 # Introduction
 
-> TODO: insérer votre introduction
+> Ce document à pour but d'expliciter la documentation du laboratoire de LOG430 à l'aide des vues architecturales de contexte, Connecteurs et Composants, Module et de déploiement. De plus, ce document montre et explique les tactiques d'attributs de qualité utiliser afin de satisfaire les attributs de qualité du laboratoire. 
 
 # Scénario d'objectif d'affaire
 
@@ -1478,12 +1478,32 @@ une nouvelle.
 
 |Élement|Description|lien vers document d'interfaces|
 |-------|-----------|-------------------------------|
-|el1|responsabilité incluant les liens vers les diagrammes de séquence démontrant le fonctionnement de celui-ci|http://www.etsmtl.ca|
+|Discovery|Instance de l'objet Discovery. Ce module enregistre les nouveaux micro-services dans le système et envoie les informations pour contacter les différents micro-services. ||
+|IDiscovery|Point d'entrée de Discovery.||
+|IDiscoveryRegister|Interface de Discovery qui permet de s'enregister au près du micro-service. ||
+|HealthMonitorService|Instance de l'objet HealthMonitorService. Ce module envoie des requêtes PING aux autres modules du système afin de vérifier leurs état.||
+|HealthMonitorController|Point d'entrée du Health Monitor qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|TrajetService|Instance de l'objet TrajetService. Ce module permet de calculer le meilleur itinéraire pour un trajet donné.||
+|ITrajetService|Point d'entrée de TrajetService.||
+|MeteoService|Instance de l'objet MeteoService. Ce module permet de retourner la météo à un moment donné.||
+|IMeteoService|Point d'entrée de MeteoService.||
+|ChaosMonkeyService|Instance de l'objet ChaosMonkeyService. Ce module permet de déconnecter un micro-service du système afin de vérifier sa solidité.||
+|IChaosMonkeyService|Point d'entrée de ChaosMonkeyService.||
+|AuthService|Instance de l'objet AuthService. Ce module permet à l'utilisateur de créer un compte ainsi que de se connecter et se déconnecter.||
+|UtilisateursService|Instance de l'objet UtilisateursService. Ce module agit comme un DAO auprès de la base de donnée.||
+|AddTrajetService|Instance de l'objet AddTrajetService. Ce module permet à l'utilisateur de sauvegarder un trajet.||
+|AuthController|Point d'entrée du AuthService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|UtilisateurController|Point d'entrée du UtilisateurService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|TrajetController|Point d'entrée du TrajetService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+
+
 
 > #### Diagramme de contexte
 > ![img.png](./vues/vue_contexte.png)
 >#### Guide de variabilité
 >#### Raisonnement
+Cette vue montre le fonctionnement du système de monitoring et de Authentication. Ainsi l'on peut voir que le module du HealthMonitorService envoie un PING 
+aux autres modules afin de recevoir leurs état. Celui-ci met ensuite à jours Discovery afin que celui-ci partage l'état de services. Cela permet ainsi de détecter une faute dans le système et de réagir. Pour ce qui est du système d'authentication, celui-ci est subdivisé en trois modules. AuthService et AddTrajetService permettent de se connecter à son compte utilisateur et d'ajouter un nouveau service au système via des points d'accès. UtilisateurService agit comme DAO et permet de connecter se connecter à la base de données tout en réduisant le couplage.
 >#### Vues associées
 
 ### Vue #2...
@@ -1498,13 +1518,28 @@ une nouvelle.
 
 |Élement|Description|lien vers document d'interfaces|
 |-------|-----------|-------------------------------|
-|el1|responsabilité incluant les liens vers les diagrammes de séquence démontrant le fonctionnement de celui-ci|http://www.etsmtl.ca|
+|Discovery Service|Instance de Discovery. Ce composant enregistre les nouveaux micro-services dans le système et envoie les informations pour contacter les différents micro-services. ||
+|IDiscovery|Point d'entrée de Discovery.||
+|HealthMonitorService|Composant HealthMonitorService. Ce composant permet de gérer le monitoring du système.||
+|HealthMonitorController|Point d'entrée du Health Monitor qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|TrajetService|Composant TrajetService. Ce composant permet de calculer le meilleur itinéraire pour un trajet donné.||
+|ITrajetService|Point d'entrée de TrajetService.||
+|MeteoService|Composant MeteoService. Ce composant permet de retourner la météo à un moment donné.||
+|IMeteoService|Point d'entrée de MeteoService.||
+|ChaosMonkeyService|Composant ChaosMonkeyService. Ce composant permet de déconnecter un micro-service du système afin de vérifier sa solidité.||
+|IChaosMonkeyService|Point d'entrée de ChaosMonkeyService.|
+|UserService|Composant UtilisateursService. Ce composant permet de gérer les comptes utilisateurs.||
+|AuthController|Point d'entrée du AuthService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|UtilisateurController|Point d'entrée du UtilisateurService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|TrajetController|Point d'entrée du TrajetService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+
 
 > #### Diagramme de contexte
 > ![img.png](./vues/vue_contexte.png)
 
 >#### Guide de variabilité
 >#### Raisonnement
+Cette vue permet de montrer les différents points d'accès des composants du système. Tout les micro-services utilisent l'interface de Discovery afin de s'enregistrer sur le service. Les services peuvent ensuite demander à Discovery les points d'accès des autres services pour y accéder. Pour ce qui est du health monitoring, un controleur permet d'indiquer quelle requête à été envoyé par les autre micro-services. Pour ce qui est de Authentication, trois controleur permettent de gérer les différentes actions de authentication. AuthController et TrajetController permettent respectivement de controler la connexion et déconnexion au système et de sauvegarder un nouveau trajet. UtilisateurController permet d'effectuer une facade entre la base de donnné et le système en agissant de point d'entrée au DAO qui est UtilisateurService.   
 >#### Vues associées
 
 ### Vue #2...
@@ -1519,17 +1554,29 @@ une nouvelle.
 
 |Élement|Description|lien vers document d'interfaces|
 |-------|-----------|-------------------------------|
-|el1|responsabilité incluant les liens vers les diagrammes de séquence démontrant le fonctionnement de celui-ci|http://www.etsmtl.ca|
+|Meteo|Service meteo qui sert à renvoyer la météo pour un emplacement donnée.||
+|CreateVehiculeRoute|Service que l'utilisateur appel pour demander un trajet en voiture.||
+|CalculerVehiculeRoute|Ce service permet de calculer le temps pour un trajet en voiture envoyé par l'utilisateur. Ce service est complémentaire au service de CreateVehiculeRoute.||
+|ChaosMonkey|Ce service sert à déconnecter les autres micro-services du sytème afin de tester l'attribut de disponibilité de ceux-ci.||
+|ComparePOI|Ce service permet de comparer des points d'interêt marqué par l'utilisateur.||
+|ServiceDiscovery|Le service de Discovery permet de gérer l'accès aux différents services du système en envoyant les informations demander pour se connecter à un service.||
+|CalculateSTMRoutes|Ce service permet de calculer le temps pour un trajet en transport en commun envoyé par l'utilisateur. Ce service est complémentaire au service de CreateSTMRoutes.||
+|CreateSTMRoutes|Service que l'utilisateur appel pour demander un trajet en transport en commun.||
+|HealthMonitor|Ce service agit comme un monitor pour les autres services et permet de voir quels services sont actifs ou inactifs.||
+|UserAPI|Ce service sert à l'utilisateur afin de se connecter à son compte utilisateur et envoyé les trajets qu'il souhaite enregistrer dans la base de données.||
+|MongoBD|Base de donnée qui enregistre les trajets enregistrés des utilisateurs.||
+
 
 > #### Diagramme de contexte
 >  ![img.png](./vues/vue_contexte.png)
 >#### Guide de variabilité
->#### Raisonnement
+>#### Raisonnement 
+Ce diagramme divise les services dans plusieurs machines virtuelles qui appartiennent à chaque équipe. Tous les services sont reliés au service de Discovery afin de centraliser l'information des adresses pour accéder à chaque service. Le userAPI sert de porte d'accès pour la base de donnée qui contient les informations des trajets sauvegardés par le user.
 >#### Vues associées
 
 # Conclusion
 
-> TODO: insérer votre conclusion
+> En conclusion, nous avons explicité dans ce document les diagrammes et informations nécessaires afin de répondre aux objectifs d'affaires du laboratoire tout en implémentant les attributs de qualités. Ainsi le document d'architecture démontre au travers de vues modules, composants et connecteurs, déploiement et contexte la structure du système de trajet en intégrant les attributs de qualités au sein de ceux-ci.
 
 
 N'oubliez pas d'effacer les TODO et ce texte et de générer une version PDF de ce document pour votre remise finale.
