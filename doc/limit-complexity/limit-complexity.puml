@@ -1,0 +1,25 @@
+@startuml
+participant HealthMonitorApi as hm
+participant Discovery as d
+participant ApiExterne as ae
+hm -> d : getListAllServices() 
+hm <-- d : return allServices 
+hm -> d : subscribe() 
+alt a new service register itself
+    ae -> d : registerService() 
+    d -> hm : announceNewService
+    hm -> d : getListAllServices()
+    hm <-- d : return allServices 
+end
+loop number of registered services every 5 seconds
+    hm -> ae: pingService()
+        ae --> hm : response with status
+    alt the api is down
+        hm -> d : updateDiscoveryService("DOWN")
+        hm -> hm : updateListServices()
+    else the api is newly up
+        hm -> d : updateDiscoveryService("UP")
+        hm -> hm : updateListServices()
+    end
+end
+@enduml

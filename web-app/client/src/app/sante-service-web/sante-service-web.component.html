@@ -1,0 +1,18 @@
+<h1 class="div-title">Gestionnaire de santé des services web</h1>
+
+<button class="btn-recuperation" mat-raised-button color="primary" (click)="recupererStatusServiceWeb()">
+    <mat-icon>cloud_download</mat-icon>
+    <span>Récupération des services web</span>
+</button>
+<mat-divider></mat-divider>
+<div class="grid">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let serviceWeb of listeServiceWeb">
+
+            <app-sante-service-web-item [serviceWeb]="serviceWeb"></app-sante-service-web-item>
+            
+        </div>
+    </div>
+</div>
+    
+    

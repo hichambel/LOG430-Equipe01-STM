@@ -1,0 +1,39 @@
+@startuml
+
+title Vue allocation - diagramme de déploiement équipes impairs
+
+node "<<server>> : Portainer" as Portainer {
+    node "<<VM>> : portainer.10.194.33.151.nip.io" as Portainer1 {
+        component HealthMonitor <<service>>
+        component UserApi <<service>>
+        component MongoDB <<database>>
+    }
+
+    node "<<VM>> : portainer.10.194.33.153.nip.io" as Portainer2 {
+        component ChaosMonkey <<service>>
+    }
+
+    node "<<VM>> : portainer.10.194.33.155.nip.io" as Portainer3 {
+        component ServiceDiscovery <<service>>
+        component ComparePOI <<service>>
+    }
+
+    node "<<VM>> : portainer.10.194.33.157.nip.io" as Portainer4 {
+        component Meteo <<service>>
+        component CreateVehicleRoutes <<service>>
+        component CalculateVehicleRoutes <<service>>
+    }
+
+    node "<<VM>> : portainer.10.194.33.159.nip.io" as Portainer5 {
+        component CreateSTMRoutes <<service>>
+        component CalculateSTMRoutes <<service>>
+    }
+}
+
+UserApi -down- MongoDB
+Portainer3 -- Portainer1
+Portainer2 -- Portainer3
+Portainer4 -- Portainer3
+Portainer3 -- Portainer5
+
+@enduml

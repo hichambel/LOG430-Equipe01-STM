@@ -1,0 +1,64 @@
+<mat-toolbar color="primary" class="mat-elevation-z12">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened">
+        menu
+    </mat-icon>
+    <mat-icon *ngIf="sidenav.opened">
+        close
+    </mat-icon>
+  </button>
+
+  <button mat-button routerLink="/acceuil">
+    <mat-icon>home</mat-icon>
+    Acceuil
+  </button>
+
+  <span class="spacer"></span>
+  <div *ngIf="!estAuthentifier">
+    <button mat-button routerLink="/inscription">Inscription</button>
+    <button mat-button routerLink="/connexion">Connexion</button>
+  </div>
+  <div *ngIf="estAuthentifier">
+    <button mat-button (click)="deconnecter()">Déconnexion</button>
+  </div>
+
+</mat-toolbar>
+  
+<mat-sidenav-container>
+  <mat-sidenav class="mat-elevation-z8" #sidenav="matSidenav" class="sidenav">
+
+      <img class="avatar mat-elevation-z8" src="..\assets\images\logostm.jpg" />
+      
+      <p class="designation">Gestionnaire de trajets</p>
+
+      <mat-divider></mat-divider>
+      
+      <button mat-button class="menu-button" routerLink="/acceuil" (click)="fermerSidenav()">
+        <mat-icon>home</mat-icon>
+        <span>Acceuil</span>
+      </button>
+
+      <button mat-button class="menu-button" routerLink="/sante" (click)="fermerSidenav()">
+        <mat-icon>healing</mat-icon>
+        <span>Santé API</span>
+      </button>
+
+      <button mat-button class="menu-button" routerLink="/meteo" (click)="fermerSidenav()">
+        <mat-icon>sunny_snowing</mat-icon>
+        <span>Météo</span>
+      </button>
+      
+      <button mat-button class="menu-button" (click)="fermerSidenav()">
+          <mat-icon>info</mat-icon>
+          <span>À propos</span>
+      </button>
+      
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <main class="content mat-elevation-z8">
+        <!-- Main content here! -->
+      <router-outlet></router-outlet> 
+    </main> 
+  </mat-sidenav-content>
+</mat-sidenav-container>

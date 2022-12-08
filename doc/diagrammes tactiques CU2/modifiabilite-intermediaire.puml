@@ -1,0 +1,15 @@
+@startuml
+actor C.L as CL
+participant RouteManagerAPI as Route
+participant DiscoveryAPI as Disc
+participant WeatherServiceAPI as Weather
+
+title CU2: Modifiabilite - Intermediaire
+
+CL -> Route: addRoute()
+Route -> Disc: getWeatherService()
+Disc --> Route: weather service ip
+Route -> Weather: getRouteTimeByWeather(weatherType:String)
+Weather --> Route: routeTime
+Route --> CL: success message
+@enduml

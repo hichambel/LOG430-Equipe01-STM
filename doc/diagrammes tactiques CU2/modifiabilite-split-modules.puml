@@ -1,0 +1,18 @@
+@startuml
+actor C.L as CL
+participant RouteManagerController as Route
+participant AuthenticationHandler as Auth
+participant ExceptionHandler as Ex
+participant DatabaseHandler as DB
+
+title CU2: Modifiabilite - Split Module - Ajout de trajet
+
+CL -> Route: addRoute()
+Route -> Auth: isUserAdmin(username:String)
+Auth --> Route: isUserAdmin = true
+Route -> Ex: checkUserInput()
+Ex --> Route: no exception found
+Route -> DB: addRoute()
+DB --> Route: success message
+Route --> CL: success message
+@enduml

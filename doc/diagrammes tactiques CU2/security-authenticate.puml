@@ -1,0 +1,17 @@
+@startuml
+actor C.L as CL
+participant AuthenticationAPI as Auth
+participant DatabaseHandler as DB
+
+title CU2: Security - Authentication
+
+CL -> Auth: login(username:String, password:String)
+Auth -> DB: isPasswordAndUsernameValid(username:String, password:String)
+alt isPasswordAndUsernameValid == true
+    DB --> Auth: true
+    Auth --> CL: login success
+else
+    DB --> Auth: false
+    Auth --> CL: error message
+end 
+@enduml
