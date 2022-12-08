@@ -1357,7 +1357,7 @@ services en mode.
 
 ### **RDCU-CU10** -
 
-<span style="color:red">Diagramme(s) de séquence démontrant la réalisation de ce cas d'utilisation</span>
+![plot](./discovery-service/discovery-service.png)
 
 # Réalisation des attributs de qualité
 
