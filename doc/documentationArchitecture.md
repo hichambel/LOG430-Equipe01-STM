@@ -1704,10 +1704,6 @@ Ce diagramme divise les services dans plusieurs machines virtuelles qui appartie
 
 > En conclusion, nous avons explicité dans ce document les diagrammes et informations nécessaires afin de répondre aux objectifs d'affaires du laboratoire tout en implémentant les attributs de qualités. Ainsi le document d'architecture démontre au travers de vues modules, composants et connecteurs, déploiement et contexte la structure du système de trajet en intégrant les attributs de qualités au sein de ceux-ci.
 
-
-N'oubliez pas d'effacer les TODO et ce texte et de générer une version PDF de ce document pour votre remise finale.
-Créer un tag git avec la commande "git tag rapport1"
-
 # Documentation des interfaces
 
 Les catalogues d'élément devraient être des tableaux qui contiennent la description des éléments en plus d'un lien vers
