@@ -8,7 +8,7 @@ services:
             dockerfile: ./Dockerfile
         command: npm run start
         ports:
-            - 6000:6000
+            - 4000:80
         networks:
             - nesjs-network
         volumes:
@@ -22,3 +22,5 @@ volumes:
 
 networks:
     nesjs-network:
+        name: trajet-user-api-stack_nesjs-network
+        external: true
