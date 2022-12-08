@@ -18,8 +18,8 @@ export class TrajetService {
     return this.trajetModel.find().exec();
   }
 
-  async findByUserId(userId: string): Promise<TrajetDocument> {
-    return this.trajetModel.find({ userId: userId });
+  async findByUserId(userId: any): Promise<any> {
+    return await this.trajetModel.find({ userId: userId.userId });
   }
 
   remove(id: string): Promise<TrajetDocument> {

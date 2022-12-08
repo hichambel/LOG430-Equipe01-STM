@@ -3,5 +3,4 @@ export class CreateTrajetDto {
   destination: string;
   depart: string;
   userId: string;
-  refreshToken: string;
 }

@@ -15,6 +15,7 @@ export class UtilisateursController {
   
   @Get()
   findAll() {
+    console.log("je suis dans le controller d'utilisateur");
     return this.utilisateursService.findAll();
   }
 

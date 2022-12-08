@@ -17,9 +17,6 @@ export class Trajet {
   
   @Prop({ required: true })
   userId: string;
-  
-  @Prop()
-  refreshToken: string;
 }
 
 export const TrajetSchema = SchemaFactory.createForClass(Trajet);

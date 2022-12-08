@@ -18,7 +18,7 @@ export class TrajetController {
   }
 
   @Get(':userId')
-  findById(@Param('userId') userId: string) {
+  findById(@Param() userId: string) {
     return this.trajetService.findByUserId(userId);
   }
   
