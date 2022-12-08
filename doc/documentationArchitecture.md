@@ -27,7 +27,7 @@
   - [OA-2. Validez si le transport par autobus est toujours plus rapide, peu importe l'heure de la journée](#oa-2-validez-si-le-transport-par-autobus-est-toujours-plus-rapide-peu-importe-lheure-de-la-journée)
 - [Cas d'utilisations](#cas-dutilisations)
     - [**CU01** - Veux comparer les temps de trajet.](#cu01---veux-comparer-les-temps-de-trajet)
-        - [CU01-D1 **Disponibilité**](#cu01-d1-disponibilité)
+      - [CU01-D1 **Disponibilité**](#cu01-d1-disponibilité)
       - [CU01-M1 **Modifiabilité**](#cu01-m1-modifiabilité)
       - [CU01-P1 **Performance**](#cu01-p1-performance)
       - [CU01-S1 **Sécurité**](#cu01-s1-sécurité)
@@ -58,7 +58,7 @@
       - [CU04-T1 **Testabilité**](#cu04-t1-testabilité)
       - [CU04-U1 **Usabilité**](#cu04-u1-usabilité)
       - [CU04-I1 **Interopérabilité**](#cu04-i1-interopérabilité)
-    - [**CU05** - Veux créer trajet automobile](#cu05---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU05** - Veux créer trajet automobile](#cu05---veux-créer-trajet-automobile)
       - [CU05-D1 **Disponibilité**](#cu05-d1-disponibilité)
       - [CU05-M1 **Modifiabilité**](#cu05-m1-modifiabilité)
       - [CU05-P1 **Performance**](#cu05-p1-performance)
@@ -66,7 +66,7 @@
       - [CU05-T1 **Testabilité**](#cu05-t1-testabilité)
       - [CU05-U1 **Usabilité**](#cu05-u1-usabilité)
       - [CU05-I1 **Interopérabilité**](#cu05-i1-interopérabilité)
-    - [**CU06** - Veux créer trajet STM](#cu06---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU06** - Veux créer trajet STM](#cu06---veux-créer-trajet-stm)
       - [CU06-D1 **Disponibilité**](#cu06-d1-disponibilité)
       - [CU06-M1 **Modifiabilité**](#cu06-m1-modifiabilité)
       - [CU06-P1 **Performance**](#cu06-p1-performance)
@@ -74,7 +74,7 @@
       - [CU06-T1 **Testabilité**](#cu06-t1-testabilité)
       - [CU06-U1 **Usabilité**](#cu06-u1-usabilité)
       - [CU06-I1 **Interopérabilité**](#cu06-i1-interopérabilité)
-    - [**CU07** - Veux calculer temps trajet automobile](#cu07---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU07** - Veux calculer temps trajet automobile](#cu07---veux-calculer-temps-trajet-automobile)
       - [CU07-D1 **Disponibilité**](#cu07-d1-disponibilité)
       - [CU07-M1 **Modifiabilité**](#cu07-m1-modifiabilité)
       - [CU07-P1 **Performance**](#cu07-p1-performance)
@@ -82,7 +82,7 @@
       - [CU07-T1 **Testabilité**](#cu07-t1-testabilité)
       - [CU07-U1 **Usabilité**](#cu07-u1-usabilité)
       - [CU07-I1 **Interopérabilité**](#cu07-i1-interopérabilité)
-    - [**CU08** - Veux calculer temps trajet STM](#cu08---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU08** - Veux calculer temps trajet STM](#cu08---veux-calculer-temps-trajet-stm)
       - [CU08-D1 **Disponibilité**](#cu08-d1-disponibilité)
       - [CU08-M1 **Modifiabilité**](#cu08-m1-modifiabilité)
       - [CU08-P1 **Performance**](#cu08-p1-performance)
@@ -90,7 +90,7 @@
       - [CU08-T1 **Testabilité**](#cu08-t1-testabilité)
       - [CU08-U1 **Usabilité**](#cu08-u1-usabilité)
       - [CU08-I1 **Interopérabilité**](#cu08-i1-interopérabilité)
-    - [**CU09** - Veux avoir la météo](#cu09---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU09** - Veux avoir la météo](#cu09---veux-avoir-la-météo)
       - [CU09-D1 **Disponibilité**](#cu09-d1-disponibilité)
       - [CU09-M1 **Modifiabilité**](#cu09-m1-modifiabilité)
       - [CU09-P1 **Performance**](#cu09-p1-performance)
@@ -98,7 +98,7 @@
       - [CU09-T1 **Testabilité**](#cu09-t1-testabilité)
       - [CU09-U1 **Usabilité**](#cu09-u1-usabilité)
       - [CU09-I1 **Interopérabilité**](#cu09-i1-interopérabilité)
-    - [**CU10** - Veux pouvoir centraliser les services du système](#cu10---vous-devez-proposer-un-nouveau-cas-dutilisation)
+    - [**CU10** - Veux pouvoir centraliser les services du système](#cu10---veux-pouvoir-centraliser-les-services-du-système)
       - [CU10-D1 **Disponibilité**](#cu10-d1-disponibilité)
       - [CU10-M1 **Modifiabilité**](#cu10-m1-modifiabilité)
       - [CU10-P1 **Performance**](#cu10-p1-performance)
@@ -146,12 +146,12 @@
     - [**RDCU-CU02** - Veux pouvoir mettre le chaos dans les](#rdcu-cu02---veux-pouvoir-mettre-le-chaos-dans-les)
     - [**RDCU-CU03** - Veux pouvoir vérifier la disponibilité d'un micro-service](#rdcu-cu03---veux-pouvoir-vérifier-la-disponibilité-dun-micro-service)
     - [**RDCU-CU04** - Veux pouvoir sauvegarder un trajet](#rdcu-cu04---veux-pouvoir-sauvegarder-un-trajet)
-    - [**RDCU-CU05** - Veux créer trajet automobile](#rdcu-cu05--)
-    - [**RDCU-CU06** - Veux créer trajet STM](#rdcu-cu06--)
-    - [**RDCU-CU07** - Veux calculer temps trajet automobile](#rdcu-cu07--)
-    - [**RDCU-CU08** - Veux calculer temps trajet STM](#rdcu-cu08--)
-    - [**RDCU-CU09** - Veux avoir la météo](#rdcu-cu09--)
-    - [**RDCU-CU10** - Veux pouvoir centraliser les services du système](#rdcu-cu10--)
+    - [**RDCU-CU05** -](#rdcu-cu05--)
+    - [**RDCU-CU06** -](#rdcu-cu06--)
+    - [**RDCU-CU07** -](#rdcu-cu07--)
+    - [**RDCU-CU08** -](#rdcu-cu08--)
+    - [**RDCU-CU09** -](#rdcu-cu09--)
+    - [**RDCU-CU10** -](#rdcu-cu10--)
 - [Réalisation des attributs de qualité](#réalisation-des-attributs-de-qualité)
   - [RDAQ-Disponibilité](#rdaq-disponibilité)
     - [RDTQ-Détection de faute](#rdtq-détection-de-faute)
@@ -1604,12 +1604,32 @@ une nouvelle.
 
 |Élement|Description|lien vers document d'interfaces|
 |-------|-----------|-------------------------------|
-|el1|responsabilité incluant les liens vers les diagrammes de séquence démontrant le fonctionnement de celui-ci|http://www.etsmtl.ca|
+|Discovery|Instance de l'objet Discovery. Ce module enregistre les nouveaux micro-services dans le système et envoie les informations pour contacter les différents micro-services. ||
+|IDiscovery|Point d'entrée de Discovery.||
+|IDiscoveryRegister|Interface de Discovery qui permet de s'enregister au près du micro-service. ||
+|HealthMonitorService|Instance de l'objet HealthMonitorService. Ce module envoie des requêtes PING aux autres modules du système afin de vérifier leurs état.||
+|HealthMonitorController|Point d'entrée du Health Monitor qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|TrajetService|Instance de l'objet TrajetService. Ce module permet de calculer le meilleur itinéraire pour un trajet donné.||
+|ITrajetService|Point d'entrée de TrajetService.||
+|MeteoService|Instance de l'objet MeteoService. Ce module permet de retourner la météo à un moment donné.||
+|IMeteoService|Point d'entrée de MeteoService.||
+|ChaosMonkeyService|Instance de l'objet ChaosMonkeyService. Ce module permet de déconnecter un micro-service du système afin de vérifier sa solidité.||
+|IChaosMonkeyService|Point d'entrée de ChaosMonkeyService.||
+|AuthService|Instance de l'objet AuthService. Ce module permet à l'utilisateur de créer un compte ainsi que de se connecter et se déconnecter.||
+|UtilisateursService|Instance de l'objet UtilisateursService. Ce module agit comme un DAO auprès de la base de donnée.||
+|AddTrajetService|Instance de l'objet AddTrajetService. Ce module permet à l'utilisateur de sauvegarder un trajet.||
+|AuthController|Point d'entrée du AuthService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|UtilisateurController|Point d'entrée du UtilisateurService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|TrajetController|Point d'entrée du TrajetService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+
+
 
 > #### Diagramme de contexte
 > ![img.png](./vues/vue_contexte.png)
 >#### Guide de variabilité
 >#### Raisonnement
+Cette vue montre le fonctionnement du système de monitoring et de Authentication. Ainsi l'on peut voir que le module du HealthMonitorService envoie un PING 
+aux autres modules afin de recevoir leurs état. Celui-ci met ensuite à jours Discovery afin que celui-ci partage l'état de services. Cela permet ainsi de détecter une faute dans le système et de réagir. Pour ce qui est du système d'authentication, celui-ci est subdivisé en trois modules. AuthService et AddTrajetService permettent de se connecter à son compte utilisateur et d'ajouter un nouveau service au système via des points d'accès. UtilisateurService agit comme DAO et permet de connecter se connecter à la base de données tout en réduisant le couplage.
 >#### Vues associées
 
 ### Vue #2...
@@ -1624,13 +1644,28 @@ une nouvelle.
 
 |Élement|Description|lien vers document d'interfaces|
 |-------|-----------|-------------------------------|
-|el1|responsabilité incluant les liens vers les diagrammes de séquence démontrant le fonctionnement de celui-ci|http://www.etsmtl.ca|
+|Discovery Service|Instance de Discovery. Ce composant enregistre les nouveaux micro-services dans le système et envoie les informations pour contacter les différents micro-services. ||
+|IDiscovery|Point d'entrée de Discovery.||
+|HealthMonitorService|Composant HealthMonitorService. Ce composant permet de gérer le monitoring du système.||
+|HealthMonitorController|Point d'entrée du Health Monitor qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|TrajetService|Composant TrajetService. Ce composant permet de calculer le meilleur itinéraire pour un trajet donné.||
+|ITrajetService|Point d'entrée de TrajetService.||
+|MeteoService|Composant MeteoService. Ce composant permet de retourner la météo à un moment donné.||
+|IMeteoService|Point d'entrée de MeteoService.||
+|ChaosMonkeyService|Composant ChaosMonkeyService. Ce composant permet de déconnecter un micro-service du système afin de vérifier sa solidité.||
+|IChaosMonkeyService|Point d'entrée de ChaosMonkeyService.|
+|UserService|Composant UtilisateursService. Ce composant permet de gérer les comptes utilisateurs.||
+|AuthController|Point d'entrée du AuthService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|UtilisateurController|Point d'entrée du UtilisateurService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+|TrajetController|Point d'entrée du TrajetService qui permet aux autres micro-services de communiquer au module via une requête HTTP.||
+
 
 > #### Diagramme de contexte
 > ![img.png](./vues/vue_contexte.png)
 
 >#### Guide de variabilité
 >#### Raisonnement
+Cette vue permet de montrer les différents points d'accès des composants du système. Tout les micro-services utilisent l'interface de Discovery afin de s'enregistrer sur le service. Les services peuvent ensuite demander à Discovery les points d'accès des autres services pour y accéder. Pour ce qui est du health monitoring, un controleur permet d'indiquer quelle requête à été envoyé par les autre micro-services. Pour ce qui est de Authentication, trois controleur permettent de gérer les différentes actions de authentication. AuthController et TrajetController permettent respectivement de controler la connexion et déconnexion au système et de sauvegarder un nouveau trajet. UtilisateurController permet d'effectuer une facade entre la base de donnné et le système en agissant de point d'entrée au DAO qui est UtilisateurService.   
 >#### Vues associées
 
 ### Vue #2...
@@ -1645,17 +1680,29 @@ une nouvelle.
 
 |Élement|Description|lien vers document d'interfaces|
 |-------|-----------|-------------------------------|
-|el1|responsabilité incluant les liens vers les diagrammes de séquence démontrant le fonctionnement de celui-ci|http://www.etsmtl.ca|
+|Meteo|Service meteo qui sert à renvoyer la météo pour un emplacement donnée.||
+|CreateVehiculeRoute|Service que l'utilisateur appel pour demander un trajet en voiture.||
+|CalculerVehiculeRoute|Ce service permet de calculer le temps pour un trajet en voiture envoyé par l'utilisateur. Ce service est complémentaire au service de CreateVehiculeRoute.||
+|ChaosMonkey|Ce service sert à déconnecter les autres micro-services du sytème afin de tester l'attribut de disponibilité de ceux-ci.||
+|ComparePOI|Ce service permet de comparer des points d'interêt marqué par l'utilisateur.||
+|ServiceDiscovery|Le service de Discovery permet de gérer l'accès aux différents services du système en envoyant les informations demander pour se connecter à un service.||
+|CalculateSTMRoutes|Ce service permet de calculer le temps pour un trajet en transport en commun envoyé par l'utilisateur. Ce service est complémentaire au service de CreateSTMRoutes.||
+|CreateSTMRoutes|Service que l'utilisateur appel pour demander un trajet en transport en commun.||
+|HealthMonitor|Ce service agit comme un monitor pour les autres services et permet de voir quels services sont actifs ou inactifs.||
+|UserAPI|Ce service sert à l'utilisateur afin de se connecter à son compte utilisateur et envoyé les trajets qu'il souhaite enregistrer dans la base de données.||
+|MongoBD|Base de donnée qui enregistre les trajets enregistrés des utilisateurs.||
+
 
 > #### Diagramme de contexte
 >  ![img.png](./vues/vue_contexte.png)
 >#### Guide de variabilité
->#### Raisonnement
+>#### Raisonnement 
+Ce diagramme divise les services dans plusieurs machines virtuelles qui appartiennent à chaque équipe. Tous les services sont reliés au service de Discovery afin de centraliser l'information des adresses pour accéder à chaque service. Le userAPI sert de porte d'accès pour la base de donnée qui contient les informations des trajets sauvegardés par le user.
 >#### Vues associées
 
 # Conclusion
 
-> TODO: insérer votre conclusion
+> En conclusion, nous avons explicité dans ce document les diagrammes et informations nécessaires afin de répondre aux objectifs d'affaires du laboratoire tout en implémentant les attributs de qualités. Ainsi le document d'architecture démontre au travers de vues modules, composants et connecteurs, déploiement et contexte la structure du système de trajet en intégrant les attributs de qualités au sein de ceux-ci.
 
 
 N'oubliez pas d'effacer les TODO et ce texte et de générer une version PDF de ce document pour votre remise finale.
