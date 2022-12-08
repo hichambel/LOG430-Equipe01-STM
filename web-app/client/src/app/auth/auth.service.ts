@@ -9,8 +9,8 @@ import { Utilisateur } from './utilisateur.model';
 // const API_ENDPOINT_INSCRIPTION = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=' + API_KEY;
 // const API_ENDPOINT_CONNEXION = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=' + API_KEY;
 
-const API_ENDPOINT_INSCRIPTION = 'http://localhost:3000/auth/signup'; // TODO: confirmer l'URL ENDPOINT
-const API_ENDPOINT_CONNEXION = 'http://localhost:3000/auth/signin'; // TODO: confirmer l'URL ENDPOINT
+const API_ENDPOINT_INSCRIPTION = 'http://localhost:4000/auth/signup'; // TODO: confirmer l'URL ENDPOINT
+const API_ENDPOINT_CONNEXION = 'http://localhost:4000/auth/signin'; // TODO: confirmer l'URL ENDPOINT
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -51,8 +51,8 @@ export class AuthService {
     return this.http.post<AuthResponseData>(
       API_ENDPOINT_INSCRIPTION,
       { 
-        courriel: courriel,
-        mdp: mdp,
+        email: courriel,
+        password: mdp,
       },
       httpOptions
       )
