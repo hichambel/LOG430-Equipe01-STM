@@ -1599,7 +1599,7 @@ une nouvelle.
 ### Vue #1
 
 > #### Présentation primaire
-> ![img.png](./vues/vue_module.png)
+> ![plot](./vues/vue_module.png)
 >#### Catalogue d'éléments
 
 |Élement|Description|lien vers document d'interfaces|
@@ -1625,7 +1625,7 @@ une nouvelle.
 
 
 > #### Diagramme de contexte
-> ![img.png](./vues/vue_contexte.png)
+> ![plot.png](./vues/vue_contexte.png)
 >#### Guide de variabilité
 >#### Raisonnement
 Cette vue montre le fonctionnement du système de monitoring et de Authentication. Ainsi l'on peut voir que le module du HealthMonitorService envoie un PING 
@@ -1639,7 +1639,7 @@ aux autres modules afin de recevoir leurs état. Celui-ci met ensuite à jours D
 ### Vue #1
 
 > #### Présentation primaire
-> ![img.png](./vues/vue_CC.png)
+> ![plot.png](./vues/vue_CC.png)
 >#### Catalogue d'éléments
 
 |Élement|Description|lien vers document d'interfaces|
@@ -1661,7 +1661,7 @@ aux autres modules afin de recevoir leurs état. Celui-ci met ensuite à jours D
 
 
 > #### Diagramme de contexte
-> ![img.png](./vues/vue_contexte.png)
+> ![plot.png](./vues/vue_contexte.png)
 
 >#### Guide de variabilité
 >#### Raisonnement
@@ -1675,7 +1675,7 @@ Cette vue permet de montrer les différents points d'accès des composants du sy
 ### Vue #1
 
 > #### Présentation primaire
-> ![img.png](./vues/deploiement-Vue_allocation.png)
+> ![plot.png](./vues/deploiement-Vue_allocation.png)
 >#### Catalogue d'éléments
 
 |Élement|Description|lien vers document d'interfaces|
@@ -1694,7 +1694,7 @@ Cette vue permet de montrer les différents points d'accès des composants du sy
 
 
 > #### Diagramme de contexte
->  ![img.png](./vues/vue_contexte.png)
+>  ![plot.png](./vues/vue_contexte.png)
 >#### Guide de variabilité
 >#### Raisonnement 
 Ce diagramme divise les services dans plusieurs machines virtuelles qui appartiennent à chaque équipe. Tous les services sont reliés au service de Discovery afin de centraliser l'information des adresses pour accéder à chaque service. Le userAPI sert de porte d'accès pour la base de donnée qui contient les informations des trajets sauvegardés par le user.
